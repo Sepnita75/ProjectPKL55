@@ -14,11 +14,60 @@ import java.util.Hashtable;
  */
 public class MessageString {
     
-    public static final String ON_DISABLE = "Field ini di disable";
+    public static final String ON_DISABLE = "Field ini harus kosong";
     public static final String OUT_LENGTH_STRING = "Text Terlalu Panjang";
-    public static final String OUT_RANGE = "Di luar nilai yang diijinkan";
+    public static final String OUT_RANGE = "Di luar nilai yang diizinkan";
     public static final String SELECTION_NEED = "Harus sesuai pilihan";
     public static final String INTEGER_NEED = "Harus Bilangan Bulat";
     public static final String DECIMAL_NEED = "Harus Desimal";
     public static final String REQUIRE = "Harus di isi";
+    
+    //  NULL CHECK
+    public static String null101(String code) {
+        return "ERROR 101 : Pertanyaan " + code + " wajib di isi!";
+    }
+    public static String null102(String code) {
+        return "ERROR 102 : Pertanyaan " + code + " harus di lewati!";
+    }
+    
+    //  VALUE EXCEPTION
+    public static String value201(String ex) {
+        return "ERROR 201 : Terjadi kesalahan pengisian! (ex: " + ex + ")";
+    }
+    
+    //  TYPE CHECK
+    public static String type301() {
+        return "ERROR 301 : Hanya boleh berisi huruf!";
+    }
+    public static String type302() {
+        return "ERROR 302 : Harus diawali dengan huruf besar!";
+    }
+    public static String type303() {
+        return "ERROR 303 : Harus di isi dengan huruf besar!";
+    }
+    public static String type304() {
+        return "ERROR 304 : Harus di isi berupa bilangan bulat!";
+    }
+    public static String type305() {
+        return "ERROR 305 : Harus di isi berupa bilangan real!";
+    }
+    public static String type306() {
+        return "ERROR 306 : Hanya boleh di isi dengan angka 1 (iya) dan 2 (tidak)";
+    }
+    public static String type307() {
+        return "ERROR 307 : Harus di isi berupa angka!";
+    }
+    
+    //  RANGE CHECK
+    public static String range401(int max) {
+        return "ERROR 401 : Pengisian maximum " + max + " karakter!";
+    }
+    public static String range402(int min, int max) {
+        return "ERROR 402 : Isian harus berada di antara " + min + " hingga " + max + "!";
+    }
+    
+    //  HUBUNGAN
+    public static String rel501(String a, String b) {
+        return "ERROR 501 : " + b + " Tidak boleh sama dengan " + a + "!";
+    }
 }

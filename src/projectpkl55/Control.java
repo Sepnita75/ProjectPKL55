@@ -19,15 +19,32 @@ public class Control {
     public static void setDict() {
         Hashtable<String, Blok> k1 = new Hashtable();
         //Blok 1
+        //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::        
+//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//                                       - BLOK 1 -
+//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        
+        //  Pembuatan hashtable blok 1
         Hashtable<String, Variabel> b1 = new Hashtable();
+        
+        //  Memasukan pertanyaan b1r1 kedalam blok 1
         b1.put("b1r1", new Text() {
-
+            
+            // Validasi Blok 1
             @Override
             public void valid() {
-
-                if (getValue() != "32") {
+                
+                // Perlakuan jika tidak di isi
+                if (getValue().isEmpty() || getValue().equals("")) {
                     setValid(false);
-                    addMessage("kita PKL di Bandung bro!");
+                    addMessage(MessageString.null101("b1r1"));
+                }
+                
+                // Perlakuan dimana 
+                if (!getValue().equals("32")) {
+                    setValid(false);
+                    addMessage(MessageString.value201("32"));
                 }
             }
         });
@@ -36,33 +53,31 @@ public class Control {
 
             @Override
             public void valid() {
-                if (getValue() != "02" || getValue() != "09") {
+                if (getValue().equals("2") || getValue().equals("9")) {
+                    if(getValue().equals("2")) setValue("02");
+                    if(getValue().equals("9")) setValue("09");
+                }
+                if (!getValue().equals("02") || !getValue().equals("09")) {
                     setValid(false);
-                    addMessage("Harus 02 atau 09");
+                    addMessage(MessageString.value201("02 atau 09"));
+                }
+                if (getValue().isEmpty() || getValue().equals("")) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b1r2"));
                 }
             }
-
         });
 
         b1.put("b1r3", new Text() {
 
             @Override
             public void valid() {
-                try {
-                    if ((Long.parseLong(getValue()) % 1) != 0) {
-                        setValid(false);
-                        addMessage("Harus angka");
-                    }
-                } catch (Exception e) {
-
-                }
 
                 if (getValue().isEmpty()) {
                     setValid(false);
-                    addMessage("Harus Diisi");
+                    addMessage(MessageString.null101("b1r3"));
                 }
             }
-
         });
 
         b1.put("b1r4", new Text() {
@@ -70,18 +85,9 @@ public class Control {
             @Override
             public void valid() {
 
-                try {
-                    if ((Long.parseLong(getValue()) % 1) != 0) {
-                        setValid(false);
-                        addMessage("Harus angka");
-                    }
-                } catch (Exception e) {
-
-                }
-
                 if (getValue().isEmpty()) {
                     setValid(false);
-                    addMessage("Harus Diisi");
+                    addMessage(MessageString.null101("b1r4"));
                 }
             }
 
@@ -92,9 +98,13 @@ public class Control {
             @Override
             public void valid() {
 
-                if (getValue() != "1" || getValue() != "2") {
+                if ((!getValue().equals("1") || !getValue().equals("2")) && !getValue().equals("")) {
                     setValid(false);
-                    addMessage("Harus diisi 1 atau 2");
+                    addMessage(MessageString.value201("1 atau 2"));
+                }
+                if (getValue().isEmpty() || getValue().equals("")) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b1r5"));
                 }
             }
 
@@ -104,7 +114,10 @@ public class Control {
 
             @Override
             public void valid() {
-
+                if (getValue().isEmpty() || getValue().equals("")) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b1r6"));
+                }
             }
 
         });
@@ -113,7 +126,10 @@ public class Control {
 
             @Override
             public void valid() {
-
+                if (getValue().isEmpty() || getValue().equals("")) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b1r7"));
+                }
             }
 
         });
@@ -122,6 +138,10 @@ public class Control {
 
             @Override
             public void valid() {
+                if (getValue().isEmpty() || getValue().equals("")) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b1r8"));
+                }
             }
         });
 
@@ -129,6 +149,10 @@ public class Control {
 
             @Override
             public void valid() {
+                if (getValue().isEmpty() || getValue().equals("")) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b1r9"));
+                }
             }
         });
 
@@ -136,6 +160,10 @@ public class Control {
 
             @Override
             public void valid() {
+                if (getValue().isEmpty() || getValue().equals("")) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b1r10"));
+                }
             }
         });
 
@@ -145,12 +173,12 @@ public class Control {
             public void valid() {
                 if (getValue().isEmpty()) {
                     setValid(false);
-                    addMessage("Harus Diisi");
+                    addMessage(MessageString.null101("b1r11"));
                 }
                 try {
                     if ((Integer.parseInt(getValue())) % 1 == 0) {
                         setValid(false);
-                        addMessage("Tidak Boleh Angka");
+                        addMessage(MessageString.type301());
                     }
                 } catch (Exception e) {
                     //ISI NEXT
@@ -162,9 +190,9 @@ public class Control {
 
             @Override
             public void valid() {
-                if (getValue().isEmpty()) {
+                if (getValue().isEmpty() || getValue().equals("")) {
                     setValid(false);
-                    addMessage("Harus Diisi");
+                    addMessage(MessageString.null101("b1r12"));
                 }
             }
         });
@@ -176,27 +204,33 @@ public class Control {
                 try {
                     if ((Integer.parseInt(getValue()) % 1) != 0) {
                         setValid(false);
-                        addMessage("Harus di isi berupa angka");
+                        addMessage(MessageString.type307());
                     }
                 } catch (Exception ex) {
 
                 }
-                if (getValue().isEmpty()) {
+                if (getValue().isEmpty() || getValue().equals("")) {
                     setValid(false);
-                    addMessage("Harus Diisi");
+                    addMessage(MessageString.null101("b1r13"));
                 }
             }
         });
 
+//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::        
+//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//                                       - BLOK 2 -
+//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::        
+        
         Hashtable<String, Variabel> b2 = new Hashtable();
 
         b2.put("b2r1s1", new Text() {
 
             @Override
             public void valid() {
-                if (getValue().isEmpty()) {
+                if (getValue().isEmpty() || getValue().equals("")) {
                     setValid(false);
-                    addMessage("Harus Diisi");
+                    addMessage(MessageString.null101("b2r1s1"));
                 }
             }
 
@@ -206,9 +240,9 @@ public class Control {
 
             @Override
             public void valid() {
-                if (getValue().isEmpty()) {
+                if (getValue().isEmpty() || getValue().equals("")) {
                     setValid(false);
-                    addMessage("Harus Diisi");
+                    addMessage(MessageString.null101("b2r1s2"));
                 }
             }
 
@@ -220,10 +254,14 @@ public class Control {
             public void valid() {
                 if (!(getValue().substring(0, 1).equals("12") || getValue().substring(0, 1).equals("13"))) {
                     setValid(false);
-                    addMessage("NIM tidak sesuai");
+                    addMessage(MessageString.value201("13.7867"));
                 } else if (!(getValue().substring(2).equals("."))) {
                     setValid(false);
-                    addMessage("NIM tidak sesuai");
+                    addMessage(MessageString.value201("13.7867"));
+                }
+                if (getValue().isEmpty() || getValue().equals("")) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b2r2s1"));
                 }
             }
 
@@ -235,17 +273,27 @@ public class Control {
             public void valid() {
                 if (!(getValue().substring(0, 1).equals("12") || getValue().substring(0, 1).equals("13"))) {
                     setValid(false);
-                    addMessage("NIM tidak sesuai");
+                    addMessage(MessageString.value201("13.7867"));
                 } else if (!(getValue().substring(2).equals("."))) {
                     setValid(false);
-                    addMessage("NIM tidak sesuai");
+                    addMessage(MessageString.value201("13.7867"));
+                }
+                if (getValue().isEmpty() || getValue().equals("")) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b2r2s1"));
+                }
+                if (getValue().equals(Controller.get("b2", "b2r2s1").getValue())) {
+                    setValid(false);
+                    addMessage(MessageString.rel501("b2r2s1", "b2r2s2"));
                 }
             }
 
         });
-
+        
+//  Ini belum bisa karena tipe data 'date' belum ada
+//  Ada hubungan antara b2r3s1 dan b2r3s2
         b2.put("b2r3s1", new Text() {
-
+            
             @Override
             public void valid() {
 
@@ -261,65 +309,196 @@ public class Control {
 
         });
 
+//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::        
+//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//                                       - BLOK 3 -
+//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::        
+                
         Hashtable<String, Variabel> b3 = new Hashtable();
 
-        b3.put("b3ar1", new Text() {
+        b3.put("b3ar1", new IntNumber() {
 
             @Override
             public void valid() {
                 if (Integer.parseInt(getValue()) < 15 || Integer.parseInt(getValue()) > 99) {
                     setValid(false);
-                    addMessage("Umur harus berada diantara 15 sampai dengan 99");
+                    addMessage(MessageString.range402(15, 99));
                 }
             }
 
         });
 
-        b3.put("b3ar2", new Text() {
+        b3.put("b3ar2", new IntNumber() {
 
             @Override
             public void valid() {
                 if (Integer.parseInt(getValue()) == 0) {
-                    if (Integer.parseInt(getValue()) != 1 || Integer.parseInt(getValue()) != 2) {
-                        setValid(false);
-                        addMessage("Harus 1 atau 2");
-                    }
+                    setValid(false);
+                    addMessage(MessageString.null101("b2r2s1"));
+                }
+                if (Integer.parseInt(getValue()) != 1 || Integer.parseInt(getValue()) != 2) {
+                    setValid(false);
+                    addMessage(MessageString.value201("1 atau 2"));
                 }
             }
 
         });
 
-        b3.put("b3ar3", new Text() {
+        b3.put("b3ar3", new IntNumber() {
 
             @Override
             public void valid() {
                 if (Integer.parseInt(getValue()) < 1 || Integer.parseInt(getValue()) > 3) {
                     setValid(false);
-                    addMessage("Harus 1,2, atau 3");
+                    addMessage(MessageString.value201("1, 2, atau 3"));
                 }
 
                 if (Integer.parseInt(getValue()) == 0) {
                     setValid(false);
-                    addMessage("Tidak boleh kosong");
-                }
-
-                if (Integer.parseInt(getValue()) == 1) {
-
-                } else if (Integer.parseInt(getValue()) == 1) {
-
+                    addMessage(MessageString.null101("b3ar3"));
                 }
             }
-
         });
 
         b3.put("b3ar4", new Text() {
 
             @Override
             public void valid() {
-                if (Integer.parseInt(getValue()) < 1 || Integer.parseInt(getValue()) > 8) {
-                    setValid(false);
-                    addMessage("Harus 1,2, atau 3");
+                if (Controller.get("b3", "b3ar3").getValue().equals("1")) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b3ar4"));
                 }
+
+                if (!(Controller.get("b3", "b3ar3")).getValue().equals("1")) {
+                    if (Integer.parseInt(getValue()) < 1 || Integer.parseInt(getValue()) > 8) {
+                        setValid(false);
+                        addMessage(MessageString.range402(1, 8));
+                    }
+                    if (Integer.parseInt(getValue()) == 0) {
+                        setValid(false);
+                        addMessage(MessageString.null101("b3ar3"));
+                    }
+                }
+            }
+        });
+    
+
+        b3.put("b3ar5", new Text() {
+
+            @Override
+            public void valid() {
+                if (Controller.get("b3", "b3ar3").getValue().equals("1")) {
+                    setEnable(false);
+                    addMessage("Tidak boleh diisi");
+                }
+
+                if (Controller.get("b3", "b3ar4").getValue().equals("1")) {
+                    if (Integer.parseInt(getValue()) < 1 || Integer.parseInt(getValue()) > 8 || Integer.parseInt(getValue()) == 7 || Integer.parseInt(getValue()) == 0) {
+                        setValid(false);
+                        addMessage("Tingkat tidak sesuai");
+                    }
+
+                }
+
+                if (Integer.parseInt(Controller.get("b3", "b3ar4").getValue()) > 1 || Integer.parseInt(Controller.get("b3", "b3ar4").getValue()) < 6) {
+                    if (Integer.parseInt(getValue()) < 1 || Integer.parseInt(getValue()) > 3 || Integer.parseInt(getValue()) != 8 || Integer.parseInt(getValue()) == 0) {
+                        setValid(false);
+                        addMessage("Isian tidak sesuai");
+                    }
+                }
+
+                if (Integer.parseInt(Controller.get("b3", "b3ar4").getValue()) == 6) {
+                    if (Integer.parseInt(getValue()) < 1 || Integer.parseInt(getValue()) > 4 || Integer.parseInt(getValue()) != 8 || Integer.parseInt(getValue()) == 0) {
+                        setValid(false);
+                        addMessage("Isian tidak sesuai");
+                    }
+                }
+
+                if (Integer.parseInt(Controller.get("b3", "b3ar4").getValue()) < 1 || Integer.parseInt(Controller.get("b3", "b3ar4").getValue()) > 7 || Integer.parseInt(getValue()) == 0) {
+                    if (Integer.parseInt(getValue()) > 0 || Integer.parseInt(getValue()) < 8) {
+                        setValid(false);
+                        addMessage("Harus Diisi");
+                    }
+                }
+
+            }
+        });
+
+        b3.put("b3ar6", new Text() {
+
+            @Override
+            public void valid() {
+                if (Controller.get("b3", "b3ar3").getValue().equals("1")) {
+                    setEnable(false);
+                    addMessage("Tidak boleh diisi");
+                }
+
+                if (Controller.get("b3", "b3ar4").getValue().equals("2")) {
+                    if (Integer.parseInt(Controller.get("b3", "b3ar5").getValue()) > 0 || Integer.parseInt(Controller.get("b3", "b3ar5").getValue()) < 4) {
+                        if (!(getValue().equals("2"))) {
+                            setValid(false);
+                            addMessage("Isian tidak sesuai");
+                        }
+                    }
+                }
+
+                if (Controller.get("b3", "b3ar4").getValue().equals("3")) {
+                    if (Integer.parseInt(Controller.get("b3", "b3ar5").getValue()) > 0 || Integer.parseInt(Controller.get("b3", "b3ar5").getValue()) < 4) {
+                        if (!(getValue().equals("3"))) {
+                            setValid(false);
+                            addMessage("Isian tidak sesuai");
+                        }
+                    }
+                }
+
+                if (Controller.get("b3", "b3ar4").getValue().equals("4")) {
+                    if (Integer.parseInt(Controller.get("b3", "b3ar5").getValue()) > 0 || Integer.parseInt(Controller.get("b3", "b3ar5").getValue()) < 4) {
+                        if (!(getValue().equals("4"))) {
+                            setValid(false);
+                            addMessage("Isian tidak sesuai");
+                        }
+                    }
+                }
+
+                if (Controller.get("b3", "b3ar4").getValue().equals("5")) {
+                    if (Integer.parseInt(Controller.get("b3", "b3ar5").getValue()) > 0 || Integer.parseInt(Controller.get("b3", "b3ar5").getValue()) < 4) {
+                        if (!(getValue().equals("5"))) {
+                            setValid(false);
+                            addMessage("Isian tidak sesuai");
+                        }
+                    }
+                }
+
+                if (Controller.get("b3", "b3ar4").getValue().equals("5") && Controller.get("b3", "b3ar5").getValue().equals("1")) {
+                    if (!(getValue().equals("6"))) {
+                        setValid(false);
+                        addMessage("Isian tidak sesuai");
+                    }
+                }
+
+                if (Controller.get("b3", "b3ar4").getValue().equals("5") && (Integer.parseInt(Controller.get("b3", "b3ar5").getValue()) > 0 || Integer.parseInt(Controller.get("b3", "b3ar5").getValue()) < 3)) {
+                    if (!(getValue().equals("6"))) {
+                        setValid(false);
+                        addMessage("Isian tidak sesuai");
+                    }
+                }
+
+                if (Controller.get("b3", "b3ar4").getValue().equals("5") && (Integer.parseInt(Controller.get("b3", "b3ar5").getValue()) > 0 || Integer.parseInt(Controller.get("b3", "b3ar5").getValue()) < 4)) {
+                    if (!(getValue().equals("6"))) {
+                        setValid(false);
+                        addMessage("Isian tidak sesuai");
+                    }
+                }
+                
+                if (Controller.get("b3", "b3ar4").getValue().equals("5") && (Integer.parseInt(Controller.get("b3", "b3ar5").getValue())>0 || Integer.parseInt(Controller.get("b3", "b3ar5").getValue())<5)) {
+                    if (!(getValue().equals("6"))) {
+                        setValid(false);
+                        addMessage("Isian tidak sesuai");
+                    }
+                }
+                
+                
             }
 
         });
