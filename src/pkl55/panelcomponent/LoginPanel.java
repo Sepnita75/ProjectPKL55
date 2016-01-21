@@ -72,6 +72,12 @@ public class LoginPanel extends javax.swing.JPanel {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 exitBt1MouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                exitBt1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                exitBt1MouseExited(evt);
+            }
         });
         exitBt1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,6 +91,12 @@ public class LoginPanel extends javax.swing.JPanel {
         minBt1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 minBt1MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                minBt1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                minBt1MouseExited(evt);
             }
         });
         minBt1.addActionListener(new java.awt.event.ActionListener() {
@@ -196,6 +208,14 @@ public class LoginPanel extends javax.swing.JPanel {
         jLayeredPane1.setBounds(470, 240, 420, 490);
 
         settingBt1.setText("");
+        settingBt1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                settingBt1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                settingBt1MouseExited(evt);
+            }
+        });
         settingBt1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 settingBt1ActionPerformed(evt);
@@ -208,6 +228,12 @@ public class LoginPanel extends javax.swing.JPanel {
         menuAwalBt2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 menuAwalBt2MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                menuAwalBt2MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                menuAwalBt2MouseExited(evt);
             }
         });
 
@@ -305,12 +331,12 @@ public class LoginPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_jLabel3MouseClicked
 
     private void jLabel3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseEntered
-    setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));        // TODO add your handling code here:
+ setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));        // TODO add your handling code here:
 //        getjLabel3().setForeground(new java.awt.Color(102, 204, 255));
     }//GEN-LAST:event_jLabel3MouseEntered
 
     private void jLabel3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseExited
-        // TODO add your handling code here:
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 //        getjLabel3().setForeground(new java.awt.Color(255, 255, 255));
     }//GEN-LAST:event_jLabel3MouseExited
 
@@ -375,6 +401,38 @@ public class LoginPanel extends javax.swing.JPanel {
     private void exitBt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBt1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_exitBt1ActionPerformed
+
+    private void settingBt1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_settingBt1MouseEntered
+setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));        // TODO add your handling code here:
+    }//GEN-LAST:event_settingBt1MouseEntered
+
+    private void settingBt1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_settingBt1MouseExited
+setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));        // TODO add your handling code here:
+    }//GEN-LAST:event_settingBt1MouseExited
+
+    private void menuAwalBt2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menuAwalBt2MouseEntered
+setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));        // TODO add your handling code here:
+    }//GEN-LAST:event_menuAwalBt2MouseEntered
+
+    private void menuAwalBt2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menuAwalBt2MouseExited
+setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));        // TODO add your handling code here:
+    }//GEN-LAST:event_menuAwalBt2MouseExited
+
+    private void minBt1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_minBt1MouseEntered
+setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));        // TODO add your handling code here:
+    }//GEN-LAST:event_minBt1MouseEntered
+
+    private void minBt1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_minBt1MouseExited
+setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));        // TODO add your handling code here:
+    }//GEN-LAST:event_minBt1MouseExited
+
+    private void exitBt1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitBt1MouseEntered
+setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));        // TODO add your handling code here:
+    }//GEN-LAST:event_exitBt1MouseEntered
+
+    private void exitBt1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitBt1MouseExited
+setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));        // TODO add your handling code here:
+    }//GEN-LAST:event_exitBt1MouseExited
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
