@@ -11,7 +11,7 @@ import Controller.Text;
  * and open the template in the editor.
  */
 /**
- *
+- *
  * @author TOSHIBA
  */
 public class Control {
@@ -401,7 +401,7 @@ public class Control {
 
                 }
 
-                if (Integer.parseInt(Controller.get("b3", "b3ar4").getValue()) > 1 || Integer.parseInt(Controller.get("b3", "b3ar4").getValue()) < 6) {
+                if (Integer.parseInt(Controller.get("b3", "b3ar4").getValue()) > 1 && Integer.parseInt(Controller.get("b3", "b3ar4").getValue()) < 6) {
                     if (Integer.parseInt(getValue()) < 1 || Integer.parseInt(getValue()) > 3 || Integer.parseInt(getValue()) != 8 || Integer.parseInt(getValue()) == 0) {
                         setValid(false);
                         addMessage("Isian tidak sesuai");
@@ -484,23 +484,54 @@ public class Control {
                     }
                 }
 
-                if (Controller.get("b3", "b3ar4").getValue().equals("5") && (Integer.parseInt(Controller.get("b3", "b3ar5").getValue()) > 0 || Integer.parseInt(Controller.get("b3", "b3ar5").getValue()) < 4)) {
-                    if (!(getValue().equals("6"))) {
+                if (Controller.get("b3", "b3ar4").getValue().equals("6") && (Integer.parseInt(Controller.get("b3", "b3ar5").getValue()) > 0 || Integer.parseInt(Controller.get("b3", "b3ar5").getValue()) < 4)) {
+                    if (!(getValue().equals("7"))) {
                         setValid(false);
                         addMessage("Isian tidak sesuai");
                     }
                 }
                 
-                if (Controller.get("b3", "b3ar4").getValue().equals("5") && (Integer.parseInt(Controller.get("b3", "b3ar5").getValue())>0 || Integer.parseInt(Controller.get("b3", "b3ar5").getValue())<5)) {
-                    if (!(getValue().equals("6"))) {
+                if (Controller.get("b3", "b3ar4").getValue().equals("6") && (Integer.parseInt(Controller.get("b3", "b3ar5").getValue())>0 || Integer.parseInt(Controller.get("b3", "b3ar5").getValue())<5)) {
+                    if (!(getValue().equals("7"))) {
                         setValid(false);
                         addMessage("Isian tidak sesuai");
                     }
                 }
                 
+                if (Controller.get("b3", "b3ar4").getValue().equals("7") && (Integer.parseInt(Controller.get("b3", "b3ar5").getValue())>0 || Integer.parseInt(Controller.get("b3", "b3ar5").getValue())<5)) {
+                    if (!(getValue().equals("8"))) {
+                        setValid(false);
+                        addMessage("Isian tidak sesuai");
+                    }
+                }
                 
+                if (Controller.get("b3", "b3ar4").getValue().equals("8") && (Integer.parseInt(Controller.get("b3", "b3ar5").getValue())>0 || Integer.parseInt(Controller.get("b3", "b3ar5").getValue())<3)) {
+                    if (!(getValue().equals("9"))) {
+                        setValid(false);
+                        addMessage("Isian tidak sesuai");
+                    }
+                }
+                
+                if (Controller.get("b3", "b3ar4").getValue().equals("8") && (Integer.parseInt(Controller.get("b3", "b3ar5").getValue())>0 || Integer.parseInt(Controller.get("b3", "b3ar5").getValue())<5)) {
+                    if (!(getValue().equals("9"))) {
+                        setValid(false);
+                        addMessage("Isian tidak sesuai");
+                    }
+                }
             }
 
+        });
+        
+        b3.put("b3ar7s1", new IntNumber(){
+
+            @Override
+            public void valid() {
+                
+                if(!(getValue()==1||getValue()==2) || getValue()=null){
+                    
+                }
+            }
+            
         });
     }
 }
