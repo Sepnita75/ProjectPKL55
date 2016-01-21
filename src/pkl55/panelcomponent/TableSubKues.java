@@ -6,19 +6,136 @@
 package pkl55.panelcomponent;
 
 import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+import javax.swing.ListSelectionModel;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
+import javax.swing.table.TableModel;
+import javax.swing.table.TableRowSorter;
+import pkl55.util.CleanErrorRenderer;
+import pkl55.util.StatusEntryRenderer;
+import pkl55.util.TableColorRender;
 
 /**
  *
  * @author _muh.shamad
  */
-public class TableDS extends javax.swing.JPanel {
+public class TableSubKues extends javax.swing.JPanel {
 
-    /**
-     * Creates new form TableDS
-     */
-    public TableDS() {
+    private KuesionerTableModel tableModel;
+    private TableModel model;
+    private TableRowSorter<KuesionerTableModel> sorter;
+    private static int row;
+
+    public TableSubKues() {
         initComponents();
+        initView();
+
+        inisialisasi();
     }
+
+    private void initView() {
+        jScrollPane1.getViewport().setOpaque(false);
+        setOpaque(false);
+        table1.setOpaque(false);
+        setPreferredSize(new Dimension(563, 474));
+    }
+
+    private void inisialisasi() {
+        tableModel = new KuesionerTableModel();
+        table1.setModel(tableModel);
+        table1.setRowSelectionAllowed(true);
+        table1.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+        table1.getColumnModel().getColumn(0).setCellRenderer(new TableColorRender());
+        table1.getColumnModel().getColumn(1).setCellRenderer(new TableColorRender());
+        table1.getColumnModel().getColumn(2).setCellRenderer(new CleanErrorRenderer());
+        table1.getColumnModel().getColumn(3).setCellRenderer(new StatusEntryRenderer());
+        sorter = new TableRowSorter<>(tableModel);
+        table1.setRowSorter(sorter);
+        table1.getColumnModel().getColumn(2).setWidth(5);
+    }
+
+    private void initListener() {
+        table1.addMouseListener(new MouseAdapter() {
+
+            @Override
+            public void mouseClicked(MouseEvent e) {
+
+            }
+
+        });
+
+//        comboKab.addItemListener(new ComboKabListener());
+//        comboKec.addItemListener(new ComboKecListener());
+//        comboDesa.addItemListener(new ComboDesaListener());
+//        comboNBS.addItemListener(new ComboBsListener());
+    }
+//
+//    class ComboKecListener implements ItemListener {
+//
+//        @Override
+//        public void itemStateChanged(ItemEvent e) {
+////            initDataKec();
+//            initDataDesa();
+//            initDataBs();
+//            Kecamatan k = (Kecamatan) comboKecamatan.getSelectedItem();
+//            if (k != null) {
+//                refreshTable();
+//                initFilter(k.getId());
+////                ((KuesionerTableModel) table1.getModel()).updateByKec(k);
+//            }
+//        }
+//
+//    }
+//
+//    class ComboKabListener implements ItemListener {
+//
+//        @Override
+//        public void itemStateChanged(ItemEvent e) {
+//            initDataKec();
+//            initDataDesa();
+//            Kabupaten k = (Kabupaten) comboKabupaten.getSelectedItem();
+//            if (k != null) {
+//                refreshTable();
+//                initFilter(k.getId());
+////                ((KuesionerTableModel) table1.getModel()).updateByKab(k);
+//            }
+//        }
+//    }
+//
+//    class ComboDesaListener implements ItemListener {
+//
+//        @Override
+//        public void itemStateChanged(ItemEvent e) {
+//            initDataBs();
+//            Desa d = (Desa) comboDesa.getSelectedItem();
+//            if (d != null) {
+//                refreshTable();
+//                initFilter(d.getId());
+////                ((KuesionerTableModel) table1.getModel()).updateByDesa(d);
+//            }
+//        }
+//    }
+//
+//    class ComboBsListener implements ItemListener {
+//
+//        @Override
+//        public void itemStateChanged(ItemEvent e) {
+//            Bs b = (Bs) comboBs.getSelectedItem();
+//            if (b != null) {
+//                refreshTable();
+//                initFilter(b.getKodebs());
+////                ((KuesionerTableModel) table1.getModel()).updateByBs(b);
+//            }
+//        }
+//
+//    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -32,18 +149,18 @@ public class TableDS extends javax.swing.JPanel {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox();
+        comboKab = new javax.swing.JComboBox();
         jLabel4 = new javax.swing.JLabel();
         jComboBox2 = new javax.swing.JComboBox();
         jLabel5 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox();
+        comboKec = new javax.swing.JComboBox();
         jLabel6 = new javax.swing.JLabel();
-        jComboBox4 = new javax.swing.JComboBox();
+        comboDesa = new javax.swing.JComboBox();
         jLabel7 = new javax.swing.JLabel();
-        jComboBox5 = new javax.swing.JComboBox();
+        comboNBS = new javax.swing.JComboBox();
         jScrollPane1 = new javax.swing.JScrollPane();
         table1 = new pkl55.panelcomponent.Table();
-        jTextField1 = new javax.swing.JTextField();
+        textFilter = new javax.swing.JTextField();
 
         jPanel1.setOpaque(false);
         jPanel1.setLayout(new java.awt.GridBagLayout());
@@ -58,14 +175,14 @@ public class TableDS extends javax.swing.JPanel {
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         jPanel1.add(jLabel3, gridBagConstraints);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox1.setPreferredSize(new java.awt.Dimension(329, 29));
+        comboKab.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comboKab.setPreferredSize(new java.awt.Dimension(329, 29));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 2;
         gridBagConstraints.gridwidth = 5;
         gridBagConstraints.insets = new java.awt.Insets(4, 0, 4, 89);
-        jPanel1.add(jComboBox1, gridBagConstraints);
+        jPanel1.add(comboKab, gridBagConstraints);
 
         jLabel4.setFont(new java.awt.Font("Segoe UI Light", 0, 16)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 0, 255));
@@ -95,15 +212,15 @@ public class TableDS extends javax.swing.JPanel {
         gridBagConstraints.weightx = 0.1;
         jPanel1.add(jLabel5, gridBagConstraints);
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox3.setPreferredSize(new java.awt.Dimension(329, 29));
+        comboKec.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comboKec.setPreferredSize(new java.awt.Dimension(329, 29));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.BASELINE;
         gridBagConstraints.insets = new java.awt.Insets(4, 0, 4, 89);
-        jPanel1.add(jComboBox3, gridBagConstraints);
+        jPanel1.add(comboKec, gridBagConstraints);
 
         jLabel6.setFont(new java.awt.Font("Segoe UI Light", 0, 16)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 0, 255));
@@ -114,13 +231,13 @@ public class TableDS extends javax.swing.JPanel {
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         jPanel1.add(jLabel6, gridBagConstraints);
 
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox4.setPreferredSize(new java.awt.Dimension(329, 29));
+        comboDesa.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comboDesa.setPreferredSize(new java.awt.Dimension(329, 29));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.insets = new java.awt.Insets(4, 0, 4, 89);
-        jPanel1.add(jComboBox4, gridBagConstraints);
+        jPanel1.add(comboDesa, gridBagConstraints);
 
         jLabel7.setFont(new java.awt.Font("Segoe UI Light", 0, 16)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 0, 255));
@@ -131,13 +248,13 @@ public class TableDS extends javax.swing.JPanel {
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         jPanel1.add(jLabel7, gridBagConstraints);
 
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox5.setPreferredSize(new java.awt.Dimension(329, 29));
+        comboNBS.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comboNBS.setPreferredSize(new java.awt.Dimension(329, 29));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.insets = new java.awt.Insets(4, 0, 4, 89);
-        jPanel1.add(jComboBox5, gridBagConstraints);
+        jPanel1.add(comboNBS, gridBagConstraints);
 
         table1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -152,16 +269,16 @@ public class TableDS extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(table1);
 
-        jTextField1.setForeground(new java.awt.Color(204, 204, 204));
-        jTextField1.setText("Ketikkan NKS di sini...");
-        jTextField1.addFocusListener(new java.awt.event.FocusAdapter() {
+        textFilter.setForeground(new java.awt.Color(204, 204, 204));
+        textFilter.setText("Ketikkan NKS di sini...");
+        textFilter.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
-                jTextField1FocusLost(evt);
+                textFilterFocusLost(evt);
             }
         });
-        jTextField1.addMouseListener(new java.awt.event.MouseAdapter() {
+        textFilter.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTextField1MouseClicked(evt);
+                textFilterMouseClicked(evt);
             }
         });
 
@@ -178,7 +295,7 @@ public class TableDS extends javax.swing.JPanel {
                     .addComponent(jScrollPane1)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(textFilter, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -186,35 +303,35 @@ public class TableDS extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(textFilter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField1FocusLost
+    private void textFilterFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_textFilterFocusLost
         // TODO add your handling code here:
-        String value = jTextField1.getText();
-        if(value.equalsIgnoreCase("")||value.equalsIgnoreCase("Ketikkan NKS di sini...")){
-            jTextField1.setForeground(Color.DARK_GRAY);
-            jTextField1.setText("Ketikkan NKS di sini...");
+        String value = textFilter.getText();
+        if (value.equalsIgnoreCase("") || value.equalsIgnoreCase("Ketikkan NKS di sini...")) {
+            textFilter.setForeground(Color.DARK_GRAY);
+            textFilter.setText("Ketikkan NKS di sini...");
         }
-    }//GEN-LAST:event_jTextField1FocusLost
+    }//GEN-LAST:event_textFilterFocusLost
 
-    private void jTextField1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField1MouseClicked
+    private void textFilterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_textFilterMouseClicked
         // TODO add your handling code here:
-        jTextField1.setText("");
-        jTextField1.setForeground(Color.black);
-    }//GEN-LAST:event_jTextField1MouseClicked
+        textFilter.setText("");
+        textFilter.setForeground(Color.black);
+    }//GEN-LAST:event_textFilterMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox jComboBox1;
+    private javax.swing.JComboBox comboDesa;
+    private javax.swing.JComboBox comboKab;
+    private javax.swing.JComboBox comboKec;
+    private javax.swing.JComboBox comboNBS;
     private javax.swing.JComboBox jComboBox2;
-    private javax.swing.JComboBox jComboBox3;
-    private javax.swing.JComboBox jComboBox4;
-    private javax.swing.JComboBox jComboBox5;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -222,7 +339,7 @@ public class TableDS extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextField1;
     private pkl55.panelcomponent.Table table1;
+    private javax.swing.JTextField textFilter;
     // End of variables declaration//GEN-END:variables
 }
