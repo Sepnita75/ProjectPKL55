@@ -54,7 +54,7 @@
                           <Component id="minBt1" min="-2" pref="44" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="exitBt1" min="-2" pref="47" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -67,7 +67,7 @@
                       <Component id="exitBt1" pref="44" max="32767" attributes="0"/>
                       <Component id="minBt1" pref="0" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="18" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
                   <Component id="userLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="timeLabel1" min="-2" pref="31" max="-2" attributes="0"/>

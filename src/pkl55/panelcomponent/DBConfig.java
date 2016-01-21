@@ -127,7 +127,7 @@ public class DBConfig extends javax.swing.JFrame {
                 .addComponent(progressTest, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(statusText, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(59, 59, 59))
+                .addContainerGap())
         );
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);

@@ -103,7 +103,7 @@ public class GeneralPanel extends javax.swing.JPanel {
                         .addComponent(minBt1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(exitBt1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(22, 22, 22))))
+                        .addGap(18, 18, 18))))
         );
         bgfull1Layout.setVerticalGroup(
             bgfull1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -111,7 +111,7 @@ public class GeneralPanel extends javax.swing.JPanel {
                 .addGroup(bgfull1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(exitBt1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, Short.MAX_VALUE)
                     .addComponent(minBt1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(userLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(timeLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
