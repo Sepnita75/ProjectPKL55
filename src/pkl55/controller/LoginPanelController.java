@@ -1,5 +1,5 @@
 package pkl55.controller;
-
+//import package muncul otomatis saat dibutuhkan (saat mengatasi error dari Netbeans)
 import java.awt.CardLayout;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
@@ -21,22 +21,31 @@ import pkl55.panelcomponent.LoginPanel;
 
 public class LoginPanelController {
 
+    //variable untuk di menampung passing dari view
     private JPanel mainPanel;
     private LoginPanel loginPanel;
     private LoginPanelModel loginPanelModel;
     private CardLayoutController controller;
     private GeneralPanel generalPanel;
-
+    
+    //contructor untuk menangkap variabel yang dibutuhkan utk dikendalikan
     public LoginPanelController(JPanel mainPanel, GeneralPanel generalPanel, LoginPanel loginPanel, LoginPanelModel loginPanelModel) {
         this.mainPanel = mainPanel;
         this.loginPanel = loginPanel;
         this.loginPanelModel = loginPanelModel;
 
+        /*membuat objek cardcontroller dan mengirimkan objek dan layout yg dibutuhkan, yakni
+          card controller utk sub panel pada general panel (yg muncul saat
+          mengklik menu tertentu).
+        */
         controller = new CardLayoutController();
         controller.setCardLayout((CardLayout) mainPanel.getLayout());
         controller.setParentCard(mainPanel);
+        
+        //Untuk keperluan info login
         generalPanel.getController().setLoginPanelModel(loginPanelModel);
-
+        
+        //menyembunyikan sub menu saat pertama kali login panel muncul
         loginPanel.getHelpBt2().setVisible(false);
         loginPanel.getSettingBt1().setVisible(false);
 
@@ -46,11 +55,15 @@ public class LoginPanelController {
             @Override
             public void actionPerformed(ActionEvent e) {
                 loginPanelModel.setLoginStatus(false);
-                getController().show("generalpanel");
+                //memunculkan panel general
+                getController().show("generalpanel"); 
+                //memunculkan sub panel help
                 generalPanel.getController().getController().show(generalPanel.getIcontemp1(), "helpsubpanel");
                 generalPanel.getUserLabel().setText("GUEST");
+                //disable tombol dsus dan kuesioner
                 generalPanel.getIcontemp1().getDs1().setEnabled(false);
                 generalPanel.getIcontemp1().getKuesioner1().setEnabled(false);
+                //menyembunyikan submenu pada loginpanel
                 closeLoginPanelMenu();
             }
         });
@@ -67,6 +80,7 @@ public class LoginPanelController {
 
             @Override
             public void actionPerformed(ActionEvent e) {
+                //minimize window
                 DataEntry55.getInstance().minim();
                 closeLoginPanelMenu();
 
@@ -142,6 +156,7 @@ public class LoginPanelController {
 
             @Override
             public void keyPressed(KeyEvent e) {
+                //jika user menekan enter maka sama saja dgn klik tombol login
                 int key = e.getKeyCode();
                 if (key == KeyEvent.VK_ENTER) {
                     loginPanel.getLoginBt1().doClick();
@@ -175,8 +190,10 @@ public class LoginPanelController {
                 closeLoginPanelMenu();
                 usernameKosong();
                 passwordKosong();
+                //mengaktifkan sub panel dsus saat login berhasil
                 generalPanel.getIcontemp1().getDs1().setActive();
                 loginPanelModel.setLoginStatus(true);
+                //memunculkan panel general
                 getController().show("generalpanel");
 
             }
@@ -187,6 +204,7 @@ public class LoginPanelController {
             @Override
             public void mouseClicked(MouseEvent e) {
                 if (!loginPanelModel.isFlag()) {
+                    //flag untuk mengetahui apakah 
                     loginPanelModel.setFlag(true);
                     loginPanel.getSettingBt1().setVisible(true);
                     loginPanel.getHelpBt2().setVisible(true);

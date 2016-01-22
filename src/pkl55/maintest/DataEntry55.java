@@ -7,6 +7,7 @@ package pkl55.maintest;
 
 import java.awt.Image;
 import javax.swing.ImageIcon;
+import javax.swing.JFrame;
 import pkl55.controller.DSController;
 import pkl55.controller.EntryKuesController;
 import pkl55.controller.LoginPanelController;
@@ -49,6 +50,7 @@ public class DataEntry55 extends javax.swing.JFrame {
         setIconImage(image);
         //fullscreen Frame
         dispose();
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
         setUndecorated(true);
         setResizable(false);
         setVisible(true);

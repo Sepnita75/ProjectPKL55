@@ -7,7 +7,9 @@ package pkl55.panelcomponent;
 
 import java.awt.Component;
 import javax.swing.JOptionPane;
+import pkl55.about.aboutBg;
 import pkl55.controller.GeneralPanelController;
+import pkl55.helpPanelComponent.aHelpCard;
 import pkl55.maintest.DataEntry55;
 
 /**
@@ -24,7 +26,7 @@ public class GeneralPanel extends javax.swing.JPanel {
     public GeneralPanel() {
         initComponents();
 
-        controller = new GeneralPanelController(getMainPanel(), getIcontemp1(), getdSSubPanel1(), getKuesSubPanel1());
+        controller = new GeneralPanelController(getMainPanel(), getIcontemp1(), getdSSubPanel1(), getKuesSubPanel1(), getaHelpCard1());
 
     }
 
@@ -45,8 +47,8 @@ public class GeneralPanel extends javax.swing.JPanel {
         mainPanel = new pkl55.background.Panelkanan();
         dSSubPanel1 = new pkl55.panelcomponent.DSSubPanel();
         kuesSubPanel1 = new pkl55.panelcomponent.KuesSubPanel();
-        helpSubPanel1 = new pkl55.panelcomponent.HelpSubPanel();
-        aboutSubPanel1 = new pkl55.panelcomponent.AboutSubPanel();
+        aHelpCard1 = new pkl55.helpPanelComponent.aHelpCard();
+        aboutBg1 = new pkl55.about.aboutBg();
         userLabel = new javax.swing.JLabel();
 
         exitBt1.setText("");
@@ -71,10 +73,20 @@ public class GeneralPanel extends javax.swing.JPanel {
         mainPanel.setLayout(new java.awt.CardLayout());
         mainPanel.add(dSSubPanel1, "dssubpanel");
         mainPanel.add(kuesSubPanel1, "kuessubpanel");
-        mainPanel.add(helpSubPanel1, "helpsubpanel");
+        mainPanel.add(aHelpCard1, "helpsubpanel");
 
-        aboutSubPanel1.setOpaque(false);
-        mainPanel.add(aboutSubPanel1, "aboutsubpanel");
+        javax.swing.GroupLayout aboutBg1Layout = new javax.swing.GroupLayout(aboutBg1);
+        aboutBg1.setLayout(aboutBg1Layout);
+        aboutBg1Layout.setHorizontalGroup(
+            aboutBg1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1261, Short.MAX_VALUE)
+        );
+        aboutBg1Layout.setVerticalGroup(
+            aboutBg1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 631, Short.MAX_VALUE)
+        );
+
+        mainPanel.add(aboutBg1, "aboutsubpanel");
 
         userLabel.setFont(new java.awt.Font("Segoe UI Light", 0, 24)); // NOI18N
         userLabel.setForeground(new java.awt.Color(255, 255, 255));
@@ -158,11 +170,11 @@ public class GeneralPanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private pkl55.panelcomponent.AboutSubPanel aboutSubPanel1;
+    private pkl55.helpPanelComponent.aHelpCard aHelpCard1;
+    private pkl55.about.aboutBg aboutBg1;
     private pkl55.background.Bgfull bgfull1;
     private pkl55.panelcomponent.DSSubPanel dSSubPanel1;
     private pkl55.component.ExitBt exitBt1;
-    private pkl55.panelcomponent.HelpSubPanel helpSubPanel1;
     private pkl55.panelcomponent.AllMenuButton icontemp1;
     private pkl55.panelcomponent.KuesSubPanel kuesSubPanel1;
     private pkl55.background.Panelkanan mainPanel;
@@ -179,12 +191,12 @@ public class GeneralPanel extends javax.swing.JPanel {
         this.controller = controller;
     }
 
-    public pkl55.panelcomponent.AboutSubPanel getAboutSubPanel1() {
-        return aboutSubPanel1;
+    public aboutBg getAboutSubPanel1() {
+        return aboutBg1;
     }
 
-    public void setAboutSubPanel1(pkl55.panelcomponent.AboutSubPanel aboutSubPanel1) {
-        this.aboutSubPanel1 = aboutSubPanel1;
+    public void setAboutSubPanel1(aboutBg aboutSubPanel1) {
+        this.aboutBg1 = aboutSubPanel1;
     }
 
     public pkl55.background.Bgfull getBgfull1() {
@@ -211,12 +223,12 @@ public class GeneralPanel extends javax.swing.JPanel {
         this.exitBt1 = exitBt1;
     }
 
-    public pkl55.panelcomponent.HelpSubPanel getHelpSubPanel1() {
-        return helpSubPanel1;
+    public aHelpCard getHelpSubPanel1() {
+        return aHelpCard1;
     }
 
-    public void setHelpSubPanel1(pkl55.panelcomponent.HelpSubPanel helpSubPanel1) {
-        this.helpSubPanel1 = helpSubPanel1;
+    public void setHelpSubPanel1(pkl55.helpPanelComponent.aHelpCard helpSubPanel1) {
+        this.aHelpCard1 = helpSubPanel1;
     }
 
     public pkl55.panelcomponent.AllMenuButton getIcontemp1() {
@@ -265,5 +277,13 @@ public class GeneralPanel extends javax.swing.JPanel {
 
     public void setUserLabel(javax.swing.JLabel jLabel1) {
         this.userLabel = jLabel1;
+    }
+
+    public pkl55.helpPanelComponent.aHelpCard getaHelpCard1() {
+        return aHelpCard1;
+    }
+
+    public void setaHelpCard1(pkl55.helpPanelComponent.aHelpCard aHelpCard1) {
+        this.aHelpCard1 = aHelpCard1;
     }
 }
