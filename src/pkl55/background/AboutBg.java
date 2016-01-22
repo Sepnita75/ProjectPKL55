@@ -7,7 +7,7 @@ import java.awt.Graphics2D;
 import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
-
+//jhjhj
 public class AboutBg  extends JPanel{
     private final Image image;
     
