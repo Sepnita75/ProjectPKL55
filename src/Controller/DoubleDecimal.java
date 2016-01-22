@@ -11,7 +11,7 @@ package Controller;
  */
 public abstract class DoubleDecimal extends Variabel {
 
-    private double value;
+    protected double value;
     private double max;
     private double min;
 

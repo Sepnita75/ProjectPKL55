@@ -34,6 +34,9 @@ public class MessageString {
     public static String value201(String ex) {
         return "ERROR 201 : Terjadi kesalahan pengisian! (ex: " + ex + ")";
     }
+    public static String value202(String should) {
+        return "ERROR 202 : Pengisihan tidak valid (Nilai yang diperbolehkan : " + should + ")";
+    }
     
     //  TYPE CHECK
     public static String type301() {

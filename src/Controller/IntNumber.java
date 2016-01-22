@@ -10,7 +10,7 @@ package Controller;
  * @author faqih_
  */
 public abstract class IntNumber extends Variabel{
-    private int value;
+    protected int value;
     private int max;
     private int min;
 
