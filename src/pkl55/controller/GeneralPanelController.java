@@ -6,7 +6,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import pkl55.helpPanelComponent.aHelpCard;
 import pkl55.maintest.DataEntry55;
 import pkl55.model.LoginPanelModel;
 import pkl55.panelcomponent.AllMenuButton;
@@ -21,23 +20,18 @@ public class GeneralPanelController {
     private DSSubPanel dSSubPanel;
     private KuesSubPanel kuesSubPanel;
     private LoginPanelModel loginPanelModel;
-    private helpController helpController;
-    private aHelpCard helpCard;
 
     public GeneralPanelController(JPanel mainPanel, AllMenuButton button, DSSubPanel dSSubPanel,
-            KuesSubPanel kuesSubPanel, aHelpCard helpCard) {
+            KuesSubPanel kuesSubPanel) {
 
         this.mainPanel = mainPanel;
         this.button = button;
         this.dSSubPanel = dSSubPanel;
         this.kuesSubPanel = kuesSubPanel;
-        this.helpCard = helpCard;
 
         controller = new CardLayoutController();
         controller.setCardLayout((CardLayout) mainPanel.getLayout());
         controller.setParentCard(mainPanel);
-        
-        helpController = new helpController(this.helpCard);
 
         button.getDs1().addActionListener(new ActionListener() {
 

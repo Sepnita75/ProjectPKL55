@@ -14,7 +14,6 @@ public class AboutBg  extends JPanel{
     public AboutBg(){
         image = new ImageIcon(getClass().getResource("/pkl55/images/About-bg.png")).getImage();
         setPreferredSize(new Dimension(1149,541));
-        //set ukuran
     }
     
 

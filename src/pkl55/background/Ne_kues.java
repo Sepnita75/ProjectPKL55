@@ -13,7 +13,6 @@ public class Ne_kues extends JPanel{
     
     public Ne_kues(){
         image = new ImageIcon(getClass().getResource("/pkl55/images/new-kues.png")).getImage();
-        
         setPreferredSize(new Dimension(1261,631));
     }
     
