@@ -57,6 +57,9 @@ public abstract class TextField extends JTextField {
             @Override
             public void keyPressed(KeyEvent e) {
                 // TODO: Do something for the keyPressed event
+                 if(e.getKeyCode()==e.VK_ENTER){
+                    nextFocus();
+                }
             }
         });
         this.addFocusListener(new FocusListener() {
