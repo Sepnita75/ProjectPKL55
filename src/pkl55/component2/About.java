@@ -44,6 +44,7 @@ public class About extends JButton {
                 if (isFlag() == false) {
                     icon = new ImageIcon(getClass().getResource("/pkl55/images/about.png"));
                     setIcon(icon);
+                    setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
                 } else {
                     setActive();
                 }

@@ -176,6 +176,7 @@ public class TableSubKues extends javax.swing.JPanel {
         jPanel1.add(jLabel3, gridBagConstraints);
 
         comboKab.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comboKab.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         comboKab.setPreferredSize(new java.awt.Dimension(329, 29));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
@@ -195,6 +196,7 @@ public class TableSubKues extends javax.swing.JPanel {
         jPanel1.add(jLabel4, gridBagConstraints);
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jComboBox2.setPreferredSize(new java.awt.Dimension(329, 29));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
@@ -213,6 +215,7 @@ public class TableSubKues extends javax.swing.JPanel {
         jPanel1.add(jLabel5, gridBagConstraints);
 
         comboKec.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comboKec.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         comboKec.setPreferredSize(new java.awt.Dimension(329, 29));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
@@ -232,6 +235,7 @@ public class TableSubKues extends javax.swing.JPanel {
         jPanel1.add(jLabel6, gridBagConstraints);
 
         comboDesa.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comboDesa.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         comboDesa.setPreferredSize(new java.awt.Dimension(329, 29));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
@@ -249,6 +253,7 @@ public class TableSubKues extends javax.swing.JPanel {
         jPanel1.add(jLabel7, gridBagConstraints);
 
         comboNBS.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comboNBS.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         comboNBS.setPreferredSize(new java.awt.Dimension(329, 29));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
@@ -271,6 +276,7 @@ public class TableSubKues extends javax.swing.JPanel {
 
         textFilter.setForeground(new java.awt.Color(204, 204, 204));
         textFilter.setText("Ketikkan NKS di sini...");
+        textFilter.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         textFilter.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 textFilterFocusLost(evt);

@@ -49,12 +49,18 @@ public class GeneralPanel extends javax.swing.JPanel {
         aboutSubPanel1 = new pkl55.panelcomponent.AboutSubPanel();
         userLabel = new javax.swing.JLabel();
 
+        bgfull1.setLayout(null);
+        bgfull1.add(icontemp1);
+        icontemp1.setBounds(0, 137, 106, 631);
+
         exitBt1.setText("");
         exitBt1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 exitBt1ActionPerformed(evt);
             }
         });
+        bgfull1.add(exitBt1);
+        exitBt1.setBounds(1301, 0, 70, 44);
 
         minBt1.setText("");
         minBt1.setOpaque(true);
@@ -63,9 +69,13 @@ public class GeneralPanel extends javax.swing.JPanel {
                 minBt1ActionPerformed(evt);
             }
         });
+        bgfull1.add(minBt1);
+        minBt1.setBounds(1240, 0, 64, 44);
 
         timeLabel1.setForeground(new java.awt.Color(255, 255, 255));
         timeLabel1.setFont(new java.awt.Font("Segoe UI Light", 0, 18)); // NOI18N
+        bgfull1.add(timeLabel1);
+        timeLabel1.setBounds(1129, 88, 204, 31);
 
         mainPanel.setOpaque(false);
         mainPanel.setLayout(new java.awt.CardLayout());
@@ -76,50 +86,14 @@ public class GeneralPanel extends javax.swing.JPanel {
         aboutSubPanel1.setOpaque(false);
         mainPanel.add(aboutSubPanel1, "aboutsubpanel");
 
+        bgfull1.add(mainPanel);
+        mainPanel.setBounds(112, 137, 1261, 631);
+
         userLabel.setFont(new java.awt.Font("Segoe UI Light", 0, 24)); // NOI18N
         userLabel.setForeground(new java.awt.Color(255, 255, 255));
         userLabel.setText("ABDURRAHMAN IZZI");
-
-        javax.swing.GroupLayout bgfull1Layout = new javax.swing.GroupLayout(bgfull1);
-        bgfull1.setLayout(bgfull1Layout);
-        bgfull1Layout.setHorizontalGroup(
-            bgfull1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(bgfull1Layout.createSequentialGroup()
-                .addComponent(icontemp1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bgfull1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(bgfull1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(bgfull1Layout.createSequentialGroup()
-                        .addGroup(bgfull1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(userLabel)
-                            .addGroup(bgfull1Layout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addComponent(timeLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addGap(50, 50, 50))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bgfull1Layout.createSequentialGroup()
-                        .addComponent(minBt1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(exitBt1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18))))
-        );
-        bgfull1Layout.setVerticalGroup(
-            bgfull1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bgfull1Layout.createSequentialGroup()
-                .addGroup(bgfull1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(exitBt1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, Short.MAX_VALUE)
-                    .addComponent(minBt1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(userLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(timeLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(bgfull1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(icontemp1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-        );
+        bgfull1.add(userLabel);
+        userLabel.setBounds(1119, 50, 214, 32);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

@@ -1,5 +1,6 @@
 package pkl55.component;
 
+import java.awt.Cursor;
 import java.awt.Dimension;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -30,12 +31,14 @@ public class ExitBt extends JButton {
             public void mouseEntered(MouseEvent me) {
                 icon = new ImageIcon(getClass().getResource("/pkl55/images/exit-hover.png"));
                 setIcon(icon);
+                setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
             }
 
             @Override
             public void mouseExited(MouseEvent me) {
                 icon = new ImageIcon(getClass().getResource("/pkl55/images/exit.png"));
                 setIcon(icon);
+                setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
             }
 
             @Override

@@ -30,12 +30,14 @@ public class MinBt extends JButton {
             public void mouseEntered(MouseEvent me) {
                 icon = new ImageIcon(getClass().getResource("/pkl55/images/minimize-hover.png"));
                 setIcon(icon);
+                setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
             }
 
             @Override
             public void mouseExited(MouseEvent me) {
                 icon = new ImageIcon(getClass().getResource("/pkl55/images/minimize.png"));
                 setIcon(icon);
+                setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
             }
 
             @Override

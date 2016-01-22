@@ -37,6 +37,7 @@ public class LoginBt extends JButton {
             public void mouseExited(MouseEvent me) {
                 icon = new ImageIcon(getClass().getResource("/pkl55/images/login.png"));
                 setIcon(icon);
+                setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
             }
 
             @Override
