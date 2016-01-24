@@ -42,6 +42,12 @@ public class Controller {
         return blok;
     }
     public static String getNks(){
-        return "";
+        String nks = "";
+        String temp;
+        for (int i = 1; i < 11; i++) {
+            temp = "b1r" + Integer.toString(i);
+            nks = nks + blok.get("b1").get(temp).getValue();
+        }
+        return nks;
     }
 }

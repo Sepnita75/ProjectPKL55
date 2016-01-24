@@ -838,9 +838,15 @@ public class Control {
             }
         });
 
-        Hashtable<String, Variabel> b4 = new Hashtable();
-
-        b4.put("b4ar1s1", new IntNumber() {
+//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::        
+//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//                                       - BLOK 4 -
+//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
+        
+        Hashtable<String, Variabel> b4a1 = new Hashtable();
+        
+        b4a1.put("b4ar1s1", new IntNumber() {
 
             @Override
             public void valid() {
@@ -852,7 +858,7 @@ public class Control {
 
         });
 
-        b4.put("b4ar1s2", new Text() {
+        b4a1.put("b4ar1s2", new Text() {
 
             @Override
             public void valid() {
@@ -864,7 +870,7 @@ public class Control {
 
         });
 
-        b4.put("b4ar2s1", new DoubleDecimal() {
+        b4a1.put("b4ar2s1", new DoubleDecimal() {
 
             @Override
             public void valid() {
@@ -881,7 +887,7 @@ public class Control {
 
         });
 
-        b4.put("b4ar2s2", new DoubleDecimal() {
+        b4a1.put("b4ar2s2", new DoubleDecimal() {
 
             @Override
             public void valid() {
@@ -898,7 +904,7 @@ public class Control {
 
         });
 
-        b4.put("b4ar3", new DoubleDecimal() {
+        b4a1.put("b4ar3", new DoubleDecimal() {
 
             @Override
             public void valid() {
@@ -910,7 +916,7 @@ public class Control {
 
         });
 
-        b4.put("b4ar4", new DoubleDecimal() {
+        b4a1.put("b4ar4", new DoubleDecimal() {
 
             @Override
             public void valid() {
@@ -927,7 +933,7 @@ public class Control {
 
         });
 
-        b4.put("b4ar5", new IntNumber() {
+        b4a1.put("b4ar5", new IntNumber() {
 
             @Override
             public void valid() {
@@ -940,7 +946,7 @@ public class Control {
 
         });
 
-        b4.put("b4ar5lainnya", new Text() {
+        b4a1.put("b4ar5lainnya", new Text() {
 
             @Override
             public void valid() {
@@ -953,12 +959,17 @@ public class Control {
                     setValid(false);
                     addMessage("Harus Huruf");
                 }
+                
+                if (Integer.parseInt(Controller.get("b4", "b4ar5").getValue()) >0 && Integer.parseInt(Controller.get("b4", "b4ar5").getValue()) <4) {
+                    setEnable(false);
+                    addMessage("Tidak Diisi");
+                }
 
             }
 
         });
 
-        b4.put("b4ar6", new IntNumber() {
+        b4a1.put("b4ar6", new IntNumber() {
 
             @Override
             public void valid() {
@@ -967,11 +978,19 @@ public class Control {
                     addMessage("Harus 1 atau 2");
 
                 }
+                
             }
 
         });
+        Loop b4a = new Loop(b4a1);
+        
+//  END
+//      OF
+//          LOOP        
 
-        b4.put("b4ar7", new IntNumber() {
+        Hashtable<String, Variabel> b4a2 = new Hashtable<>();
+        
+        b4a2.put("b4ar7", new IntNumber() {
 
             @Override
             public void valid() {
@@ -983,7 +1002,7 @@ public class Control {
 
         });
 
-        b4.put("b4ar8s1", new IntNumber() {
+        b4a2.put("b4ar8s1", new IntNumber() {
 
             @Override
             public void valid() {
@@ -1000,7 +1019,7 @@ public class Control {
 
         });
 
-        b4.put("b4ar8s2", new IntNumber() {
+        b4a2.put("b4ar8s2", new IntNumber() {
 
             @Override
             public void valid() {
