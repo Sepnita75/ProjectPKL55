@@ -852,7 +852,7 @@ public class Control {
             public void valid() {
                 if (value == 0) {
                     setValid(false);
-                    addMessage("Tidak boleh kosong");
+                    addMessage(MessageString.null101("b4ar1 jenis kapal"));
                 }
             }
 
@@ -864,7 +864,7 @@ public class Control {
             public void valid() {
                 if ((Integer.parseInt(getValue())) % 1 != 0) {
                     setValid(false);
-                    addMessage("Tidak Boleh Angka");
+                    addMessage(MessageString.type308());
                 }
             }
 
@@ -876,12 +876,12 @@ public class Control {
             public void valid() {
                 if ((value % 1) > 0 || (value % 1) < 0) {
                     setValid(false);
-                    addMessage("Harus Angka");
+                    addMessage(MessageString.type307());
                 }
 
                 if (value == 0) {
                     setValid(false);
-                    addMessage("Tidak Boleh Kosong");
+                    addMessage(MessageString.null101("b4ar2 Panjang"));
                 }
             }
 
@@ -893,12 +893,12 @@ public class Control {
             public void valid() {
                 if ((value % 1) > 0 || (value % 1) < 0) {
                     setValid(false);
-                    addMessage("Harus Angka");
+                    addMessage(MessageString.type307());
                 }
 
                 if (value == 0) {
                     setValid(false);
-                    addMessage("Tidak Boleh Kosong");
+                    addMessage(MessageString.null101("b4ar2 lebar"));
                 }
             }
 
@@ -910,7 +910,7 @@ public class Control {
             public void valid() {
                 if ((value % 1) > 0 || (value % 1) < 0) {
                     setValid(false);
-                    addMessage("Harus Angka");
+                    addMessage(MessageString.type307());
                 }
             }
 
@@ -922,12 +922,12 @@ public class Control {
             public void valid() {
                 if ((value % 1) > 0 || (value % 1) < 0) {
                     setValid(false);
-                    addMessage("Harus Angka");
+                    addMessage(MessageString.type307());
                 }
 
                 if (value == 0) {
                     setValid(false);
-                    addMessage("Tidak Boleh Kosong");
+                    addMessage(MessageString.null101("b4ar4"));
                 }
             }
 
@@ -939,7 +939,7 @@ public class Control {
             public void valid() {
                 if (value < 1 && value > 3) {
                     setValid(false);
-                    addMessage("Isian Tidak Sesuai");
+                    addMessage(MessageString.range402(1, 3));
                 }
 
             }
@@ -952,17 +952,17 @@ public class Control {
             public void valid() {
                 if (Integer.parseInt(Controller.get("b4", "b4ar5").getValue()) == 0 && value.isEmpty()) {
                     setValid(false);
-                    addMessage("Harus Diisi");
+                    addMessage(MessageString.null101("lainnya"));
                 }
 
                 if ((Integer.parseInt(getValue())) % 1 != 0) {
                     setValid(false);
-                    addMessage("Harus Huruf");
+                    addMessage(MessageString.type301());
                 }
                 
                 if (Integer.parseInt(Controller.get("b4", "b4ar5").getValue()) >0 && Integer.parseInt(Controller.get("b4", "b4ar5").getValue()) <4) {
                     setEnable(false);
-                    addMessage("Tidak Diisi");
+                    addMessage(MessageString.null102("lainnya"));
                 }
 
             }
@@ -975,7 +975,7 @@ public class Control {
             public void valid() {
                 if (value != 1 || value != 2 || value == 0) {
                     setValid(false);
-                    addMessage("Harus 1 atau 2");
+                    addMessage(MessageString.value201("1 atau 2"));
 
                 }
                 
@@ -996,7 +996,7 @@ public class Control {
             public void valid() {
                 if ((value % 1) > 0 || (value % 1) < 0) {
                     setValid(false);
-                    addMessage("Harus Angka");
+                    addMessage(MessageString.type304());
                 }
             }
 
@@ -1008,12 +1008,12 @@ public class Control {
             public void valid() {
                 if ((value % 1) > 0 || (value % 1) < 0) {
                     setValid(false);
-                    addMessage("Harus Angka");
+                    addMessage(MessageString.type304());
                 }
 
                 if (value < 1 && value > 12) {
                     setValid(false);
-                    addMessage("Isi Tidak Sesuai");
+                    addMessage(MessageString.range402(1, 12));
                 }
             }
 
@@ -1025,17 +1025,17 @@ public class Control {
             public void valid() {
                 if ((value % 1) > 0 || (value % 1) < 0) {
                     setValid(false);
-                    addMessage("Harus Angka");
+                    addMessage(MessageString.type304());
                 }
 
                 if (!getValue().substring(0, 2).equals("201")) {
                     setValid(false);
-                    addMessage("Isi Tidak Sesuai");
+                    addMessage(MessageString.value202("2016"));
                 }
 
                 if (!(getValue().substring(3).equals("4") || getValue().substring(3).equals("5"))) {
                     setValid(false);
-                    addMessage("Isi Tidak Sesuai");
+                    addMessage(MessageString.value202("2016"));
                 }
 
             }

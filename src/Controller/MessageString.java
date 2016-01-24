@@ -60,6 +60,9 @@ public class MessageString {
     public static String type307() {
         return "ERROR 307 : Harus di isi berupa angka!";
     }
+    public static String type308() {
+        return "ERROR 308 : Tidak boleh berupa angka!";
+    }
     
     //  RANGE CHECK
     public static String range401(int max) {

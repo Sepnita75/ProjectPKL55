@@ -46,7 +46,7 @@ public class Controller {
         String temp;
         for (int i = 1; i < 11; i++) {
             temp = "b1r" + Integer.toString(i);
-            nks = nks + blok.get("b1").get(temp).getValue();
+            nks = nks + get("b1", temp).getValue();
         }
         return nks;
     }
