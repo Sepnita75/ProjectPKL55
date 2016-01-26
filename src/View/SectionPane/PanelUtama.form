@@ -46,6 +46,9 @@
               </Layout>
               <SubComponents>
                 <Component class="View.InputTextField" name="b1r1">
+                  <Properties>
+                    <Property name="varName" type="java.lang.String" value="b1r1"/>
+                  </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                       <AbsoluteConstraints x="660" y="270" width="30" height="-1"/>
@@ -53,6 +56,10 @@
                   </Constraints>
                 </Component>
                 <Component class="View.InputTextField" name="b1r2">
+                  <Properties>
+                    <Property name="position" type="int" value="1"/>
+                    <Property name="varName" type="java.lang.String" value="b1r2"/>
+                  </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                       <AbsoluteConstraints x="660" y="300" width="30" height="-1"/>
@@ -60,6 +67,10 @@
                   </Constraints>
                 </Component>
                 <Component class="View.InputTextField" name="b1r3">
+                  <Properties>
+                    <Property name="position" type="int" value="2"/>
+                    <Property name="varName" type="java.lang.String" value="b1r3"/>
+                  </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b1r3ActionPerformed"/>
                   </Events>
@@ -70,6 +81,10 @@
                   </Constraints>
                 </Component>
                 <Component class="View.InputTextField" name="b1r4">
+                  <Properties>
+                    <Property name="position" type="int" value="3"/>
+                    <Property name="varName" type="java.lang.String" value="b1r4"/>
+                  </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                       <AbsoluteConstraints x="660" y="365" width="30" height="-1"/>
@@ -77,6 +92,10 @@
                   </Constraints>
                 </Component>
                 <Component class="View.InputTextField" name="b1r5">
+                  <Properties>
+                    <Property name="position" type="int" value="4"/>
+                    <Property name="varName" type="java.lang.String" value="b1r5"/>
+                  </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                       <AbsoluteConstraints x="660" y="396" width="30" height="-1"/>
@@ -84,6 +103,10 @@
                   </Constraints>
                 </Component>
                 <Component class="View.InputTextField" name="b1r6">
+                  <Properties>
+                    <Property name="position" type="int" value="5"/>
+                    <Property name="varName" type="java.lang.String" value="b1r6"/>
+                  </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b1r6ActionPerformed"/>
                   </Events>
@@ -94,6 +117,10 @@
                   </Constraints>
                 </Component>
                 <Component class="View.InputTextField" name="b1r7">
+                  <Properties>
+                    <Property name="position" type="int" value="6"/>
+                    <Property name="varName" type="java.lang.String" value="b1r7"/>
+                  </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                       <AbsoluteConstraints x="660" y="462" width="30" height="-1"/>
@@ -101,6 +128,10 @@
                   </Constraints>
                 </Component>
                 <Component class="View.InputTextField" name="b1r8">
+                  <Properties>
+                    <Property name="position" type="int" value="7"/>
+                    <Property name="varName" type="java.lang.String" value="b1r8"/>
+                  </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                       <AbsoluteConstraints x="660" y="493" width="30" height="-1"/>
@@ -108,6 +139,10 @@
                   </Constraints>
                 </Component>
                 <Component class="View.InputTextField" name="b1r9">
+                  <Properties>
+                    <Property name="position" type="int" value="8"/>
+                    <Property name="varName" type="java.lang.String" value="b1r9"/>
+                  </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b1r9ActionPerformed"/>
                   </Events>
@@ -118,6 +153,10 @@
                   </Constraints>
                 </Component>
                 <Component class="View.InputTextField" name="b1r10">
+                  <Properties>
+                    <Property name="position" type="int" value="9"/>
+                    <Property name="varName" type="java.lang.String" value="b1r10"/>
+                  </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b1r10ActionPerformed"/>
                   </Events>
@@ -128,6 +167,10 @@
                   </Constraints>
                 </Component>
                 <Component class="View.InputTextField" name="b1r11">
+                  <Properties>
+                    <Property name="position" type="int" value="10"/>
+                    <Property name="varName" type="java.lang.String" value="b1r11"/>
+                  </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                       <AbsoluteConstraints x="350" y="585" width="430" height="-1"/>
@@ -135,6 +178,10 @@
                   </Constraints>
                 </Component>
                 <Component class="View.InputTextField" name="b1r12">
+                  <Properties>
+                    <Property name="position" type="int" value="11"/>
+                    <Property name="varName" type="java.lang.String" value="b1r12"/>
+                  </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                       <AbsoluteConstraints x="350" y="619" width="430" height="-1"/>
@@ -142,6 +189,10 @@
                   </Constraints>
                 </Component>
                 <Component class="View.InputTextField" name="b1r13">
+                  <Properties>
+                    <Property name="position" type="int" value="12"/>
+                    <Property name="varName" type="java.lang.String" value="b1r13"/>
+                  </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                       <AbsoluteConstraints x="350" y="650" width="430" height="-1"/>
@@ -153,6 +204,7 @@
                     <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                       <ComponentRef name="b2r2s1"/>
                     </Property>
+                    <Property name="varName" type="java.lang.String" value="b2r1s1"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -165,6 +217,9 @@
                     <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                       <ComponentRef name="b2r2s2"/>
                     </Property>
+                    <Property name="position" type="int" value="16"/>
+                    <Property name="varName" type="java.lang.String" value="b2r1s2"/>
+                    <Property name="verifyInputWhenFocusTarget" type="boolean" value="false"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -177,6 +232,8 @@
                     <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                       <ComponentRef name="b2r3s1"/>
                     </Property>
+                    <Property name="position" type="int" value="14"/>
+                    <Property name="varName" type="java.lang.String" value="b2r2s1"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -189,6 +246,8 @@
                     <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                       <ComponentRef name="b2r3s2"/>
                     </Property>
+                    <Property name="position" type="int" value="17"/>
+                    <Property name="varName" type="java.lang.String" value="b2r2s2"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -201,6 +260,8 @@
                     <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                       <ComponentRef name="b2r1s2"/>
                     </Property>
+                    <Property name="position" type="int" value="15"/>
+                    <Property name="varName" type="java.lang.String" value="b2r3s1"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -209,6 +270,10 @@
                   </Constraints>
                 </Component>
                 <Component class="View.InputTextField" name="b2r3s2">
+                  <Properties>
+                    <Property name="position" type="int" value="18"/>
+                    <Property name="varName" type="java.lang.String" value="b2r3s2"/>
+                  </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                       <AbsoluteConstraints x="600" y="840" width="50" height="17"/>
@@ -216,6 +281,10 @@
                   </Constraints>
                 </Component>
                 <Component class="View.InputTextField" name="b2r5">
+                  <Properties>
+                    <Property name="position" type="int" value="19"/>
+                    <Property name="varName" type="java.lang.String" value="b2r5"/>
+                  </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b2r5ActionPerformed"/>
                   </Events>
@@ -266,6 +335,8 @@
                     <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                       <ComponentRef name="b3ar2"/>
                     </Property>
+                    <Property name="position" type="int" value="20"/>
+                    <Property name="varName" type="java.lang.String" value="b3ar1"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b3ar1ActionPerformed"/>
@@ -281,6 +352,8 @@
                     <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                       <ComponentRef name="b3ar3"/>
                     </Property>
+                    <Property name="position" type="int" value="21"/>
+                    <Property name="varName" type="java.lang.String" value="b3ar2"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -293,6 +366,8 @@
                     <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                       <ComponentRef name="b3ar4"/>
                     </Property>
+                    <Property name="position" type="int" value="22"/>
+                    <Property name="varName" type="java.lang.String" value="b3ar3"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -305,6 +380,8 @@
                     <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                       <ComponentRef name="b3ar5"/>
                     </Property>
+                    <Property name="position" type="int" value="23"/>
+                    <Property name="varName" type="java.lang.String" value="b3ar4"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -317,6 +394,8 @@
                     <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                       <ComponentRef name="b3ar6"/>
                     </Property>
+                    <Property name="position" type="int" value="24"/>
+                    <Property name="varName" type="java.lang.String" value="b3ar5"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -329,6 +408,8 @@
                     <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                       <ComponentRef name="b3ar7s1"/>
                     </Property>
+                    <Property name="position" type="int" value="25"/>
+                    <Property name="varName" type="java.lang.String" value="b3ar6"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -341,6 +422,8 @@
                     <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                       <ComponentRef name="b3ar7s2"/>
                     </Property>
+                    <Property name="position" type="int" value="26"/>
+                    <Property name="varName" type="java.lang.String" value="b3ar7s1"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -353,6 +436,8 @@
                     <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                       <ComponentRef name="b3ar7s2lainnya"/>
                     </Property>
+                    <Property name="position" type="int" value="27"/>
+                    <Property name="varName" type="java.lang.String" value="b3ar7s2"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -365,6 +450,8 @@
                     <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                       <ComponentRef name="b3ar7s3"/>
                     </Property>
+                    <Property name="position" type="int" value="28"/>
+                    <Property name="varName" type="java.lang.String" value="b3ar7s2lainnya"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -377,6 +464,8 @@
                     <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                       <ComponentRef name="b3ar8s1"/>
                     </Property>
+                    <Property name="position" type="int" value="29"/>
+                    <Property name="varName" type="java.lang.String" value="b3ar7s3"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -389,6 +478,8 @@
                     <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                       <ComponentRef name="b3ar8s2"/>
                     </Property>
+                    <Property name="position" type="int" value="30"/>
+                    <Property name="varName" type="java.lang.String" value="b3ar8s1"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -402,6 +493,8 @@
                     <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                       <ComponentRef name="b3ar8s3"/>
                     </Property>
+                    <Property name="position" type="int" value="31"/>
+                    <Property name="varName" type="java.lang.String" value="b3ar8s2"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -414,6 +507,8 @@
                     <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                       <ComponentRef name="b3ar8s4"/>
                     </Property>
+                    <Property name="position" type="int" value="32"/>
+                    <Property name="varName" type="java.lang.String" value="b3ar8s3"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -426,6 +521,8 @@
                     <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                       <ComponentRef name="b3ar9s1"/>
                     </Property>
+                    <Property name="position" type="int" value="33"/>
+                    <Property name="varName" type="java.lang.String" value="b3ar8s4"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -438,6 +535,8 @@
                     <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                       <ComponentRef name="b3ar9s2"/>
                     </Property>
+                    <Property name="position" type="int" value="34"/>
+                    <Property name="varName" type="java.lang.String" value="b3ar9s1"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -450,6 +549,8 @@
                     <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                       <ComponentRef name="b3ar10s1"/>
                     </Property>
+                    <Property name="position" type="int" value="35"/>
+                    <Property name="varName" type="java.lang.String" value="b3ar9s2"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b3ar9s2ActionPerformed"/>
@@ -465,6 +566,8 @@
                     <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                       <ComponentRef name="b3ar10s2"/>
                     </Property>
+                    <Property name="position" type="int" value="36"/>
+                    <Property name="varName" type="java.lang.String" value="b3ar10s1"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -477,6 +580,8 @@
                     <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                       <ComponentRef name="b3br11"/>
                     </Property>
+                    <Property name="position" type="int" value="37"/>
+                    <Property name="varName" type="java.lang.String" value="b3ar10s2"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -489,6 +594,8 @@
                     <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                       <ComponentRef name="b3br12"/>
                     </Property>
+                    <Property name="position" type="int" value="38"/>
+                    <Property name="varName" type="java.lang.String" value="b3br11"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -501,6 +608,9 @@
                     <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                       <ComponentRef name="b3br13"/>
                     </Property>
+                    <Property name="position" type="int" value="39"/>
+                    <Property name="varName" type="java.lang.String" value="b3br12"/>
+                    <Property name="verifyInputWhenFocusTarget" type="boolean" value="false"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -513,6 +623,8 @@
                     <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                       <ComponentRef name="b3br14"/>
                     </Property>
+                    <Property name="position" type="int" value="40"/>
+                    <Property name="varName" type="java.lang.String" value="b3br13"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -521,6 +633,10 @@
                   </Constraints>
                 </Component>
                 <Component class="View.InputTextField" name="b3br14">
+                  <Properties>
+                    <Property name="position" type="int" value="41"/>
+                    <Property name="varName" type="java.lang.String" value="b3br14"/>
+                  </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b3br14ActionPerformed"/>
                   </Events>
@@ -567,6 +683,10 @@
               </Layout>
               <SubComponents>
                 <Component class="View.InputTextField" name="b4ar1s1">
+                  <Properties>
+                    <Property name="position" type="int" value="42"/>
+                    <Property name="varName" type="java.lang.String" value="b4ar1s1"/>
+                  </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b4ar1s1ActionPerformed"/>
                   </Events>
@@ -577,6 +697,10 @@
                   </Constraints>
                 </Component>
                 <Component class="View.InputTextField" name="b4ar1s2">
+                  <Properties>
+                    <Property name="position" type="int" value="43"/>
+                    <Property name="varName" type="java.lang.String" value="b4ar1s2"/>
+                  </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                       <AbsoluteConstraints x="520" y="234" width="70" height="-1"/>
@@ -588,6 +712,8 @@
                     <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                       <ComponentRef name="b4ar2s1"/>
                     </Property>
+                    <Property name="position" type="int" value="44"/>
+                    <Property name="varName" type="java.lang.String" value="b4ar1s3"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -596,6 +722,10 @@
                   </Constraints>
                 </Component>
                 <Component class="View.InputTextField" name="b4ar2s1">
+                  <Properties>
+                    <Property name="position" type="int" value="45"/>
+                    <Property name="varName" type="java.lang.String" value="b4ar2s1"/>
+                  </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                       <AbsoluteConstraints x="520" y="275" width="45" height="-1"/>
@@ -603,6 +733,10 @@
                   </Constraints>
                 </Component>
                 <Component class="View.InputTextField" name="b4ar2s2">
+                  <Properties>
+                    <Property name="position" type="int" value="46"/>
+                    <Property name="varName" type="java.lang.String" value="b4ar2s2"/>
+                  </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                       <AbsoluteConstraints x="706" y="275" width="45" height="-1"/>
@@ -610,6 +744,10 @@
                   </Constraints>
                 </Component>
                 <Component class="View.InputTextField" name="b4ar3">
+                  <Properties>
+                    <Property name="position" type="int" value="47"/>
+                    <Property name="varName" type="java.lang.String" value="b4ar3"/>
+                  </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                       <AbsoluteConstraints x="460" y="320" width="45" height="-1"/>
@@ -617,6 +755,10 @@
                   </Constraints>
                 </Component>
                 <Component class="View.InputTextField" name="b4ar4">
+                  <Properties>
+                    <Property name="position" type="int" value="48"/>
+                    <Property name="varName" type="java.lang.String" value="b4ar4"/>
+                  </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                       <AbsoluteConstraints x="460" y="360" width="45" height="-1"/>
@@ -624,6 +766,10 @@
                   </Constraints>
                 </Component>
                 <Component class="View.InputTextField" name="b4ar5">
+                  <Properties>
+                    <Property name="position" type="int" value="49"/>
+                    <Property name="varName" type="java.lang.String" value="b4ar5"/>
+                  </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                       <AbsoluteConstraints x="460" y="420" width="45" height="-1"/>
@@ -631,6 +777,10 @@
                   </Constraints>
                 </Component>
                 <Component class="View.InputTextField" name="b4ar5lainnya">
+                  <Properties>
+                    <Property name="position" type="int" value="50"/>
+                    <Property name="varName" type="java.lang.String" value="b4ar5lainnya"/>
+                  </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                       <AbsoluteConstraints x="272" y="430" width="100" height="16"/>
@@ -638,6 +788,10 @@
                   </Constraints>
                 </Component>
                 <Component class="View.InputTextField" name="b4ar6">
+                  <Properties>
+                    <Property name="position" type="int" value="51"/>
+                    <Property name="varName" type="java.lang.String" value="b4ar6"/>
+                  </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                       <AbsoluteConstraints x="460" y="490" width="45" height="-1"/>
@@ -645,6 +799,10 @@
                   </Constraints>
                 </Component>
                 <Component class="View.InputTextField" name="b4ar7">
+                  <Properties>
+                    <Property name="position" type="int" value="52"/>
+                    <Property name="varName" type="java.lang.String" value="b4ar7"/>
+                  </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                       <AbsoluteConstraints x="460" y="530" width="45" height="-1"/>
@@ -652,6 +810,10 @@
                   </Constraints>
                 </Component>
                 <Component class="View.InputTextField" name="b4ar8s1">
+                  <Properties>
+                    <Property name="position" type="int" value="53"/>
+                    <Property name="varName" type="java.lang.String" value="b4ar8s1"/>
+                  </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                       <AbsoluteConstraints x="580" y="562" width="45" height="-1"/>
@@ -659,6 +821,10 @@
                   </Constraints>
                 </Component>
                 <Component class="View.InputTextField" name="b4ar8s2">
+                  <Properties>
+                    <Property name="position" type="int" value="54"/>
+                    <Property name="varName" type="java.lang.String" value="b4ar8s2"/>
+                  </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                       <AbsoluteConstraints x="690" y="562" width="45" height="-1"/>
@@ -666,6 +832,10 @@
                   </Constraints>
                 </Component>
                 <Component class="View.InputTextField" name="b4r9s1d1t1">
+                  <Properties>
+                    <Property name="position" type="int" value="55"/>
+                    <Property name="varName" type="java.lang.String" value="b4r9s1d1t1"/>
+                  </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                       <AbsoluteConstraints x="220" y="727" width="40" height="-1"/>
@@ -673,6 +843,10 @@
                   </Constraints>
                 </Component>
                 <Component class="View.InputTextField" name="b4r9s1d1t2">
+                  <Properties>
+                    <Property name="position" type="int" value="56"/>
+                    <Property name="varName" type="java.lang.String" value="b4r9s1d1t2"/>
+                  </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                       <AbsoluteConstraints x="340" y="727" width="40" height="-1"/>
@@ -680,6 +854,10 @@
                   </Constraints>
                 </Component>
                 <Component class="View.InputTextField" name="b4r9s1d1t3">
+                  <Properties>
+                    <Property name="position" type="int" value="57"/>
+                    <Property name="varName" type="java.lang.String" value="b4r9s1d1t3"/>
+                  </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                       <AbsoluteConstraints x="460" y="727" width="40" height="-1"/>
@@ -687,6 +865,10 @@
                   </Constraints>
                 </Component>
                 <Component class="View.InputTextField" name="b4r9s1d2">
+                  <Properties>
+                    <Property name="position" type="int" value="58"/>
+                    <Property name="varName" type="java.lang.String" value="b4r9s1d2"/>
+                  </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                       <AbsoluteConstraints x="580" y="727" width="40" height="-1"/>
@@ -694,6 +876,10 @@
                   </Constraints>
                 </Component>
                 <Component class="View.InputTextField" name="b4r9s1d3">
+                  <Properties>
+                    <Property name="position" type="int" value="59"/>
+                    <Property name="varName" type="java.lang.String" value="b4r9s1d3"/>
+                  </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                       <AbsoluteConstraints x="720" y="727" width="40" height="-1"/>

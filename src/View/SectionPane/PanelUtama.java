@@ -134,27 +134,50 @@ private CardLayoutController cardLayoutController;
 
         Sec1.setBackground(new java.awt.Color(255, 255, 255));
         Sec1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        b1r1.setVarName("b1r1");
         Sec1.add(b1r1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 270, 30, -1));
+
+        b1r2.setPosition(1);
+        b1r2.setVarName("b1r2");
         Sec1.add(b1r2, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 300, 30, -1));
 
+        b1r3.setPosition(2);
+        b1r3.setVarName("b1r3");
         b1r3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b1r3ActionPerformed(evt);
             }
         });
         Sec1.add(b1r3, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 333, 30, -1));
+
+        b1r4.setPosition(3);
+        b1r4.setVarName("b1r4");
         Sec1.add(b1r4, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 365, 30, -1));
+
+        b1r5.setPosition(4);
+        b1r5.setVarName("b1r5");
         Sec1.add(b1r5, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 396, 30, -1));
 
+        b1r6.setPosition(5);
+        b1r6.setVarName("b1r6");
         b1r6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b1r6ActionPerformed(evt);
             }
         });
         Sec1.add(b1r6, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 430, 30, -1));
+
+        b1r7.setPosition(6);
+        b1r7.setVarName("b1r7");
         Sec1.add(b1r7, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 462, 30, -1));
+
+        b1r8.setPosition(7);
+        b1r8.setVarName("b1r8");
         Sec1.add(b1r8, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 493, 30, -1));
 
+        b1r9.setPosition(8);
+        b1r9.setVarName("b1r9");
         b1r9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b1r9ActionPerformed(evt);
@@ -162,32 +185,58 @@ private CardLayoutController cardLayoutController;
         });
         Sec1.add(b1r9, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 525, 30, -1));
 
+        b1r10.setPosition(9);
+        b1r10.setVarName("b1r10");
         b1r10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b1r10ActionPerformed(evt);
             }
         });
         Sec1.add(b1r10, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 557, 30, -1));
+
+        b1r11.setPosition(10);
+        b1r11.setVarName("b1r11");
         Sec1.add(b1r11, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 585, 430, -1));
+
+        b1r12.setPosition(11);
+        b1r12.setVarName("b1r12");
         Sec1.add(b1r12, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 619, 430, -1));
+
+        b1r13.setPosition(12);
+        b1r13.setVarName("b1r13");
         Sec1.add(b1r13, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 650, 430, -1));
 
         b2r1s1.setNextFocusableComponent(b2r2s1);
+        b2r1s1.setVarName("b2r1s1");
         Sec1.add(b2r1s1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 778, 230, 17));
 
         b2r1s2.setNextFocusableComponent(b2r2s2);
+        b2r1s2.setPosition(16);
+        b2r1s2.setVarName("b2r1s2");
+        b2r1s2.setVerifyInputWhenFocusTarget(false);
         Sec1.add(b2r1s2, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 778, 230, 17));
 
         b2r2s1.setNextFocusableComponent(b2r3s1);
+        b2r2s1.setPosition(14);
+        b2r2s1.setVarName("b2r2s1");
         Sec1.add(b2r2s1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 810, 90, 17));
 
         b2r2s2.setNextFocusableComponent(b2r3s2);
+        b2r2s2.setPosition(17);
+        b2r2s2.setVarName("b2r2s2");
         Sec1.add(b2r2s2, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 810, 90, 17));
 
         b2r3s1.setNextFocusableComponent(b2r1s2);
+        b2r3s1.setPosition(15);
+        b2r3s1.setVarName("b2r3s1");
         Sec1.add(b2r3s1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 840, 50, 17));
+
+        b2r3s2.setPosition(18);
+        b2r3s2.setVarName("b2r3s2");
         Sec1.add(b2r3s2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 840, 50, 17));
 
+        b2r5.setPosition(19);
+        b2r5.setVarName("b2r5");
         b2r5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b2r5ActionPerformed(evt);
@@ -206,6 +255,8 @@ private CardLayoutController cardLayoutController;
         Sec2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         b3ar1.setNextFocusableComponent(b3ar2);
+        b3ar1.setPosition(20);
+        b3ar1.setVarName("b3ar1");
         b3ar1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b3ar1ActionPerformed(evt);
@@ -214,49 +265,79 @@ private CardLayoutController cardLayoutController;
         Sec2.add(b3ar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 92, 30, -1));
 
         b3ar2.setNextFocusableComponent(b3ar3);
+        b3ar2.setPosition(21);
+        b3ar2.setVarName("b3ar2");
         Sec2.add(b3ar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 150, 30, -1));
 
         b3ar3.setNextFocusableComponent(b3ar4);
+        b3ar3.setPosition(22);
+        b3ar3.setVarName("b3ar3");
         Sec2.add(b3ar3, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 220, 30, -1));
 
         b3ar4.setNextFocusableComponent(b3ar5);
+        b3ar4.setPosition(23);
+        b3ar4.setVarName("b3ar4");
         Sec2.add(b3ar4, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 320, 30, -1));
 
         b3ar5.setNextFocusableComponent(b3ar6);
+        b3ar5.setPosition(24);
+        b3ar5.setVarName("b3ar5");
         Sec2.add(b3ar5, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 420, 30, -1));
 
         b3ar6.setNextFocusableComponent(b3ar7s1);
+        b3ar6.setPosition(25);
+        b3ar6.setVarName("b3ar6");
         Sec2.add(b3ar6, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 510, 30, -1));
 
         b3ar7s1.setNextFocusableComponent(b3ar7s2);
+        b3ar7s1.setPosition(26);
+        b3ar7s1.setVarName("b3ar7s1");
         Sec2.add(b3ar7s1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 610, 30, -1));
 
         b3ar7s2.setNextFocusableComponent(b3ar7s2lainnya);
+        b3ar7s2.setPosition(27);
+        b3ar7s2.setVarName("b3ar7s2");
         Sec2.add(b3ar7s2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 690, 30, -1));
 
         b3ar7s2lainnya.setNextFocusableComponent(b3ar7s3);
+        b3ar7s2lainnya.setPosition(28);
+        b3ar7s2lainnya.setVarName("b3ar7s2lainnya");
         Sec2.add(b3ar7s2lainnya, new org.netbeans.lib.awtextra.AbsoluteConstraints(142, 741, 66, 18));
 
         b3ar7s3.setNextFocusableComponent(b3ar8s1);
+        b3ar7s3.setPosition(29);
+        b3ar7s3.setVarName("b3ar7s3");
         Sec2.add(b3ar7s3, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 810, 30, -1));
 
         b3ar8s1.setNextFocusableComponent(b3ar8s2);
+        b3ar8s1.setPosition(30);
+        b3ar8s1.setVarName("b3ar8s1");
         Sec2.add(b3ar8s1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 870, 30, -1));
 
         b3ar8s2.setFocusCycleRoot(true);
         b3ar8s2.setNextFocusableComponent(b3ar8s3);
+        b3ar8s2.setPosition(31);
+        b3ar8s2.setVarName("b3ar8s2");
         Sec2.add(b3ar8s2, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 94, 30, -1));
 
         b3ar8s3.setNextFocusableComponent(b3ar8s4);
+        b3ar8s3.setPosition(32);
+        b3ar8s3.setVarName("b3ar8s3");
         Sec2.add(b3ar8s3, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 140, 30, -1));
 
         b3ar8s4.setNextFocusableComponent(b3ar9s1);
+        b3ar8s4.setPosition(33);
+        b3ar8s4.setVarName("b3ar8s4");
         Sec2.add(b3ar8s4, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 183, 30, -1));
 
         b3ar9s1.setNextFocusableComponent(b3ar9s2);
+        b3ar9s1.setPosition(34);
+        b3ar9s1.setVarName("b3ar9s1");
         Sec2.add(b3ar9s1, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 280, 30, -1));
 
         b3ar9s2.setNextFocusableComponent(b3ar10s1);
+        b3ar9s2.setPosition(35);
+        b3ar9s2.setVarName("b3ar9s2");
         b3ar9s2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b3ar9s2ActionPerformed(evt);
@@ -265,20 +346,33 @@ private CardLayoutController cardLayoutController;
         Sec2.add(b3ar9s2, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 340, 30, -1));
 
         b3ar10s1.setNextFocusableComponent(b3ar10s2);
+        b3ar10s1.setPosition(36);
+        b3ar10s1.setVarName("b3ar10s1");
         Sec2.add(b3ar10s1, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 450, 30, -1));
 
         b3ar10s2.setNextFocusableComponent(b3br11);
+        b3ar10s2.setPosition(37);
+        b3ar10s2.setVarName("b3ar10s2");
         Sec2.add(b3ar10s2, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 510, 30, -1));
 
         b3br11.setNextFocusableComponent(b3br12);
+        b3br11.setPosition(38);
+        b3br11.setVarName("b3br11");
         Sec2.add(b3br11, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 650, 30, -1));
 
         b3br12.setNextFocusableComponent(b3br13);
+        b3br12.setPosition(39);
+        b3br12.setVarName("b3br12");
+        b3br12.setVerifyInputWhenFocusTarget(false);
         Sec2.add(b3br12, new org.netbeans.lib.awtextra.AbsoluteConstraints(585, 718, 70, -1));
 
         b3br13.setNextFocusableComponent(b3br14);
+        b3br13.setPosition(40);
+        b3br13.setVarName("b3br13");
         Sec2.add(b3br13, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 808, 30, -1));
 
+        b3br14.setPosition(41);
+        b3br14.setVarName("b3br14");
         b3br14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b3br14ActionPerformed(evt);
@@ -296,30 +390,82 @@ private CardLayoutController cardLayoutController;
         Sec3.setBackground(new java.awt.Color(255, 255, 255));
         Sec3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        b4ar1s1.setPosition(42);
+        b4ar1s1.setVarName("b4ar1s1");
         b4ar1s1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b4ar1s1ActionPerformed(evt);
             }
         });
         Sec3.add(b4ar1s1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 234, 50, -1));
+
+        b4ar1s2.setPosition(43);
+        b4ar1s2.setVarName("b4ar1s2");
         Sec3.add(b4ar1s2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 234, 70, -1));
 
         b4ar1s3.setNextFocusableComponent(b4ar2s1);
+        b4ar1s3.setPosition(44);
+        b4ar1s3.setVarName("b4ar1s3");
         Sec3.add(b4ar1s3, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 234, 50, -1));
+
+        b4ar2s1.setPosition(45);
+        b4ar2s1.setVarName("b4ar2s1");
         Sec3.add(b4ar2s1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 275, 45, -1));
+
+        b4ar2s2.setPosition(46);
+        b4ar2s2.setVarName("b4ar2s2");
         Sec3.add(b4ar2s2, new org.netbeans.lib.awtextra.AbsoluteConstraints(706, 275, 45, -1));
+
+        b4ar3.setPosition(47);
+        b4ar3.setVarName("b4ar3");
         Sec3.add(b4ar3, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 320, 45, -1));
+
+        b4ar4.setPosition(48);
+        b4ar4.setVarName("b4ar4");
         Sec3.add(b4ar4, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 360, 45, -1));
+
+        b4ar5.setPosition(49);
+        b4ar5.setVarName("b4ar5");
         Sec3.add(b4ar5, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 420, 45, -1));
+
+        b4ar5lainnya.setPosition(50);
+        b4ar5lainnya.setVarName("b4ar5lainnya");
         Sec3.add(b4ar5lainnya, new org.netbeans.lib.awtextra.AbsoluteConstraints(272, 430, 100, 16));
+
+        b4ar6.setPosition(51);
+        b4ar6.setVarName("b4ar6");
         Sec3.add(b4ar6, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 490, 45, -1));
+
+        b4ar7.setPosition(52);
+        b4ar7.setVarName("b4ar7");
         Sec3.add(b4ar7, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 530, 45, -1));
+
+        b4ar8s1.setPosition(53);
+        b4ar8s1.setVarName("b4ar8s1");
         Sec3.add(b4ar8s1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 562, 45, -1));
+
+        b4ar8s2.setPosition(54);
+        b4ar8s2.setVarName("b4ar8s2");
         Sec3.add(b4ar8s2, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 562, 45, -1));
+
+        b4r9s1d1t1.setPosition(55);
+        b4r9s1d1t1.setVarName("b4r9s1d1t1");
         Sec3.add(b4r9s1d1t1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 727, 40, -1));
+
+        b4r9s1d1t2.setPosition(56);
+        b4r9s1d1t2.setVarName("b4r9s1d1t2");
         Sec3.add(b4r9s1d1t2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 727, 40, -1));
+
+        b4r9s1d1t3.setPosition(57);
+        b4r9s1d1t3.setVarName("b4r9s1d1t3");
         Sec3.add(b4r9s1d1t3, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 727, 40, -1));
+
+        b4r9s1d2.setPosition(58);
+        b4r9s1d2.setVarName("b4r9s1d2");
         Sec3.add(b4r9s1d2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 727, 40, -1));
+
+        b4r9s1d3.setPosition(59);
+        b4r9s1d3.setVarName("b4r9s1d3");
         Sec3.add(b4r9s1d3, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 727, 40, -1));
 
         b4r9s2d1t1.addActionListener(new java.awt.event.ActionListener() {
