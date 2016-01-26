@@ -77,7 +77,7 @@ public class GeneralPanel extends javax.swing.JPanel {
         timeLabel1.setForeground(new java.awt.Color(255, 255, 255));
         timeLabel1.setFont(new java.awt.Font("Segoe UI Light", 0, 18)); // NOI18N
         bgfull1.add(timeLabel1);
-        timeLabel1.setBounds(1129, 88, 204, 31);
+        timeLabel1.setBounds(1123, 88, 210, 31);
 
         mainPanel.setOpaque(false);
         mainPanel.setLayout(new java.awt.CardLayout());
