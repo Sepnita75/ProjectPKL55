@@ -73,7 +73,7 @@ public class EntryKuesPanel extends javax.swing.JPanel {
         jLabel1.setText("ABDURRAHMAN IZZI");
 
         timeLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        timeLabel1.setFont(new java.awt.Font("Segoe UI Light", 0, 18)); // NOI18N
+        timeLabel1.setFont(new java.awt.Font("Segoe UI Light", 0, 17)); // NOI18N
 
         jLabel2.setFont(new java.awt.Font("Segoe UI Light", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -111,9 +111,9 @@ public class EntryKuesPanel extends javax.swing.JPanel {
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, entryKuesBg1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(entryKuesBg1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel1)
-                    .addComponent(timeLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(entryKuesBg1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(timeLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(25, 25, 25))
             .addGroup(entryKuesBg1Layout.createSequentialGroup()
                 .addGap(478, 478, 478)
