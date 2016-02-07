@@ -11,7 +11,7 @@ public class EntryKuesBg  extends JPanel{
     private final Image image;
     
     public EntryKuesBg(){
-        image = new ImageIcon(getClass().getResource("/pkl55/images/path80.png")).getImage();
+        image = new ImageIcon(getClass().getResource("/pkl55/images/BgUmum.png")).getImage();
         setPreferredSize(new Dimension(1366,768));
     }
     
