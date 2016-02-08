@@ -26,7 +26,7 @@ public class GeneralPanel extends javax.swing.JPanel {
     public GeneralPanel() {
         initComponents();
 
-        controller = new GeneralPanelController(getMainPanel(), getIcontemp1(), getdSSubPanel1(), getKuesSubPanel1(), getHelpSubPanel1());
+        controller = new GeneralPanelController(getExitBt1(), getMainPanel(), getIcontemp1(), getdSSubPanel1(), getKuesSubPanel1(), getHelpSubPanel1());
 
     }
 
@@ -121,20 +121,6 @@ public class GeneralPanel extends javax.swing.JPanel {
 
     private void exitBt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBt1ActionPerformed
         // TODO add your handling code here:
-        if (getController().getLoginPanelModel().isLoginStatus()) {
-            int t = JOptionPane.showConfirmDialog((Component) null, "Log out dan Keluar?",
-                    "Perhatian", JOptionPane.OK_CANCEL_OPTION);
-            if (t == 0) {
-                System.exit(0);
-            }
-        } else{
-            int t = JOptionPane.showConfirmDialog((Component) null, "Keluar?",
-                    "Perhatian", JOptionPane.OK_CANCEL_OPTION);
-            if (t == 0) {
-                System.exit(0);
-            }
-        }
-
     }//GEN-LAST:event_exitBt1ActionPerformed
 
     private void minBt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_minBt1ActionPerformed

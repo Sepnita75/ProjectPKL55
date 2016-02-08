@@ -235,4 +235,12 @@ public class DataEntry55 extends javax.swing.JFrame {
     public void setMainPanel(javax.swing.JPanel mainPanel) {
         this.mainPanel = mainPanel;
     }
+
+    public pkl55.panelcomponent.EntryDSPanel getEntryDSPanel1() {
+        return entryDSPanel1;
+    }
+
+    public void setEntryDSPanel1(pkl55.panelcomponent.EntryDSPanel entryDSPanel1) {
+        this.entryDSPanel1 = entryDSPanel1;
+    }
 }

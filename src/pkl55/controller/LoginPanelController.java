@@ -1,6 +1,5 @@
 package pkl55.controller;
 
-import Model.Config;
 import java.awt.CardLayout;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
@@ -11,6 +10,14 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.net.URLEncoder;
+import java.util.LinkedHashMap;
+import java.util.Map;
 import javax.swing.JDialog;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -19,14 +26,31 @@ import pkl55.model.LoginPanelModel;
 import pkl55.panelcomponent.DBConfig;
 import pkl55.panelcomponent.GeneralPanel;
 import pkl55.panelcomponent.LoginPanel;
+import java.io.*;
+import java.net.*;
+import java.util.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 public class LoginPanelController {
+
+    public static JSONObject getJson() {
+        return json;
+    }
+
+    public static void setJson(JSONObject aJson) {
+        json = aJson;
+    }
 
     private JPanel mainPanel;
     private LoginPanel loginPanel;
     private LoginPanelModel loginPanelModel;
     private CardLayoutController controller;
     private GeneralPanel generalPanel;
+    private static JSONObject json;
 
     public LoginPanelController(JPanel mainPanel, final GeneralPanel generalPanel, final LoginPanel loginPanel, final LoginPanelModel loginPanelModel) {
         this.mainPanel = mainPanel;
@@ -174,19 +198,32 @@ public class LoginPanelController {
             @Override
             public void actionPerformed(ActionEvent e) {
                 closeLoginPanelMenu();
-                usernameKosong();
-                passwordKosong();
-                generalPanel.getIcontemp1().getDs1().setActive();
-//                if (Model.Model.login(getLoginPanel().getLoginTextField1().getText(), getLoginPanel().getPasswordTextField1().getText())) {
-                    loginPanelModel.setLoginStatus(true);
-                    getController().show("generalpanel");
-//                    generalPanel.getUserLabel().setText(Model.Model.getName());
-//                } else {
-//                    JOptionPane.showMessageDialog(loginPanel, "Username dan Password salah",
-//                        "Login", JOptionPane.INFORMATION_MESSAGE);
-//                    getLoginPanel().getLoginTextField1().setText("");
-//                    getLoginPanel().getPasswordTextField1().setText("");
-//                }
+                if (getLoginPanel().getLoginTextField1().getText().length() < 1 || getLoginPanel().getLoginTextField1().getText().equalsIgnoreCase("Masukan Username")) {
+                    JOptionPane.showMessageDialog(getLoginPanel(), "Username masih kosong.", "Notification", JOptionPane.INFORMATION_MESSAGE);
+                } else if (getLoginPanel().getPasswordTextField1().getText().length() < 1) {
+                    JOptionPane.showMessageDialog(getLoginPanel(), "Password masih kosong.", "Notification", JOptionPane.INFORMATION_MESSAGE);
+                } else {
+                    if (login() == 3) {
+                        if (getJson().get("UserstatusLogin").toString().equalsIgnoreCase("1")) {
+                            JOptionPane.showMessageDialog(loginPanel, "User masih aktif, mohon logout dahulu atau hubungi admin.",
+                                    "Perhatian", JOptionPane.INFORMATION_MESSAGE);
+                        } else {
+                            generalPanel.getIcontemp1().getDs1().setActive();
+                            loginPanelModel.setLoginStatus(true);
+                            generalPanel.getUserLabel().setText(getJson().get("Usernama").toString());
+                            DataEntry55.getInstance().getEntryKues1().getjLabel1().setText(getJson().get("Usernama").toString());
+                            DataEntry55.getInstance().getEntryDSPanel1().getjLabel1().setText(getJson().get("Usernama").toString());
+                            getController().show("generalpanel");
+                        }
+                    } else if (login() == 2) {
+                        JOptionPane.showMessageDialog(loginPanel, "Password atau username salah.",
+                                "Perhatian", JOptionPane.INFORMATION_MESSAGE);
+                    } else {
+                        JOptionPane.showMessageDialog(loginPanel, "Koneksi bermasalah, ulangi lagi atau hubungi admin.",
+                                "Perhatian", JOptionPane.INFORMATION_MESSAGE);
+                    }
+                }
+
             }
         });
 
@@ -304,22 +341,94 @@ public class LoginPanelController {
 
     }
 
+    public int login() {
+        URL url;
+        try {
+            url = new URL("http://izziweb.net/ServerPKL/Server.php?type=login");
+        } catch (MalformedURLException ex) {
+            return 1;
+        }
+        Map<String, Object> params = new LinkedHashMap<>();
+        params.put("username", loginPanel.getLoginTextField1().getText());
+        params.put("password", loginPanel.getPasswordTextField1().getText());
+
+        StringBuilder postData = new StringBuilder();
+        for (Map.Entry<String, Object> param : params.entrySet()) {
+            if (postData.length() != 0) {
+                postData.append('&');
+            }
+            try {
+                postData.append(URLEncoder.encode(param.getKey(), "UTF-8"));
+            } catch (UnsupportedEncodingException ex) {
+                return 1;
+            }
+            postData.append('=');
+            try {
+                postData.append(URLEncoder.encode(String.valueOf(param.getValue()), "UTF-8"));
+            } catch (UnsupportedEncodingException ex) {
+                return 1;
+            }
+        }
+        byte[] postDataBytes;
+        try {
+            postDataBytes = postData.toString().getBytes("UTF-8");
+        } catch (UnsupportedEncodingException ex) {
+            return 1;
+        }
+
+        HttpURLConnection conn;
+        try {
+            conn = (HttpURLConnection) url.openConnection();
+        } catch (IOException ex) {
+            return 1;
+        }
+        try {
+            conn.setRequestMethod("POST");
+        } catch (ProtocolException ex) {
+            return 1;
+        }
+        conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+        conn.setRequestProperty("Content-Length", String.valueOf(postDataBytes.length));
+        conn.setDoOutput(true);
+        try {
+            conn.getOutputStream().write(postDataBytes);
+        } catch (IOException ex) {
+            return 1;
+        }
+
+        Reader in;
+        try {
+            in = new BufferedReader(new InputStreamReader(conn.getInputStream(), "UTF-8"));
+        } catch (IOException ex) {
+            return 1;
+        }
+
+        String json1 = "";
+        try {
+            for (int c = in.read(); c != -1; c = in.read()) {
+                json1 += (char) c;
+            }
+        } catch (IOException ex) {
+            return 1;
+        }
+        JSONObject json = null;
+        if (!json1.equalsIgnoreCase("[]")) {
+            try {
+                json = (JSONObject) new JSONParser().parse(json1);
+                this.setJson(json);
+                return 3;
+            } catch (ParseException ex) {
+                return 1;
+            }
+        } else {
+            return 2;
+        }
+    }
+
     public void closeLoginPanelMenu() {
         getLoginPanelModel().setFlag(false);
         getLoginPanel().getSettingBt1().setVisible(false);
         getLoginPanel().getHelpBt2().setVisible(false);
-    }
-
-    public void usernameKosong() {
-        if (getLoginPanel().getLoginTextField1().getText().length() < 1 || getLoginPanel().getLoginTextField1().getText().equalsIgnoreCase("Masukan Username")) {
-            JOptionPane.showMessageDialog(getLoginPanel(), "Username masih kosong.", "Notification", JOptionPane.INFORMATION_MESSAGE);
-        }
-    }
-
-    public void passwordKosong() {
-        if (getLoginPanel().getPasswordTextField1().getText().length() < 1) {
-            JOptionPane.showMessageDialog(getLoginPanel(), "Password masih kosong.", "Notification", JOptionPane.INFORMATION_MESSAGE);
-        }
     }
 
     public JPanel getMainPanel() {
