@@ -25,8 +25,10 @@ import pkl55.helpPanelComponent.aHelpCard;
 import pkl55.maintest.DataEntry55;
 import pkl55.model.LoginPanelModel;
 import pkl55.panelcomponent.AllMenuButton;
+import pkl55.panelcomponent.DBConfig;
 import pkl55.panelcomponent.DSSubPanel;
 import pkl55.panelcomponent.KuesSubPanel;
+import pkl55.util.DBConfigModel;
 
 public class GeneralPanelController {
 
@@ -146,7 +148,10 @@ public class GeneralPanelController {
     public int logout() throws IOException{
         URL url;
         try {
-            url = new URL("http://izziweb.net/ServerPKL/Server.php?type=logout");
+            String fromSetting = DataEntry55.getInstance().getLoginPanelController().getDbc().getDBConfig().getLogoutUrl();
+            if(fromSetting!=null){
+                url = new URL(fromSetting);
+            } else url = new URL("http://izziweb.net/ServerPKL/Server.php?type=logout");
         } catch (MalformedURLException ex) {
             return 1;
         }

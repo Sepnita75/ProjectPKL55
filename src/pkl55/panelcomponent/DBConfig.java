@@ -1,7 +1,18 @@
 package pkl55.panelcomponent;
 
+import java.awt.Component;
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.ProtocolException;
+import java.net.URL;
+import java.net.URLEncoder;
+import java.util.LinkedHashMap;
+import java.util.Map;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 import javax.swing.SwingWorker;
 import pkl55.util.DBConfigManager;
 import pkl55.util.DBConfigModel;
@@ -15,23 +26,58 @@ public class DBConfig extends javax.swing.JFrame {
     public DBConfig() {
         initComponents();
         configManager = new DBConfigManager();
-        if(configManager.readConfig()==null) {
+        if (configManager.readConfig() == null) {
             DBConfig = new DBConfigModel();
         } else {
             DBConfig = configManager.readConfig();
+            initText();
         }
         progressTest.setVisible(false);
         setLocationRelativeTo(null);
-        initText();
+        uncheckUrlStatus();
+        uncrossUrlStatus();
     }
-    
+
     //Menyimpan data dalam objek DBConfig
-    void saveData(){
-        //DBConfig.setDbName(dbNameText.getText());
-        DBConfig.setUrl(urlText.getText());
-        //DBConfig.setPort(portText.getText());
-        DBConfig.setUser(userText.getText());
-        //DBConfig.setPassword(passText.getText());
+    void saveData() {
+        getDBConfig().setKue1Url(getKue1UrlField().getText());
+        getDBConfig().setKue2Url(getKue2UrlField().getText());
+        getDBConfig().setKue3Url(getKue3UrlField().getText());
+        getDBConfig().setLoginUrl(getLoginUrlField().getText());
+        getDBConfig().setLogoutUrl(getLogoutUrlField().getText());
+    }
+
+    void uncheckUrlStatus() {
+        loginTick.setVisible(false);
+        logoutTick.setVisible(false);
+        kue1Tick.setVisible(false);
+        kue2Tick.setVisible(false);
+        kue3Tick.setVisible(false);
+    }
+
+    void uncrossUrlStatus() {
+        cross1.setVisible(false);
+        cross2.setVisible(false);
+        cross3.setVisible(false);
+        cross4.setVisible(false);
+        cross5.setVisible(false);
+    }
+
+    void checkUrlStatus() {
+        loginTick.setVisible(true);
+        logoutTick.setVisible(true);
+        kue1Tick.setVisible(true);
+        kue2Tick.setVisible(true);
+        kue3Tick.setVisible(true);
+    }
+
+    void crossUrlStatus() {
+        checkUrlStatus();
+        cross1.setVisible(true);
+        cross2.setVisible(true);
+        cross3.setVisible(true);
+        cross4.setVisible(true);
+        cross5.setVisible(true);
     }
 
     /**
@@ -45,27 +91,41 @@ public class DBConfig extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        urlText = new javax.swing.JTextField();
-        userText = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        statusText = new javax.swing.JLabel();
         progressTest = new javax.swing.JProgressBar();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        loginUrlField = new javax.swing.JTextField();
+        logoutUrlField = new javax.swing.JTextField();
+        kue1UrlField = new javax.swing.JTextField();
+        kue2UrlField = new javax.swing.JTextField();
+        kue3UrlField = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        logout = new javax.swing.JLabel();
+        loginTick = new pkl55.background.tick();
+        cross1 = new pkl55.background.cross();
+        logoutTick = new pkl55.background.tick();
+        cross2 = new pkl55.background.cross();
+        kue1Tick = new pkl55.background.tick();
+        cross3 = new pkl55.background.cross();
+        kue2Tick = new pkl55.background.tick();
+        cross4 = new pkl55.background.cross();
+        kue3Tick = new pkl55.background.tick();
+        cross5 = new pkl55.background.cross();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(483, 218));
         setMinimumSize(new java.awt.Dimension(483, 218));
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel2.setText("Url :");
-
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel5.setText("Username :");
+        jLabel2.setText("URI :");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(214, 11, -1, -1));
 
         jButton1.setText("Tes Koneksi");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -73,6 +133,7 @@ public class DBConfig extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(248, 264, -1, -1));
 
         jButton2.setText("Simpan");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -80,57 +141,173 @@ public class DBConfig extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(343, 264, -1, -1));
+        jPanel1.add(progressTest, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 293, 382, -1));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(statusText, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(79, 79, 79))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 83, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(userText, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 364, Short.MAX_VALUE)
-                            .addComponent(urlText))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(progressTest, javax.swing.GroupLayout.DEFAULT_SIZE, 463, Short.MAX_VALUE)
-                        .addContainerGap())))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1)
-                .addGap(21, 21, 21))
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel3.setText("Kuesioner 1");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 137, 58, 16));
+
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel5.setText("Kuesioner 2");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 186, 58, 16));
+
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel7.setText("Kuesioner 3");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 233, 58, 16));
+        jPanel1.add(loginUrlField, new org.netbeans.lib.awtextra.AbsoluteConstraints(96, 39, 314, -1));
+        jPanel1.add(logoutUrlField, new org.netbeans.lib.awtextra.AbsoluteConstraints(96, 88, 314, -1));
+        jPanel1.add(kue1UrlField, new org.netbeans.lib.awtextra.AbsoluteConstraints(96, 135, 314, -1));
+        jPanel1.add(kue2UrlField, new org.netbeans.lib.awtextra.AbsoluteConstraints(96, 184, 314, -1));
+        jPanel1.add(kue3UrlField, new org.netbeans.lib.awtextra.AbsoluteConstraints(96, 231, 314, -1));
+
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel4.setText("Login");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 41, 27, 16));
+
+        logout.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        logout.setText("Logout");
+        jPanel1.add(logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 90, 35, 16));
+
+        javax.swing.GroupLayout cross1Layout = new javax.swing.GroupLayout(cross1);
+        cross1.setLayout(cross1Layout);
+        cross1Layout.setHorizontalGroup(
+            cross1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 25, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(urlText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(userText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(progressTest, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(statusText, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+        cross1Layout.setVerticalGroup(
+            cross1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 25, Short.MAX_VALUE)
         );
+
+        javax.swing.GroupLayout loginTickLayout = new javax.swing.GroupLayout(loginTick);
+        loginTick.setLayout(loginTickLayout);
+        loginTickLayout.setHorizontalGroup(
+            loginTickLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, loginTickLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(cross1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        loginTickLayout.setVerticalGroup(
+            loginTickLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(loginTickLayout.createSequentialGroup()
+                .addComponent(cross1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 7, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(loginTick, new org.netbeans.lib.awtextra.AbsoluteConstraints(424, 39, -1, 32));
+
+        javax.swing.GroupLayout cross2Layout = new javax.swing.GroupLayout(cross2);
+        cross2.setLayout(cross2Layout);
+        cross2Layout.setHorizontalGroup(
+            cross2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 25, Short.MAX_VALUE)
+        );
+        cross2Layout.setVerticalGroup(
+            cross2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 25, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout logoutTickLayout = new javax.swing.GroupLayout(logoutTick);
+        logoutTick.setLayout(logoutTickLayout);
+        logoutTickLayout.setHorizontalGroup(
+            logoutTickLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, logoutTickLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(cross2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        logoutTickLayout.setVerticalGroup(
+            logoutTickLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(logoutTickLayout.createSequentialGroup()
+                .addComponent(cross2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 7, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(logoutTick, new org.netbeans.lib.awtextra.AbsoluteConstraints(424, 88, -1, 32));
+
+        javax.swing.GroupLayout cross3Layout = new javax.swing.GroupLayout(cross3);
+        cross3.setLayout(cross3Layout);
+        cross3Layout.setHorizontalGroup(
+            cross3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 25, Short.MAX_VALUE)
+        );
+        cross3Layout.setVerticalGroup(
+            cross3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 25, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout kue1TickLayout = new javax.swing.GroupLayout(kue1Tick);
+        kue1Tick.setLayout(kue1TickLayout);
+        kue1TickLayout.setHorizontalGroup(
+            kue1TickLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kue1TickLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(cross3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        kue1TickLayout.setVerticalGroup(
+            kue1TickLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(kue1TickLayout.createSequentialGroup()
+                .addComponent(cross3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 7, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(kue1Tick, new org.netbeans.lib.awtextra.AbsoluteConstraints(424, 135, -1, 32));
+
+        javax.swing.GroupLayout cross4Layout = new javax.swing.GroupLayout(cross4);
+        cross4.setLayout(cross4Layout);
+        cross4Layout.setHorizontalGroup(
+            cross4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 25, Short.MAX_VALUE)
+        );
+        cross4Layout.setVerticalGroup(
+            cross4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 25, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout kue2TickLayout = new javax.swing.GroupLayout(kue2Tick);
+        kue2Tick.setLayout(kue2TickLayout);
+        kue2TickLayout.setHorizontalGroup(
+            kue2TickLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kue2TickLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(cross4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        kue2TickLayout.setVerticalGroup(
+            kue2TickLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(kue2TickLayout.createSequentialGroup()
+                .addComponent(cross4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 7, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(kue2Tick, new org.netbeans.lib.awtextra.AbsoluteConstraints(424, 184, -1, 32));
+
+        javax.swing.GroupLayout cross5Layout = new javax.swing.GroupLayout(cross5);
+        cross5.setLayout(cross5Layout);
+        cross5Layout.setHorizontalGroup(
+            cross5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 25, Short.MAX_VALUE)
+        );
+        cross5Layout.setVerticalGroup(
+            cross5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 25, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout kue3TickLayout = new javax.swing.GroupLayout(kue3Tick);
+        kue3Tick.setLayout(kue3TickLayout);
+        kue3TickLayout.setHorizontalGroup(
+            kue3TickLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kue3TickLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(cross5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        kue3TickLayout.setVerticalGroup(
+            kue3TickLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(kue3TickLayout.createSequentialGroup()
+                .addComponent(cross5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 7, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(kue3Tick, new org.netbeans.lib.awtextra.AbsoluteConstraints(424, 231, -1, 32));
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
 
@@ -140,7 +317,7 @@ public class DBConfig extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Konfigurasi Database Program Aplikasi Data Entry PKL 54");
+        jLabel1.setText("Konfigurasi Program Aplikasi Data Entry PKL 55");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -161,53 +338,155 @@ public class DBConfig extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        saveData();
-        testWorker = new TestWorker();
-        testWorker.execute();
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         saveData();
-        configManager.saveConfig(DBConfig);
-        Model.Config.setURL(urlText.getText());
+        configManager.saveConfig(getDBConfig());
+        Model.Config.setURL(getKue1UrlField().getText());
         Model.Config.setURLToConfig();
         System.out.println(Model.Config.url);
         JOptionPane.showMessageDialog(this, "Konfigurasi berhasil disimpan");
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        saveData();
+        uncheckUrlStatus();
+        uncrossUrlStatus();
+        testWorker = new TestWorker();
+        testWorker.execute();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
      */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private pkl55.background.cross cross1;
+    private pkl55.background.cross cross2;
+    private pkl55.background.cross cross3;
+    private pkl55.background.cross cross4;
+    private pkl55.background.cross cross5;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private pkl55.background.tick kue1Tick;
+    private javax.swing.JTextField kue1UrlField;
+    private pkl55.background.tick kue2Tick;
+    private javax.swing.JTextField kue2UrlField;
+    private pkl55.background.tick kue3Tick;
+    private javax.swing.JTextField kue3UrlField;
+    private pkl55.background.tick loginTick;
+    private javax.swing.JTextField loginUrlField;
+    private javax.swing.JLabel logout;
+    private pkl55.background.tick logoutTick;
+    private javax.swing.JTextField logoutUrlField;
     private javax.swing.JProgressBar progressTest;
-    private javax.swing.JLabel statusText;
-    private javax.swing.JTextField urlText;
-    private javax.swing.JTextField userText;
     // End of variables declaration//GEN-END:variables
 
     private void initText() {
-        urlText.setText(DBConfig.getUrl());
-        userText.setText(System.getProperty("user.name"));
-//        dbNameText.setText(DBConfig.getDbName());
-//        portText.setText(DBConfig.getPort());
-//        passText.setText(DBConfig.getPassword());
+        getKue1UrlField().setText(getDBConfig().getKue1Url());
+        getKue2UrlField().setText(getDBConfig().getKue2Url());
+        getKue3UrlField().setText(getDBConfig().getKue3Url());
+        getLoginUrlField().setText(getDBConfig().getLoginUrl());
+        getLogoutUrlField().setText(getDBConfig().getLogoutUrl());
     }
-    
-    public JPanel getJPanel1(){
+
+    public JPanel getJPanel1() {
         return jPanel1;
     }
-    
-    public  JPanel getJPanel2(){
+
+    public JPanel getJPanel2() {
         return jPanel1;
+    }
+
+    public DBConfigModel getDBConfig() {
+        return DBConfig;
+    }
+
+    public javax.swing.JTextField getKue1UrlField() {
+        return kue3UrlField;
+    }
+
+    public void setKue1UrlField(javax.swing.JTextField kue1UrlField) {
+        this.kue3UrlField = kue1UrlField;
+    }
+
+    public javax.swing.JTextField getKue2UrlField() {
+        return kue1UrlField;
+    }
+
+    public void setKue2UrlField(javax.swing.JTextField kue2UrlField) {
+        this.kue1UrlField = kue2UrlField;
+    }
+
+    public javax.swing.JTextField getKue3UrlField() {
+        return kue2UrlField;
+    }
+
+    public void setKue3UrlField(javax.swing.JTextField kue3UrlField) {
+        this.kue2UrlField = kue3UrlField;
+    }
+
+    public javax.swing.JTextField getLoginUrlField() {
+        return loginUrlField;
+    }
+
+    public void setLoginUrlField(javax.swing.JTextField loginUrlField) {
+        this.loginUrlField = loginUrlField;
+    }
+
+    public javax.swing.JTextField getLogoutUrlField() {
+        return logoutUrlField;
+    }
+
+    public void setLogoutUrlField(javax.swing.JTextField logoutUrlField) {
+        this.logoutUrlField = logoutUrlField;
+    }
+
+    public pkl55.background.tick getKue1Tick() {
+        return kue3Tick;
+    }
+
+    public void setKue1Tick(pkl55.background.tick kue1Tick) {
+        this.kue3Tick = kue1Tick;
+    }
+
+    public pkl55.background.tick getKue2Tick() {
+        return kue1Tick;
+    }
+
+    public void setKue2Tick(pkl55.background.tick kue2Tick) {
+        this.kue1Tick = kue2Tick;
+    }
+
+    public pkl55.background.tick getKue3Tick() {
+        return kue2Tick;
+    }
+
+    public void setKue3Tick(pkl55.background.tick kue3Tick) {
+        this.kue2Tick = kue3Tick;
+    }
+
+    public pkl55.background.tick getLoginTick() {
+        return loginTick;
+    }
+
+    public void setLoginTick(pkl55.background.tick loginTick) {
+        this.loginTick = loginTick;
+    }
+
+    public pkl55.background.tick getLogoutTick() {
+        return logoutTick;
+    }
+
+    public void setLogoutTick(pkl55.background.tick logoutTick) {
+        this.logoutTick = logoutTick;
     }
 
     class TestWorker extends SwingWorker<String, Object> {
@@ -220,11 +499,131 @@ public class DBConfig extends javax.swing.JFrame {
 //                ConnectDB cdb = new ConnectDB(DBConfig.getUrl(), DBConfig.getPort(), DBConfig.getDbName(), 
 //                        DBConfig.getUser(), DBConfig.getPassword());
 //                cdb.Connect();
-                statusText.setText("Koneksi berhasil");
+                int position = 1;
+                for (Component comp : jPanel1.getComponents()) {
+                    if (comp.isVisible()) {
+                        int status = 1;
+                        if (comp instanceof JTextField) {
+                            JTextField temp = ((JTextField) comp);
+                            if (!temp.getText().equalsIgnoreCase("")) {
+                                status = testConnection(((JTextField) comp).getText());
+                            }
+                            System.out.println(status);
+                            if (status == 3) {
+                                switch (position) {
+                                    case 1:
+                                        loginTick.setVisible(true);
+                                        break;
+                                    case 2:
+                                        logoutTick.setVisible(true);
+                                        break;
+                                    case 3:
+                                        kue1Tick.setVisible(true);
+                                        break;
+                                    case 4:
+                                        kue2Tick.setVisible(true);
+                                        break;
+                                    case 5:
+                                        kue3Tick.setVisible(true);
+                                        break;
+                                }
+                            } else {
+                                if (status == 2) {
+                                    JOptionPane.showMessageDialog(null, "Jaringan bermasalah.",
+                                            "Perhatian", JOptionPane.INFORMATION_MESSAGE);
+                                    crossUrlStatus();
+                                    break;
+                                } else{
+                                    switch (position) {
+                                        case 1:
+                                            loginTick.setVisible(true);
+                                            cross1.setVisible(true);
+                                            break;
+                                        case 2:
+                                            logoutTick.setVisible(true);
+                                            cross2.setVisible(true);
+                                            break;
+                                        case 3:
+                                            kue1Tick.setVisible(true);
+                                            cross3.setVisible(true);
+                                            break;
+                                        case 4:
+                                            kue2Tick.setVisible(true);
+                                            cross4.setVisible(true);
+                                            break;
+                                        case 5:
+                                            kue3Tick.setVisible(true);
+                                            cross5.setVisible(true);
+                                            break;
+                                    }
+                                }
+                            }
+                            position++;
+                        }
+                    }
+                }
+                position = 1;
             } catch (Exception e) {
-                statusText.setText("Koneksi gagal");
+                System.out.println(e.getMessage());
             }
             return "";
+        }
+
+        public int testConnection(String address){
+            URL url;
+            try {
+                url = new URL(address);
+            } catch (MalformedURLException ex) {
+                return 4;//URL salah
+            }
+            Map<String, Object> params = new LinkedHashMap<>();
+            params.put("username", "dummy");
+            params.put("password", "dummy");
+
+            StringBuilder postData = new StringBuilder();
+            for (Map.Entry<String, Object> param : params.entrySet()) {
+                if (postData.length() != 0) {
+                    postData.append('&');
+                }
+                try {
+                    postData.append(URLEncoder.encode(param.getKey(), "UTF-8"));
+                } catch (UnsupportedEncodingException ex) {
+                    return 1;
+                }
+                postData.append('=');
+                try {
+                    postData.append(URLEncoder.encode(String.valueOf(param.getValue()), "UTF-8"));
+                } catch (UnsupportedEncodingException ex) {
+                    return 1;
+                }
+            }
+            byte[] postDataBytes;
+            try {
+                postDataBytes = postData.toString().getBytes("UTF-8");
+            } catch (UnsupportedEncodingException ex) {
+                return 1;
+            }
+
+            HttpURLConnection conn;
+            try {
+                conn = (HttpURLConnection) url.openConnection();
+            } catch (IOException ex) {
+                return 1;
+            }
+            try {
+                conn.setRequestMethod("POST");
+            } catch (ProtocolException ex) {
+                return 1;
+            }
+            conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+            conn.setRequestProperty("Content-Length", String.valueOf(postDataBytes.length));
+            conn.setDoOutput(true);
+            try {
+                conn.getOutputStream().write(postDataBytes);
+            } catch (IOException ex) {
+                return 2;
+            }
+            return 3;
         }
 
         @Override

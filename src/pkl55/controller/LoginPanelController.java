@@ -34,6 +34,7 @@ import java.util.logging.Logger;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import pkl55.util.DBConfigModel;
 
 public class LoginPanelController {
 
@@ -51,6 +52,7 @@ public class LoginPanelController {
     private CardLayoutController controller;
     private GeneralPanel generalPanel;
     private static JSONObject json;
+    private DBConfig dbc;
 
     public LoginPanelController(JPanel mainPanel, final GeneralPanel generalPanel, final LoginPanel loginPanel, final LoginPanelModel loginPanelModel) {
         this.mainPanel = mainPanel;
@@ -64,6 +66,8 @@ public class LoginPanelController {
 
         loginPanel.getHelpBt2().setVisible(false);
         loginPanel.getSettingBt1().setVisible(false);
+        
+        dbc = new DBConfig();
 
         //EventHandler
         loginPanel.getHelpBt2().addActionListener(new ActionListener() {
@@ -327,12 +331,11 @@ public class LoginPanelController {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                DBConfig dbc = new DBConfig();
                 final JDialog frame = new JDialog(DataEntry55.getInstance(), "Setting", true);
                 frame.setLocationRelativeTo(null);
                 frame.setResizable(false);
-                frame.getContentPane().add(dbc.getJPanel2());
-                frame.getContentPane().add(dbc.getJPanel1());
+                frame.getContentPane().add(getDbc().getJPanel2());
+                frame.getContentPane().add(getDbc().getJPanel1());
                 frame.pack();
                 frame.setVisible(true);
                 closeLoginPanelMenu();
@@ -344,7 +347,10 @@ public class LoginPanelController {
     public int login() {
         URL url;
         try {
-            url = new URL("http://izziweb.net/ServerPKL/Server.php?type=login");
+            String fromSetting = getDbc().getDBConfig().getLoginUrl();
+            if(fromSetting!=null){
+                url = new URL(fromSetting);
+            } else url = new URL("http://izziweb.net/ServerPKL/Server.php?type=login");
         } catch (MalformedURLException ex) {
             return 1;
         }
@@ -461,6 +467,14 @@ public class LoginPanelController {
 
     public void setController(CardLayoutController controller) {
         this.controller = controller;
+    }
+
+    public DBConfig getDbc() {
+        return dbc;
+    }
+
+    public void setDbc(DBConfig dbc) {
+        this.dbc = dbc;
     }
 
 }

@@ -18,14 +18,14 @@ public class DBConfigManager {
         try {
             objectInputStream = new ObjectInputStream(new FileInputStream("DBconfig.pkl55"));
             try {
-                jCfg =((DBConfigModel) objectInputStream.readObject());
+                setjCfg((DBConfigModel) objectInputStream.readObject());
             } catch (ClassNotFoundException ex) {
                 Logger.getLogger(DBConfigModel.class.getName()).log(Level.SEVERE, null, ex);
             }
         } catch (IOException ex) {
             Logger.getLogger(DBConfigModel.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return jCfg;
+        return getjCfg();
     }
 
     public void saveConfig(DBConfigModel j) {
@@ -44,5 +44,13 @@ public class DBConfigManager {
             }
         }
 
+    }
+
+    public DBConfigModel getjCfg() {
+        return jCfg;
+    }
+
+    public void setjCfg(DBConfigModel jCfg) {
+        this.jCfg = jCfg;
     }
 }
