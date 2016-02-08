@@ -237,9 +237,11 @@ public class DSSubPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         if(getjCheckBox1().isSelected()){
             getjCheckBox1().setSelected(false);
+            getjLabel2().setText("(Perpindahan antar kolom isian dengan Enter)");
         } else{
             getjCheckBox1().setSelected(true);
-        }        
+            getjLabel2().setText("(Perpindahan antar kolom isian otomatis)");
+        }
     }//GEN-LAST:event_jLabel1MouseClicked
 
 
