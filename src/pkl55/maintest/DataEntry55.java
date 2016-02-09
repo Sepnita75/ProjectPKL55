@@ -36,13 +36,16 @@ public class DataEntry55 extends javax.swing.JFrame {
     private DSController dSController;
 
     public DataEntry55() {
-        super("PKL 55 STIS");
         initComponents();
+        //instance = new DataEntry55();
+        //navbarButton1.getHomebutton1().setActive(true);
         loginPanelModel = new LoginPanelModel();
         loginPanelController = new LoginPanelController(getMainPanel(), getGeneralPanel1(), getLoginPanel1(), getLoginPanelModel());
         entryKuesController = new EntryKuesController(getEntryKues1(), getEntryKuesModel(), getLoginPanelController(), generalPanel1.getKuesSubPanel1());
         dSController = new DSController(loginPanelController ,entryKues1, generalPanel1.getdSSubPanel1());
         
+
+
         image = new ImageIcon(getClass().getResource("/pkl55/images/kuesioner.png")).getImage();
         setIconImage(image);
         //fullscreen Frame
