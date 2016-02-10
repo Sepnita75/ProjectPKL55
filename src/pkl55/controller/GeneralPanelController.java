@@ -139,6 +139,8 @@ public class GeneralPanelController {
                         "Perhatian", JOptionPane.INFORMATION_MESSAGE);
                         }
                     }
+                } else{
+                    backToLoginPanel();
                 }
             }
 
