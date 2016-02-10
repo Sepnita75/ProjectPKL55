@@ -222,9 +222,11 @@ public class LoginPanelController {
                     } else if (login() == 2) {
                         JOptionPane.showMessageDialog(loginPanel, "Password atau username salah.",
                                 "Perhatian", JOptionPane.INFORMATION_MESSAGE);
+                                getController().show("generalpanel");
                     } else {
                         JOptionPane.showMessageDialog(loginPanel, "Koneksi bermasalah, ulangi lagi atau hubungi admin.",
                                 "Perhatian", JOptionPane.INFORMATION_MESSAGE);
+                                getController().show("generalpanel");
                     }
                 }
 
