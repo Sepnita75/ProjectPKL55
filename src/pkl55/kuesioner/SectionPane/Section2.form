@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,4,-107,0,0,3,60"/>
+  </AuxValues>
+
+  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+    <Property name="useNullLayout" type="boolean" value="false"/>
+  </Layout>
+  <SubComponents>
+    <Component class="pkl55.kuesioner.InputTextField" name="b3ar1">
+      <Properties>
+        <Property name="panel" type="pkl55.kuesioner.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="20"/>
+        <Property name="varName" type="java.lang.String" value="b3ar1"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="b3ar1.setErrorlist(errorList);"/>
+      </AuxValues>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="110" y="100" width="30" height="-1"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.kuesioner.InputTextField" name="b3ar2">
+      <Properties>
+        <Property name="panel" type="pkl55.kuesioner.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="21"/>
+        <Property name="varName" type="java.lang.String" value="b3ar2"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="b3ar2.setErrorlist(errorList);"/>
+      </AuxValues>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="360" y="150" width="30" height="-1"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.kuesioner.InputTextField" name="b3ar3">
+      <Properties>
+        <Property name="panel" type="pkl55.kuesioner.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="22"/>
+        <Property name="varName" type="java.lang.String" value="b3ar3"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="b3ar3.setErrorlist(errorList);"/>
+      </AuxValues>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="360" y="220" width="30" height="-1"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.kuesioner.InputTextField" name="b3ar4">
+      <Properties>
+        <Property name="panel" type="pkl55.kuesioner.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="23"/>
+        <Property name="varName" type="java.lang.String" value="b3ar4"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="b3ar4.setErrorlist(errorList);"/>
+      </AuxValues>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="360" y="320" width="30" height="-1"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.kuesioner.InputTextField" name="b3ar5">
+      <Properties>
+        <Property name="panel" type="pkl55.kuesioner.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="24"/>
+        <Property name="varName" type="java.lang.String" value="b3ar5"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="b3ar5.setErrorlist(errorList);"/>
+      </AuxValues>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="360" y="420" width="30" height="-1"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.kuesioner.InputTextField" name="b3ar6">
+      <Properties>
+        <Property name="panel" type="pkl55.kuesioner.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="25"/>
+        <Property name="varName" type="java.lang.String" value="b3ar6"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="b3ar6.setErrorlist(errorList);"/>
+      </AuxValues>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="360" y="510" width="30" height="-1"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.kuesioner.InputTextField" name="b3ar7s1">
+      <Properties>
+        <Property name="panel" type="pkl55.kuesioner.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="26"/>
+        <Property name="varName" type="java.lang.String" value="b3ar7s1"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="b3ar7s1.setErrorlist(errorList);"/>
+      </AuxValues>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="360" y="610" width="30" height="-1"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.kuesioner.InputTextField" name="b3ar7s2">
+      <Properties>
+        <Property name="panel" type="pkl55.kuesioner.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="27"/>
+        <Property name="varName" type="java.lang.String" value="b3ar7s2"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="b3ar7s2.setErrorlist(errorList);"/>
+      </AuxValues>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="360" y="690" width="30" height="-1"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.kuesioner.InputTextField" name="b3ar7s2lainnya">
+      <Properties>
+        <Property name="panel" type="pkl55.kuesioner.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="28"/>
+        <Property name="varName" type="java.lang.String" value="b3ar7s2lainnya"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="b3ar7s2lainnya.setErrorlist(errorList);"/>
+      </AuxValues>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="142" y="741" width="66" height="18"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.kuesioner.InputTextField" name="b3ar7s3">
+      <Properties>
+        <Property name="panel" type="pkl55.kuesioner.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="29"/>
+        <Property name="varName" type="java.lang.String" value="b3ar7s3"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="b3ar7s3.setErrorlist(errorList);"/>
+      </AuxValues>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="360" y="810" width="30" height="-1"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.kuesioner.InputTextField" name="b3ar8s1">
+      <Properties>
+        <Property name="panel" type="pkl55.kuesioner.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="30"/>
+        <Property name="varName" type="java.lang.String" value="b3ar8s1"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="b3ar8s1.setErrorlist(errorList);"/>
+      </AuxValues>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="360" y="870" width="30" height="-1"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.kuesioner.InputTextField" name="b3ar8s2">
+      <Properties>
+        <Property name="focusCycleRoot" type="boolean" value="true"/>
+        <Property name="panel" type="pkl55.kuesioner.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="31"/>
+        <Property name="varName" type="java.lang.String" value="b3ar8s2"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="b3ar8s2.setErrorlist(errorList);"/>
+      </AuxValues>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="750" y="70" width="30" height="-1"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.kuesioner.InputTextField" name="b3ar8s3">
+      <Properties>
+        <Property name="panel" type="pkl55.kuesioner.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="32"/>
+        <Property name="varName" type="java.lang.String" value="b3ar8s3"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="b3ar8s3.setErrorlist(errorList);"/>
+      </AuxValues>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="750" y="130" width="30" height="-1"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.kuesioner.InputTextField" name="b3ar8s4">
+      <Properties>
+        <Property name="panel" type="pkl55.kuesioner.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="33"/>
+        <Property name="varName" type="java.lang.String" value="b3ar8s4"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="b3ar8s4.setErrorlist(errorList);"/>
+      </AuxValues>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="750" y="183" width="30" height="-1"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.kuesioner.InputTextField" name="b3ar9s1">
+      <Properties>
+        <Property name="panel" type="pkl55.kuesioner.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="34"/>
+        <Property name="varName" type="java.lang.String" value="b3ar9s1"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="b3ar9s1.setErrorlist(errorList);"/>
+      </AuxValues>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="750" y="280" width="30" height="-1"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.kuesioner.InputTextField" name="b3ar9s2">
+      <Properties>
+        <Property name="panel" type="pkl55.kuesioner.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="35"/>
+        <Property name="varName" type="java.lang.String" value="b3ar9s2"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="b3ar9s2.setErrorlist(errorList);"/>
+      </AuxValues>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="750" y="350" width="30" height="-1"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.kuesioner.InputTextField" name="b3ar10s1">
+      <Properties>
+        <Property name="panel" type="pkl55.kuesioner.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="36"/>
+        <Property name="varName" type="java.lang.String" value="b3ar10s1"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="b3ar10s1.setErrorlist(errorList);"/>
+      </AuxValues>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="750" y="440" width="30" height="-1"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.kuesioner.InputTextField" name="b3ar10s2">
+      <Properties>
+        <Property name="panel" type="pkl55.kuesioner.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="37"/>
+        <Property name="varName" type="java.lang.String" value="b3ar10s2"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="b3ar10s2.setErrorlist(errorList);"/>
+      </AuxValues>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="750" y="510" width="30" height="-1"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.kuesioner.InputTextField" name="b3br11">
+      <Properties>
+        <Property name="panel" type="pkl55.kuesioner.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="38"/>
+        <Property name="varName" type="java.lang.String" value="b3br11"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="b3br11.setErrorlist(errorList);"/>
+      </AuxValues>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="750" y="640" width="30" height="-1"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.kuesioner.InputTextField" name="b3br12">
+      <Properties>
+        <Property name="panel" type="pkl55.kuesioner.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="39"/>
+        <Property name="varName" type="java.lang.String" value="b3br12"/>
+        <Property name="verifyInputWhenFocusTarget" type="boolean" value="false"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="b3br12.setErrorlist(errorList);"/>
+      </AuxValues>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="585" y="718" width="70" height="-1"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.kuesioner.InputTextField" name="b3br13">
+      <Properties>
+        <Property name="panel" type="pkl55.kuesioner.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="40"/>
+        <Property name="varName" type="java.lang.String" value="b3br13"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="b3br13.setErrorlist(errorList);"/>
+      </AuxValues>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="750" y="808" width="30" height="-1"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.kuesioner.InputTextField" name="b3br14">
+      <Properties>
+        <Property name="panel" type="pkl55.kuesioner.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor" postCode="b3br14.setNextpage(true);">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="41"/>
+        <Property name="varName" type="java.lang.String" value="b3br14"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="b3br14.setErrorlist(errorList);"/>
+      </AuxValues>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="750" y="870" width="30" height="-1"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel2">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/pkl55/kuesioner/SourceOfPicture/2.png"/>
+        </Property>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+  </SubComponents>
+</Form>
