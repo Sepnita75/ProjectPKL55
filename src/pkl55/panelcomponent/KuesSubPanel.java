@@ -71,6 +71,8 @@ public class KuesSubPanel extends javax.swing.JPanel {
 
         updateds1.setText("");
 
+        tableSubKuesPanel2.setOpaque(false);
+
         javax.swing.GroupLayout ne_kues1Layout = new javax.swing.GroupLayout(ne_kues1);
         ne_kues1.setLayout(ne_kues1Layout);
         ne_kues1Layout.setHorizontalGroup(

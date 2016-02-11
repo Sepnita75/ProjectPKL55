@@ -57,11 +57,15 @@ public class TableSubKuesPanel extends javax.swing.JPanel {
         table1.setModel(tableModel);
         table1.setRowSelectionAllowed(true);
         table1.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-//        table1.getColumnModel().getColumn(2).setCellRenderer(new CleanErrorRenderer());
-//        table1.getColumnModel().getColumn(3).setCellRenderer(new StatusEntryRenderer());
+        table1.getColumnModel().getColumn(2).setCellRenderer(new TableFlagColorRenderer());
+        table1.getColumnModel().getColumn(3).setCellRenderer(new TableStatusColorRenderer());
 //        sorter = new TableRowSorter<>(tableModel);
 //        table1.setRowSorter(sorter);
 //        table1.getColumnModel().getColumn(2).setWidth(5);
+    }
+    
+    public String getNks(){
+        return (String) ((TableKuesModel) table1.getModel()).getValueAt(table1.getSelectedRow(), 0);
     }
 
     /**
@@ -171,6 +175,11 @@ public class TableSubKuesPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
+        table1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                table1MouseClicked(evt);
+            }
+        });
         jScrollPane2.setViewportView(table1);
 
         add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 690, -1));
@@ -192,6 +201,10 @@ public class TableSubKuesPanel extends javax.swing.JPanel {
         textFilter.setText("");
         textFilter.setForeground(Color.black);
     }//GEN-LAST:event_textFilterMouseClicked
+
+    private void table1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_table1MouseClicked
+        System.out.println(getNks());
+    }//GEN-LAST:event_table1MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

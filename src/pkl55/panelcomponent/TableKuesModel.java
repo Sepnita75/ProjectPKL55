@@ -27,7 +27,7 @@ public class TableKuesModel extends AbstractTableModel {
 //        list.add(e);
         fireTableDataChanged();
     }
-
+    
     @Override
     public int getColumnCount() {
         return 4;

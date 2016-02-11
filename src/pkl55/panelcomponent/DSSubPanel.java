@@ -17,50 +17,54 @@ public class DSSubPanel extends javax.swing.JPanel {
      * Creates new form Dspane
      */
     TableDSModel tableModel;
-    
+
     public DSSubPanel() {
         initComponents();
         String[][] data = new String[5][4];
-        data[0][0]="1";
-        data[0][1]="Pringsewu";
-        data[0][2]="Labotu";
-        data[0][3]="3798579285";
-        
-        data[1][0]="2";
-        data[1][1]="Laonti";
-        data[1][2]="Labotu";
-        data[1][3]="4646549285";
-        
-        data[2][0]="3";
-        data[2][1]="Lainea";
-        data[2][2]="Kalisusu";
-        data[2][3]="45634664365";
-        
-        data[3][0]="4";
-        data[3][1]="Konawe";
-        data[3][2]="Wangi-Wangi";
-        data[3][3]="379456346536";
-        
-        data[4][0]="5";
-        data[4][1]="Konda";
-        data[4][2]="Ambalodangge";
-        data[4][3]="544369285";
-        
-        
+        data[0][0] = "1";
+        data[0][1] = "Pringsewu";
+        data[0][2] = "Labotu";
+        data[0][3] = "3798579285";
+
+        data[1][0] = "2";
+        data[1][1] = "Laonti";
+        data[1][2] = "Labotu";
+        data[1][3] = "4646549285";
+
+        data[2][0] = "3";
+        data[2][1] = "Lainea";
+        data[2][2] = "Kalisusu";
+        data[2][3] = "45634664365";
+
+        data[3][0] = "4";
+        data[3][1] = "Konawe";
+        data[3][2] = "Wangi-Wangi";
+        data[3][3] = "379456346536";
+
+        data[4][0] = "5";
+        data[4][1] = "Konda";
+        data[4][2] = "Ambalodangge";
+        data[4][3] = "544369285";
+
         initTable();
         ((TableDSModel) jTable1.getModel()).update(data);
     }
-    
-            private void initTable() {
-                tableModel = new TableDSModel();
-                jTable1.setModel(tableModel);
-                jTable1.setRowSelectionAllowed(true);
-                jTable1.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+
+    private void initTable() {
+        tableModel = new TableDSModel();
+        jTable1.setModel(tableModel);
+        jTable1.setRowSelectionAllowed(true);
+        jTable1.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+        jTable1.getColumnModel().getColumn(0).setPreferredWidth(8);
         //        table1.getColumnModel().getColumn(2).setCellRenderer(new CleanErrorRenderer());
         //        table1.getColumnModel().getColumn(3).setCellRenderer(new StatusEntryRenderer());
         //        sorter = new TableRowSorter<>(tableModel);
         //        table1.setRowSorter(sorter);
         //        table1.getColumnModel().getColumn(2).setWidth(5);
+    }
+
+    public String getNks() {
+        return (String) ((TableDSModel) jTable1.getModel()).getValueAt(jTable1.getSelectedRow(), 3);
     }
 
     /**
@@ -174,6 +178,11 @@ public class DSSubPanel extends javax.swing.JPanel {
         });
         jTable1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jTable1.getTableHeader().setReorderingAllowed(false);
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable1MouseClicked(evt);
+            }
+        });
         jScrollPane2.setViewportView(jTable1);
         if (jTable1.getColumnModel().getColumnCount() > 0) {
             jTable1.getColumnModel().getColumn(0).setPreferredWidth(5);
@@ -276,19 +285,23 @@ public class DSSubPanel extends javax.swing.JPanel {
 
     private void ne_ds2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ne_ds2MouseClicked
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_ne_ds2MouseClicked
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
         // TODO add your handling code here:
-        if(getjCheckBox1().isSelected()){
+        if (getjCheckBox1().isSelected()) {
             getjCheckBox1().setSelected(false);
             getjLabel2().setText("(Perpindahan antar kolom isian dengan Enter)");
-        } else{
+        } else {
             getjCheckBox1().setSelected(true);
             getjLabel2().setText("(Perpindahan antar kolom isian otomatis)");
         }
     }//GEN-LAST:event_jLabel1MouseClicked
+
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+        System.out.println(getNks());
+    }//GEN-LAST:event_jTable1MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

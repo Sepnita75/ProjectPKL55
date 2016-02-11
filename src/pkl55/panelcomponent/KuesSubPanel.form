@@ -145,6 +145,9 @@
           </Properties>
         </Component>
         <Component class="pkl55.panelcomponent.TableSubKuesPanel" name="tableSubKuesPanel2">
+          <Properties>
+            <Property name="opaque" type="boolean" value="false"/>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>
