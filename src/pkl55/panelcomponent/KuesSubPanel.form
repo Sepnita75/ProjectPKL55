@@ -52,12 +52,12 @@
                           <Component id="updateds1" min="-2" pref="358" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="70" max="32767" attributes="0"/>
-                  <Component id="tableSubKuesPanel1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="tableSubKuesPanel2" min="-2" pref="691" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="652" max="32767" attributes="0"/>
                   <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="235" max="-2" attributes="0"/>
               </Group>
@@ -83,7 +83,7 @@
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="tableSubKuesPanel1" min="-2" max="-2" attributes="0"/>
+                          <Component id="tableSubKuesPanel2" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -144,10 +144,7 @@
             <Property name="text" type="java.lang.String" value=""/>
           </Properties>
         </Component>
-        <Component class="pkl55.panelcomponent.TableSubKuesPanel" name="tableSubKuesPanel1">
-          <Properties>
-            <Property name="opaque" type="boolean" value="false"/>
-          </Properties>
+        <Component class="pkl55.panelcomponent.TableSubKuesPanel" name="tableSubKuesPanel2">
         </Component>
       </SubComponents>
     </Container>

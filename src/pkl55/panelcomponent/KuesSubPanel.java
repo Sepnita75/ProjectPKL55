@@ -35,7 +35,7 @@ public class KuesSubPanel extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         updateds1 = new pkl55.component2.Updateds();
-        tableSubKuesPanel1 = new pkl55.panelcomponent.TableSubKuesPanel();
+        tableSubKuesPanel2 = new pkl55.panelcomponent.TableSubKuesPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList();
 
@@ -71,8 +71,6 @@ public class KuesSubPanel extends javax.swing.JPanel {
 
         updateds1.setText("");
 
-        tableSubKuesPanel1.setOpaque(false);
-
         javax.swing.GroupLayout ne_kues1Layout = new javax.swing.GroupLayout(ne_kues1);
         ne_kues1.setLayout(ne_kues1Layout);
         ne_kues1Layout.setHorizontalGroup(
@@ -90,11 +88,11 @@ public class KuesSubPanel extends javax.swing.JPanel {
                     .addGroup(ne_kues1Layout.createSequentialGroup()
                         .addGap(61, 61, 61)
                         .addComponent(updateds1, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
-                .addComponent(tableSubKuesPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(72, 72, 72))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(tableSubKuesPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 691, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(77, 77, 77))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ne_kues1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(0, 652, Short.MAX_VALUE)
                 .addComponent(jLabel8)
                 .addGap(235, 235, 235))
         );
@@ -116,7 +114,7 @@ public class KuesSubPanel extends javax.swing.JPanel {
                         .addGap(52, 52, 52))
                     .addGroup(ne_kues1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tableSubKuesPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(tableSubKuesPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
@@ -163,7 +161,7 @@ public class KuesSubPanel extends javax.swing.JPanel {
     private javax.swing.JList jList1;
     private javax.swing.JScrollPane jScrollPane1;
     private pkl55.background.Ne_kues ne_kues1;
-    private pkl55.panelcomponent.TableSubKuesPanel tableSubKuesPanel1;
+    private pkl55.panelcomponent.TableSubKuesPanel tableSubKuesPanel2;
     private pkl55.component2.Updateds updateds1;
     // End of variables declaration//GEN-END:variables
 

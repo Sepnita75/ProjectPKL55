@@ -41,6 +41,7 @@ public class EntryDSPanel extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         timeLabel1 = new pkl55.panel2.TimeLabel();
         jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         logout21.setText("");
 
@@ -77,16 +78,32 @@ public class EntryDSPanel extends javax.swing.JPanel {
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Listing :");
 
+        jLabel2.setFont(new java.awt.Font("Segoe UI Light", 0, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("PROGRAM ENTRI DATA PKL 55 STIS");
+
         javax.swing.GroupLayout entryKuesBg1Layout = new javax.swing.GroupLayout(entryKuesBg1);
         entryKuesBg1.setLayout(entryKuesBg1Layout);
         entryKuesBg1Layout.setHorizontalGroup(
             entryKuesBg1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(entryKuesBg1Layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(727, 727, 727)
+                .addComponent(jLabel1))
+            .addGroup(entryKuesBg1Layout.createSequentialGroup()
+                .addGap(1127, 1127, 1127)
+                .addComponent(timeLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(entryKuesBg1Layout.createSequentialGroup()
+                .addGap(477, 477, 477)
+                .addComponent(jLabel3))
+            .addGroup(entryKuesBg1Layout.createSequentialGroup()
                 .addGap(23, 23, 23)
-                .addGroup(entryKuesBg1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane1)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 351, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 233, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(entryKuesBg1Layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(233, 233, 233)
                 .addComponent(prev1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(44, 44, 44)
                 .addComponent(next1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -95,47 +112,41 @@ public class EntryDSPanel extends javax.swing.JPanel {
                 .addGap(37, 37, 37)
                 .addComponent(save1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(38, 38, 38)
-                .addComponent(logout21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(43, 43, 43))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, entryKuesBg1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(entryKuesBg1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(timeLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(25, 25, 25))
-            .addGroup(entryKuesBg1Layout.createSequentialGroup()
-                .addGap(477, 477, 477)
-                .addComponent(jLabel3)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(logout21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         entryKuesBg1Layout.setVerticalGroup(
             entryKuesBg1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(entryKuesBg1Layout.createSequentialGroup()
-                .addGap(54, 54, 54)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(50, 50, 50)
+                .addGroup(entryKuesBg1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addGroup(entryKuesBg1Layout.createSequentialGroup()
+                        .addGap(4, 4, 4)
+                        .addComponent(jLabel1)))
+                .addGap(6, 6, 6)
                 .addComponent(timeLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(55, 55, 55)
                 .addComponent(jLabel3)
                 .addGap(29, 29, 29)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 242, Short.MAX_VALUE)
+                .addGap(71, 71, 71)
                 .addGroup(entryKuesBg1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, entryKuesBg1Layout.createSequentialGroup()
-                        .addGroup(entryKuesBg1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(next1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(prev1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(44, 44, 44))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, entryKuesBg1Layout.createSequentialGroup()
-                        .addGroup(entryKuesBg1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ds21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(save1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(logout21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(34, 34, 34))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, entryKuesBg1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(entryKuesBg1Layout.createSequentialGroup()
+                        .addGap(171, 171, 171)
+                        .addComponent(prev1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(entryKuesBg1Layout.createSequentialGroup()
+                        .addGap(171, 171, 171)
+                        .addComponent(next1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(entryKuesBg1Layout.createSequentialGroup()
+                        .addGap(179, 179, 179)
+                        .addComponent(ds21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(entryKuesBg1Layout.createSequentialGroup()
+                        .addGap(179, 179, 179)
+                        .addComponent(save1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(entryKuesBg1Layout.createSequentialGroup()
+                        .addGap(179, 179, 179)
+                        .addComponent(logout21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -159,6 +170,7 @@ public class EntryDSPanel extends javax.swing.JPanel {
     private pkl55.component2.Ds2 ds21;
     private pkl55.background.EntryKuesBg entryKuesBg1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;

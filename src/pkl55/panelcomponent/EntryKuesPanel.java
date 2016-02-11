@@ -69,6 +69,7 @@ public class EntryKuesPanel extends javax.swing.JPanel {
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         timeLabel1 = new pkl55.panel2.TimeLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(1366, 768));
 
@@ -116,14 +117,16 @@ public class EntryKuesPanel extends javax.swing.JPanel {
         timeLabel1.setForeground(new java.awt.Color(255, 255, 255));
         timeLabel1.setFont(new java.awt.Font("Segoe UI Light", 0, 17)); // NOI18N
 
+        jLabel2.setFont(new java.awt.Font("Segoe UI Light", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("PROGRAM ENTRI DATA PKL 55 STIS");
+
         javax.swing.GroupLayout entryKuesBg1Layout = new javax.swing.GroupLayout(entryKuesBg1);
         entryKuesBg1.setLayout(entryKuesBg1Layout);
         entryKuesBg1Layout.setHorizontalGroup(
             entryKuesBg1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(entryKuesBg1Layout.createSequentialGroup()
                 .addGroup(entryKuesBg1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(timeLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1)
                     .addGroup(entryKuesBg1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(entryKuesBg1Layout.createSequentialGroup()
                             .addGap(621, 621, 621)
@@ -138,30 +141,39 @@ public class EntryKuesPanel extends javax.swing.JPanel {
                             .addComponent(logout21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(entryKuesBg1Layout.createSequentialGroup()
                             .addGap(461, 461, 461)
-                            .addComponent(jLabel3))))
+                            .addComponent(jLabel3)))
+                    .addGroup(entryKuesBg1Layout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(710, 710, 710)
+                        .addGroup(entryKuesBg1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(timeLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING))))
                 .addContainerGap(28, Short.MAX_VALUE))
         );
         entryKuesBg1Layout.setVerticalGroup(
             entryKuesBg1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(entryKuesBg1Layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(jLabel1)
                 .addGroup(entryKuesBg1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(entryKuesBg1Layout.createSequentialGroup()
-                        .addGap(133, 133, 133)
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 471, Short.MAX_VALUE)
-                        .addGroup(entryKuesBg1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(prev1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(next1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(entryKuesBg1Layout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(timeLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(entryKuesBg1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(ds21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(logout21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(save1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(save1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(entryKuesBg1Layout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addComponent(jLabel2)
+                        .addGap(107, 107, 107)
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 471, Short.MAX_VALUE)
+                        .addGroup(entryKuesBg1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(prev1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(next1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(44, 44, 44))
         );
 
@@ -228,6 +240,7 @@ public class EntryKuesPanel extends javax.swing.JPanel {
     private View.ErrorDetil errorDetil1;
     private View.ErrorList errorList1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;

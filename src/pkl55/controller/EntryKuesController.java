@@ -25,7 +25,7 @@ public class EntryKuesController {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                loginPanelController.getController().show("entrykues");
+                loginPanelController.getController().show("entry");
                 
             }
         });
