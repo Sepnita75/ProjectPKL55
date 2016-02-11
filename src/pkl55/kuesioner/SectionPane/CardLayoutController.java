@@ -1,4 +1,4 @@
-package pkl55.kuesioner.SectionPane;
+package View.SectionPane;
 
 import java.awt.CardLayout;
 import java.awt.Component;

@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pkl55.kuesioner.SectionPane;
+package View.SectionPane;
 
-import pkl55.kuesioner.ErrorList;
-import pkl55.kuesioner.Panel;
+import View.ErrorList;
+import View.Panel;
 
 /**
  *
@@ -20,37 +20,41 @@ public class MainPanel extends Panel {
         this.errorList = errorList;
     }
 
-    public ErrorList getErrorList() {
-        return errorList;
-    }
-    
-
     public MainPanel() {
+        super();
         initComponents();
-        pkl55.kuesioner.View.init(54);
     }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setLayout(new java.awt.CardLayout());
+        section11 = new View.SectionPane.Section1();
+        section21 = new View.SectionPane.Section2();
+        section31 = new View.SectionPane.Section3();
+
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        add(section11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        add(section21, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        add(section31, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
-
-//    public final void init() {
-//        System.out.println(section11);
-//        addHal("hal1", section11);
-//        addHal("hal2", section21);
-//        addHal("hal3", section31);
-//        section11.setParent(this);
-//        section21.setParent(this);
-//        section31.setParent(this);
-//        section11.setErrorList(errorList);
-//    }
+    @Override
+    public void init() {
+        addHal("hal1", section11);
+        addHal("hal2", section21);
+        addHal("hal3", section31);
+        section11.setParent(this);
+        section21.setParent(this);
+        section31.setParent(this);
+        section11.setErrorList(errorList);
+    }
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private View.SectionPane.Section1 section11;
+    private View.SectionPane.Section2 section21;
+    private View.SectionPane.Section3 section31;
     // End of variables declaration//GEN-END:variables
 
 }

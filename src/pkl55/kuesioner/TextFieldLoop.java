@@ -1,10 +1,14 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package View;
 
-package pkl55.kuesioner;
-
-import pkl55.validasi.Loop;
-import pkl55.validasi.TextSelect;
-import pkl55.validasi.Variabel;
-import pkl55.validasi.VariabelMap;
+import Controller.Loop;
+import Controller.TextSelect;
+import Controller.Variabel;
+import Controller.VariabelMap;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.FocusEvent;
@@ -12,7 +16,7 @@ import java.awt.event.FocusListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import javax.swing.AbstractAction;
-import pkl55.database.model.Config;
+import Model.Config;
 import java.util.ArrayList;
 
 /**
@@ -23,6 +27,7 @@ public class TextFieldLoop extends Field {
 
     private String varName;
     private String loopName;
+    private int position;
     private boolean start;
     private boolean end;
     private TabelLoop tabelLoop = null;
@@ -90,7 +95,6 @@ public class TextFieldLoop extends Field {
 
             @Override
             public void focusLost(FocusEvent fe) {
-                System.out.println("Hellooooo\t"+getText());
                 VariabelMap.set(varName, getText());
                 Variabel var = VariabelMap.getVar(varName);
                 Loop loop = VariabelMap.getLoop(loopName);

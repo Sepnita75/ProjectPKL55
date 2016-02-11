@@ -18,14 +18,14 @@
     <Property name="useNullLayout" type="boolean" value="false"/>
   </Layout>
   <SubComponents>
-    <Component class="pkl55.kuesioner.InputTextField" name="b3ar1">
+    <Component class="View.InputTextField" name="b3ar1">
       <Properties>
-        <Property name="panel" type="pkl55.kuesioner.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="this" type="code"/>
-        </Property>
         <Property name="position" type="int" value="20"/>
         <Property name="varName" type="java.lang.String" value="b3ar1"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b3ar1ActionPerformed"/>
+      </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="b3ar1.setErrorlist(errorList);"/>
       </AuxValues>
@@ -35,11 +35,8 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="pkl55.kuesioner.InputTextField" name="b3ar2">
+    <Component class="View.InputTextField" name="b3ar2">
       <Properties>
-        <Property name="panel" type="pkl55.kuesioner.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="this" type="code"/>
-        </Property>
         <Property name="position" type="int" value="21"/>
         <Property name="varName" type="java.lang.String" value="b3ar2"/>
       </Properties>
@@ -52,11 +49,8 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="pkl55.kuesioner.InputTextField" name="b3ar3">
+    <Component class="View.InputTextField" name="b3ar3">
       <Properties>
-        <Property name="panel" type="pkl55.kuesioner.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="this" type="code"/>
-        </Property>
         <Property name="position" type="int" value="22"/>
         <Property name="varName" type="java.lang.String" value="b3ar3"/>
       </Properties>
@@ -69,11 +63,8 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="pkl55.kuesioner.InputTextField" name="b3ar4">
+    <Component class="View.InputTextField" name="b3ar4">
       <Properties>
-        <Property name="panel" type="pkl55.kuesioner.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="this" type="code"/>
-        </Property>
         <Property name="position" type="int" value="23"/>
         <Property name="varName" type="java.lang.String" value="b3ar4"/>
       </Properties>
@@ -86,11 +77,8 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="pkl55.kuesioner.InputTextField" name="b3ar5">
+    <Component class="View.InputTextField" name="b3ar5">
       <Properties>
-        <Property name="panel" type="pkl55.kuesioner.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="this" type="code"/>
-        </Property>
         <Property name="position" type="int" value="24"/>
         <Property name="varName" type="java.lang.String" value="b3ar5"/>
       </Properties>
@@ -103,11 +91,8 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="pkl55.kuesioner.InputTextField" name="b3ar6">
+    <Component class="View.InputTextField" name="b3ar6">
       <Properties>
-        <Property name="panel" type="pkl55.kuesioner.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="this" type="code"/>
-        </Property>
         <Property name="position" type="int" value="25"/>
         <Property name="varName" type="java.lang.String" value="b3ar6"/>
       </Properties>
@@ -120,11 +105,8 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="pkl55.kuesioner.InputTextField" name="b3ar7s1">
+    <Component class="View.InputTextField" name="b3ar7s1">
       <Properties>
-        <Property name="panel" type="pkl55.kuesioner.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="this" type="code"/>
-        </Property>
         <Property name="position" type="int" value="26"/>
         <Property name="varName" type="java.lang.String" value="b3ar7s1"/>
       </Properties>
@@ -137,11 +119,8 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="pkl55.kuesioner.InputTextField" name="b3ar7s2">
+    <Component class="View.InputTextField" name="b3ar7s2">
       <Properties>
-        <Property name="panel" type="pkl55.kuesioner.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="this" type="code"/>
-        </Property>
         <Property name="position" type="int" value="27"/>
         <Property name="varName" type="java.lang.String" value="b3ar7s2"/>
       </Properties>
@@ -154,11 +133,8 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="pkl55.kuesioner.InputTextField" name="b3ar7s2lainnya">
+    <Component class="View.InputTextField" name="b3ar7s2lainnya">
       <Properties>
-        <Property name="panel" type="pkl55.kuesioner.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="this" type="code"/>
-        </Property>
         <Property name="position" type="int" value="28"/>
         <Property name="varName" type="java.lang.String" value="b3ar7s2lainnya"/>
       </Properties>
@@ -171,11 +147,8 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="pkl55.kuesioner.InputTextField" name="b3ar7s3">
+    <Component class="View.InputTextField" name="b3ar7s3">
       <Properties>
-        <Property name="panel" type="pkl55.kuesioner.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="this" type="code"/>
-        </Property>
         <Property name="position" type="int" value="29"/>
         <Property name="varName" type="java.lang.String" value="b3ar7s3"/>
       </Properties>
@@ -188,11 +161,8 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="pkl55.kuesioner.InputTextField" name="b3ar8s1">
+    <Component class="View.InputTextField" name="b3ar8s1">
       <Properties>
-        <Property name="panel" type="pkl55.kuesioner.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="this" type="code"/>
-        </Property>
         <Property name="position" type="int" value="30"/>
         <Property name="varName" type="java.lang.String" value="b3ar8s1"/>
       </Properties>
@@ -205,12 +175,9 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="pkl55.kuesioner.InputTextField" name="b3ar8s2">
+    <Component class="View.InputTextField" name="b3ar8s2">
       <Properties>
         <Property name="focusCycleRoot" type="boolean" value="true"/>
-        <Property name="panel" type="pkl55.kuesioner.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="this" type="code"/>
-        </Property>
         <Property name="position" type="int" value="31"/>
         <Property name="varName" type="java.lang.String" value="b3ar8s2"/>
       </Properties>
@@ -223,11 +190,8 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="pkl55.kuesioner.InputTextField" name="b3ar8s3">
+    <Component class="View.InputTextField" name="b3ar8s3">
       <Properties>
-        <Property name="panel" type="pkl55.kuesioner.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="this" type="code"/>
-        </Property>
         <Property name="position" type="int" value="32"/>
         <Property name="varName" type="java.lang.String" value="b3ar8s3"/>
       </Properties>
@@ -240,11 +204,8 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="pkl55.kuesioner.InputTextField" name="b3ar8s4">
+    <Component class="View.InputTextField" name="b3ar8s4">
       <Properties>
-        <Property name="panel" type="pkl55.kuesioner.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="this" type="code"/>
-        </Property>
         <Property name="position" type="int" value="33"/>
         <Property name="varName" type="java.lang.String" value="b3ar8s4"/>
       </Properties>
@@ -257,11 +218,8 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="pkl55.kuesioner.InputTextField" name="b3ar9s1">
+    <Component class="View.InputTextField" name="b3ar9s1">
       <Properties>
-        <Property name="panel" type="pkl55.kuesioner.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="this" type="code"/>
-        </Property>
         <Property name="position" type="int" value="34"/>
         <Property name="varName" type="java.lang.String" value="b3ar9s1"/>
       </Properties>
@@ -274,14 +232,14 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="pkl55.kuesioner.InputTextField" name="b3ar9s2">
+    <Component class="View.InputTextField" name="b3ar9s2">
       <Properties>
-        <Property name="panel" type="pkl55.kuesioner.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="this" type="code"/>
-        </Property>
         <Property name="position" type="int" value="35"/>
         <Property name="varName" type="java.lang.String" value="b3ar9s2"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b3ar9s2ActionPerformed"/>
+      </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="b3ar9s2.setErrorlist(errorList);"/>
       </AuxValues>
@@ -291,11 +249,8 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="pkl55.kuesioner.InputTextField" name="b3ar10s1">
+    <Component class="View.InputTextField" name="b3ar10s1">
       <Properties>
-        <Property name="panel" type="pkl55.kuesioner.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="this" type="code"/>
-        </Property>
         <Property name="position" type="int" value="36"/>
         <Property name="varName" type="java.lang.String" value="b3ar10s1"/>
       </Properties>
@@ -308,11 +263,8 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="pkl55.kuesioner.InputTextField" name="b3ar10s2">
+    <Component class="View.InputTextField" name="b3ar10s2">
       <Properties>
-        <Property name="panel" type="pkl55.kuesioner.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="this" type="code"/>
-        </Property>
         <Property name="position" type="int" value="37"/>
         <Property name="varName" type="java.lang.String" value="b3ar10s2"/>
       </Properties>
@@ -325,11 +277,8 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="pkl55.kuesioner.InputTextField" name="b3br11">
+    <Component class="View.InputTextField" name="b3br11">
       <Properties>
-        <Property name="panel" type="pkl55.kuesioner.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="this" type="code"/>
-        </Property>
         <Property name="position" type="int" value="38"/>
         <Property name="varName" type="java.lang.String" value="b3br11"/>
       </Properties>
@@ -342,11 +291,8 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="pkl55.kuesioner.InputTextField" name="b3br12">
+    <Component class="View.InputTextField" name="b3br12">
       <Properties>
-        <Property name="panel" type="pkl55.kuesioner.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="this" type="code"/>
-        </Property>
         <Property name="position" type="int" value="39"/>
         <Property name="varName" type="java.lang.String" value="b3br12"/>
         <Property name="verifyInputWhenFocusTarget" type="boolean" value="false"/>
@@ -360,11 +306,8 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="pkl55.kuesioner.InputTextField" name="b3br13">
+    <Component class="View.InputTextField" name="b3br13">
       <Properties>
-        <Property name="panel" type="pkl55.kuesioner.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="this" type="code"/>
-        </Property>
         <Property name="position" type="int" value="40"/>
         <Property name="varName" type="java.lang.String" value="b3br13"/>
       </Properties>
@@ -377,14 +320,14 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="pkl55.kuesioner.InputTextField" name="b3br14">
+    <Component class="View.InputTextField" name="b3br14">
       <Properties>
-        <Property name="panel" type="pkl55.kuesioner.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor" postCode="b3br14.setNextpage(true);">
-          <Connection code="this" type="code"/>
-        </Property>
         <Property name="position" type="int" value="41"/>
         <Property name="varName" type="java.lang.String" value="b3br14"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b3br14ActionPerformed"/>
+      </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="b3br14.setErrorlist(errorList);"/>
       </AuxValues>
@@ -397,7 +340,7 @@
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/pkl55/kuesioner/SourceOfPicture/2.png"/>
+          <Image iconType="3" name="/View/SourceOfPicture/2.png"/>
         </Property>
       </Properties>
       <Constraints>

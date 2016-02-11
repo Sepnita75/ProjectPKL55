@@ -12,13 +12,12 @@ import javax.swing.JTextField;
  * @author faqih_
  */
 public abstract class Field extends JTextField{
-    protected int position;
+    private int position;
     protected ErrorList errorlist;
     protected boolean nextpage;
     protected Hal panel;
 
     public Field() {
-        setText("");
     }
     
     

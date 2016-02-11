@@ -1,4 +1,8 @@
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package pkl55.kuesioner;
 
 import pkl55.validasi.TextSelect;
@@ -76,7 +80,6 @@ public class TextField extends Field {
                 Variabel var = VariabelMap.getVar(getVarName());
                 if (var != null) {
                     if (!var.isValid()) {
-                        System.out.println("Yang ini\t"+var.getValue());
                         errorlist.add(new ListItem(VariabelMap.getVar(getVarName()).getMessage(), getVarName()));
                         setColor(FieldColor.ON_ERROR);
                     } else {

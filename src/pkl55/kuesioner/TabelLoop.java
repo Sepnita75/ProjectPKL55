@@ -1,4 +1,4 @@
-package pkl55.kuesioner;
+package View;
 
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;

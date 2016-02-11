@@ -43,17 +43,17 @@ public class KuesionerPKL {
             public void valid() {
 
                 // Perlakuan jika tidak di isi
-                if (getValue().isEmpty() || getValue().equals("")) {
+                if (value.isEmpty() || value.equals("")) {
                     setValid(false);
                     addMessage(MessageString.null101("b1r1"));
                 }
 
                 // Perlakuan dimana 
-                if (!getValue().equals("32")) {
+                if (!value.equals("52")) {
                     setValid(false);
-                    addMessage(MessageString.value201("32"));
+                    addMessage(MessageString.value201("52"));
                 }
-//                System.out.println("Okesih\t"+value+"\t"+isValid());
+
             }
         });
 
@@ -61,20 +61,19 @@ public class KuesionerPKL {
 
             @Override
             public void valid() {
-                if (getValue().equals("2") || getValue().equals("9")) {
-                    if (getValue().equals("2")) {
-                        setValue("02");
+                if (value.equals("1") || value.equals("8")) {
+                    if (value.equals("1")) {
+                        setValue("01");
                     }
-                    if (getValue().equals("9")) {
-                        setValue("09");
+                    if (value.equals("8")) {
+                        setValue("08");
                     }
                 }
-                if (!getValue().equals("02") && !getValue().equals("09")) {
-                    System.out.println("Coba ini\t"+isValid());
+                if (!value.equals("01") && !value.equals("08")) {
                     setValid(false);
-                    addMessage(MessageString.value201("02 atau 09"));
+                    addMessage(MessageString.value201("01 atau 08"));
                 }
-                if (getValue().isEmpty() || getValue().equals("")) {
+                if (value.isEmpty() || value.equals("")) {
                     setValid(false);
                     addMessage(MessageString.null101("b1r2"));
                 }
@@ -86,12 +85,12 @@ public class KuesionerPKL {
             @Override
             public void valid() {
 
-                if (getValue().isEmpty()) {
+                if (value.isEmpty()) {
                     setValid(false);
                     addMessage(MessageString.null101("b1r3"));
                 }
                 try {
-                    if ((Integer.parseInt(getValue()) % 1) != 0) {
+                    if ((Integer.parseInt(value) % 1) != 0) {
                         setValid(false);
                         addMessage(MessageString.type307());
                     }
@@ -107,12 +106,12 @@ public class KuesionerPKL {
             @Override
             public void valid() {
 
-                if (getValue().isEmpty()) {
+                if (value.isEmpty()) {
                     setValid(false);
                     addMessage(MessageString.null101("b1r4"));
                 }
                 try {
-                    if ((Integer.parseInt(getValue()) % 1) != 0) {
+                    if ((Integer.parseInt(value) % 1) != 0) {
                         setValid(false);
                         addMessage(MessageString.type307());
                     }
@@ -124,133 +123,44 @@ public class KuesionerPKL {
 
         });
 
-        b1.put("b1r5", new Text() {
+        b1.put("b1r5s1", new Text() {
 
             @Override
             public void valid() {
 
-                if ((!getValue().equals("1") || !getValue().equals("2")) && !getValue().equals("")) {
-                    setValid(false);
-                    addMessage(MessageString.value201("1 atau 2"));
-                }
-                if (getValue().isEmpty() || getValue().equals("")) {
-                    setValid(false);
-                    addMessage(MessageString.null101("b1r5"));
-                }
             }
 
         });
 
-        b1.put("b1r6", new Text() {
+        b1.put("b1r5s2", new Text() {
 
             @Override
             public void valid() {
-                if (getValue().isEmpty() || getValue().equals("")) {
-                    setValid(false);
-                    addMessage(MessageString.null101("b1r6"));
-                }
+
             }
 
         });
 
-        b1.put("b1r7", new Text() {
+        b1.put("b1r5s3", new Text() {
 
             @Override
             public void valid() {
-                if (getValue().isEmpty() || getValue().equals("")) {
-                    setValid(false);
-                    addMessage(MessageString.null101("b1r7"));
-                }
+
             }
 
         });
 
-        b1.put("b1r8", new Text() {
+        b1.put("b1r5s4", new Text() {
 
             @Override
             public void valid() {
-                if (getValue().isEmpty() || getValue().equals("")) {
-                    setValid(false);
-                    addMessage(MessageString.null101("b1r8"));
-                }
+
             }
+
         });
 
-        b1.put("b1r9", new Text() {
-
-            @Override
-            public void valid() {
-                if (getValue().isEmpty() || getValue().equals("")) {
-                    setValid(false);
-                    addMessage(MessageString.null101("b1r9"));
-                }
-            }
-        });
-
-        b1.put("b1r10", new Text() {
-
-            @Override
-            public void valid() {
-                if (getValue().isEmpty() || getValue().equals("")) {
-                    setValid(false);
-                    addMessage(MessageString.null101("b1r10"));
-                }
-            }
-        });
-
-        b1.put("b1r11", new Text() {
-
-            @Override
-            public void valid() {
-                if (getValue().isEmpty()) {
-                    setValid(false);
-                    addMessage(MessageString.null101("b1r11"));
-                }
-                try {
-                    if ((Integer.parseInt(getValue())) % 1 == 0) {
-                        setValid(false);
-                        addMessage(MessageString.type301());
-                    }
-                } catch (Exception e) {
-                    setValid(false);
-                    addMessage(MessageString.type301());
-                }
-            }
-        });
-
-        b1.put("b1r12", new Text() {
-
-            @Override
-            public void valid() {
-                if (getValue().isEmpty() || getValue().equals("")) {
-                    setValid(false);
-                    addMessage(MessageString.null101("b1r12"));
-                }
-            }
-        });
-
-        b1.put("b1r13", new Text() {
-
-            @Override
-            public void valid() {
-                try {
-                    if ((Integer.parseInt(getValue()) % 1) != 0) {
-                        setValid(false);
-                        addMessage(MessageString.type307());
-                    }
-                } catch (NumberFormatException e) {
-                    setValid(false);
-                    addMessage(MessageString.type307());
-                }
-                if (getValue().isEmpty() || getValue().equals("")) {
-                    setValid(false);
-                    addMessage(MessageString.null101("b1r13"));
-                }
-            }
-        });
         Blok blok1 = new Blok(b1);
         k1.put("b1", blok1);
-        
 
 //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::        
 //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -263,9 +173,18 @@ public class KuesionerPKL {
 
             @Override
             public void valid() {
-                if (getValue().isEmpty() || getValue().equals("")) {
+                if (value.isEmpty() || value.equals("")) {
                     setValid(false);
                     addMessage(MessageString.null101("b2r1s1"));
+                }
+                try {
+                    if ((Integer.parseInt(value)) % 1 == 0) {
+                        setValid(false);
+                        addMessage(MessageString.type301());
+                    }
+                } catch (Exception e) {
+                    setValid(false);
+                    addMessage(MessageString.type301());
                 }
             }
 
@@ -275,9 +194,19 @@ public class KuesionerPKL {
 
             @Override
             public void valid() {
-                if (getValue().isEmpty() || getValue().equals("")) {
+                if (value.isEmpty() || value.equals("")) {
                     setValid(false);
                     addMessage(MessageString.null101("b2r1s2"));
+                }
+
+                try {
+                    if ((Integer.parseInt(value)) % 1 == 0) {
+                        setValid(false);
+                        addMessage(MessageString.type301());
+                    }
+                } catch (Exception e) {
+                    setValid(false);
+                    addMessage(MessageString.type301());
                 }
             }
 
@@ -287,14 +216,14 @@ public class KuesionerPKL {
 
             @Override
             public void valid() {
-                if (!(getValue().substring(0, 2).equals("12") && getValue().substring(0, 2).equals("13"))) {
+                if (!(value.substring(0, 2).equals("12") || value.substring(0, 2).equals("13"))) {
                     setValid(false);
                     addMessage(MessageString.value201("13.7867"));
-                } else if (!(getValue().substring(2).equals("."))) {
+                } else if (!(value.substring(2, 3).equals("."))) {
                     setValid(false);
                     addMessage(MessageString.value201("13.7867"));
                 }
-                if (getValue().isEmpty() && getValue().equals("")) {
+                if (value.isEmpty() && value.equals("")) {
                     setValid(false);
                     addMessage(MessageString.null101("b2r2s1"));
                 }
@@ -306,18 +235,18 @@ public class KuesionerPKL {
 
             @Override
             public void valid() {
-                if (!(getValue().substring(0, 1).equals("12") && getValue().substring(0, 1).equals("13"))) {
+                if (!(value.substring(0, 1).equals("12") || value.substring(0, 1).equals("13"))) {
                     setValid(false);
                     addMessage(MessageString.value201("13.7867"));
-                } else if (!(getValue().substring(2).equals("."))) {
+                } else if (!(value.substring(2, 3).equals("."))) {
                     setValid(false);
                     addMessage(MessageString.value201("13.7867"));
                 }
-                if (getValue().isEmpty() && getValue().equals("")) {
+                if (value.isEmpty() && value.equals("")) {
                     setValid(false);
                     addMessage(MessageString.null101("b2r2s1"));
                 }
-                if (getValue().equals(var("b2r2s1"))) {
+                if (value.equals(var("b2r2s1"))) {
                     setValid(false);
                     addMessage(MessageString.rel501("b2r2s1", "b2r2s2"));
                 }
@@ -325,8 +254,6 @@ public class KuesionerPKL {
 
         });
 
-//  Ini belum bisa karena tipe data 'date' belum ada
-//  Ada hubungan antara b2r3s1 dan b2r3s2
         b2.put("b2r3s1", new Text() {
 
             @Override
@@ -339,7 +266,7 @@ public class KuesionerPKL {
 
             @Override
             public void valid() {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+
             }
 
         });
@@ -353,333 +280,202 @@ public class KuesionerPKL {
 //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::        
         Hashtable<String, SuperVariabel> b3 = new Hashtable();
 
-        b3.put("b3ar1", new IntNumber() {
+        b3.put("b3r1", new Text() {
 
             @Override
             public void valid() {
-                if (Integer.parseInt(getValue()) < 15 || Integer.parseInt(getValue()) > 99) {
+                if (value.isEmpty() || value.equals("")) {
                     setValid(false);
-                    addMessage(MessageString.range402(15, 99));
+                    addMessage(MessageString.null101("b3r1"));
+                }
+
+                try {
+                    if ((Integer.parseInt(value)) % 1 == 0) {
+                        setValid(false);
+                        addMessage(MessageString.type301());
+                    }
+                } catch (Exception e) {
+                    setValid(false);
+                    addMessage(MessageString.type301());
                 }
             }
 
         });
 
-        b3.put("b3ar2", new IntNumber() {
+        b3.put("b3r2", new IntNumber() {
 
             @Override
             public void valid() {
-                if (Integer.parseInt(getValue()) == 0) {
+                if (value == 0) {
                     setValid(false);
-                    addMessage(MessageString.null101("b2r2s1"));
+                    addMessage(MessageString.null101("b3r2"));
                 }
-                if (Integer.parseInt(getValue()) != 1 || Integer.parseInt(getValue()) != 2) {
+
+                try {
+                    if ((value % 1) != 0) {
+                        setValid(false);
+                        addMessage(MessageString.type307());
+                    }
+                } catch (NumberFormatException e) {
                     setValid(false);
-                    addMessage(MessageString.value201("1 atau 2"));
+                    addMessage(MessageString.type307());
                 }
             }
 
         });
 
-        b3.put("b3ar3", new IntNumber() {
+        b3.put("b3r3", new Text() {
 
             @Override
             public void valid() {
-                if (Integer.parseInt(getValue()) < 1 || Integer.parseInt(getValue()) > 3) {
+                if (value.isEmpty()) {
                     setValid(false);
-                    addMessage(MessageString.value201("1, 2, atau 3"));
+                    addMessage(MessageString.null101("b3r3"));
                 }
 
-                if (Integer.parseInt(getValue()) == 0) {
+                if (!(value.equals("1") && value.equals("2"))) {
                     setValid(false);
-                    addMessage(MessageString.null101("b3ar3"));
+                    addMessage(MessageString.type306());
                 }
-            }
-        });
 
-        b3.put("b3ar4", new Text() {
-
-            @Override
-            public void valid() {
-                if (var("b3ar3").equals("1")) {
+                if (Integer.parseInt(var("b3r2")) < 15) {
                     setEnable(false);
-                    addMessage(MessageString.null102("b3ar4"));
+                    addMessage(MessageString.null102("b3r2"));
                 }
 
-                if (!(var("b3ar3")).equals("1")) {
-                    if (Integer.parseInt(getValue()) < 1 || Integer.parseInt(getValue()) > 8) {
-                        setValid(false);
-                        addMessage(MessageString.range402(1, 8));
-                    }
-                    if (Integer.parseInt(getValue()) == 0) {
-                        setValid(false);
-                        addMessage(MessageString.null101("b3ar3"));
-                    }
-                }
             }
+
         });
 
-        b3.put("b3ar5", new Text() {
+        Blok blok3 = new Blok(b3);
+        k1.put("b3", blok3);
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::        
+//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//                                       - BLOK 3a -
+//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::        
+        Hashtable<String, SuperVariabel> b3a = new Hashtable();
+
+        b3a.put("b3ar5", new Text() {
 
             @Override
             public void valid() {
-                if (var("b3ar3").equals("1")) {
+                if (value.isEmpty()) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b3ar5"));
+                }
+                if (!(value.equals("1") && value.equals("2"))) {
+                    setValid(false);
+                    addMessage(MessageString.value202("1 atau 2"));
+                }
+
+                if (Integer.parseInt(var("b3r2")) < 15) {
                     setEnable(false);
                     addMessage(MessageString.null102("b3ar5"));
                 }
 
-                if (var("b3ar4").equals("1")) {
-                    if (Integer.parseInt(getValue()) < 1 || Integer.parseInt(getValue()) > 8 || Integer.parseInt(getValue()) == 7 || Integer.parseInt(getValue()) == 0) {
-                        setValid(false);
-                        addMessage(MessageString.range402(1, 8));
-                    }
-
-                }
-
-                if (Integer.parseInt(var("b3ar4")) > 1 && Integer.parseInt(var("b3ar4")) < 6) {
-                    if (Integer.parseInt(getValue()) < 1 || Integer.parseInt(getValue()) > 3 || Integer.parseInt(getValue()) != 8 || Integer.parseInt(getValue()) == 0) {
-                        setValid(false);
-                        addMessage(MessageString.value202("1, 2, 3, 8"));
-                    }
-                }
-
-                if (Integer.parseInt(var("b3ar4")) == 6) {
-                    if (Integer.parseInt(getValue()) < 1 || Integer.parseInt(getValue()) > 4 || Integer.parseInt(getValue()) != 8 || Integer.parseInt(getValue()) == 0) {
-                        setValid(false);
-                        addMessage(MessageString.value202("1, 2, 3, 4, 8"));
-                    }
-                }
-
-                if (Integer.parseInt(var("b3ar4")) < 1 || Integer.parseInt(var("b3ar4")) > 7 || Integer.parseInt(getValue()) == 0) {
-                    if (Integer.parseInt(getValue()) > 0 || Integer.parseInt(getValue()) <= 8) {
-                        setValid(false);
-                        addMessage(MessageString.null101("b3ar5"));
-                    }
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b3ar5"));
                 }
             }
+
         });
 
-        b3.put("b3ar6", new Text() {
+        b3a.put("b3ar6", new Text() {
 
             @Override
             public void valid() {
-
-                if (var("b3ar3").equals("1")) {
+                if (value.isEmpty()) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b3ar6"));
+                }
+                if (!(value.equals("1") && value.equals("2"))) {
+                    setValid(false);
+                    addMessage(MessageString.value202("1 atau 2"));
+                }
+                if (Integer.parseInt(var("b3r2")) < 15) {
                     setEnable(false);
                     addMessage(MessageString.null102("b3ar6"));
                 }
 
-                if (var("b3ar4").equals("1")) {
-                    if (Integer.parseInt(var("b3ar5")) > 0 && Integer.parseInt(var("b3ar5")) < 7) {
-                        if (!getValue().equals("1")) {
-                            addMessage(MessageString.value202("1"));
-                        }
-                    }
-                    if (Integer.parseInt(var("b3ar5")) == 8) {
-                        if (!getValue().equals("2")) {
-                            addMessage(MessageString.value202("2"));
-                        }
-                    }
-                }   
-
-                // Validasi 1
-                if (var("b3ar4").equals("2")) {
-                    if (Integer.parseInt(var("b3ar5")) > 0 && Integer.parseInt(var("b3ar5")) < 4) {
-                        if (!(getValue().equals("2"))) {
-                            setValid(false);
-                            addMessage(MessageString.value202("2"));
-                        }
-                    }
-                    if (Integer.parseInt(var("b3ar5")) == 8) {
-                        if (!(getValue().equals("3"))) {
-                            setValid(false);
-                            addMessage(MessageString.value202("3"));
-                        }
-                    }
-                }
-
-                //  Validasi #2
-                if (var("b3ar4").equals("3")) {
-                    if (Integer.parseInt(var("b3ar5")) > 0 && Integer.parseInt(var("b3ar5")) < 4) {
-                        if (!(getValue().equals("3"))) {
-                            setValid(false);
-                            addMessage(MessageString.value202("3"));
-                        }
-                    }
-                    if (Integer.parseInt(var("b3ar5")) == 8) {
-                        if (!(getValue().equals("4"))) {
-                            setValid(false);
-                            addMessage(MessageString.value202("4"));
-                        }
-                    }
-                }
-
-                //  Validasi #3
-                if (var("b3ar4").equals("4")) {
-                    if (Integer.parseInt(var("b3ar5")) > 0 && Integer.parseInt(var("b3ar5")) < 4) {
-                        if (!(getValue().equals("4"))) {
-                            setValid(false);
-                            addMessage(MessageString.value202("4"));
-                        }
-                    }
-                    if (Integer.parseInt(var("b3ar5")) == 8) {
-                        if (!(getValue().equals("4"))) {
-                            setValid(false);
-                            addMessage(MessageString.value202("4"));
-                        }
-                    }
-                }
-
-                //  Validasi #4
-                if (var("b3ar4").equals("5")) {
-                    if (Integer.parseInt(var("b3ar5")) > 0 && Integer.parseInt(var("b3ar5")) < 4) {
-                        if (!(getValue().equals("5"))) {
-                            setValid(false);
-                            addMessage(MessageString.value202("5"));
-                        }
-                    }
-                    if (Integer.parseInt(var("b3ar5")) == 8) {
-                        if (!(getValue().equals("6"))) {
-                            setValid(false);
-                            addMessage(MessageString.value202("6"));
-                        }
-                    }
-                }
-
-                //  Validasi #5
-                if (var("b3ar4").equals("5") && var("b3ar5").equals("1")) {
-                    if (!(getValue().equals("6"))) {
-                        setValid(false);
-                        addMessage(MessageString.value202("6"));
-                    }
-                }
-
-                //  Validasi #6
-                if (var("b3ar4").equals("5") && (Integer.parseInt(var("b3ar5")) > 0 || Integer.parseInt(var("b3ar5")) == 2)) {
-                    if (!(getValue().equals("6"))) {
-                        setValid(false);
-                        addMessage(MessageString.value202("6"));
-                    }
-                }
-
-                //  Validasi #7
-                if (var("b3ar4").equals("6") && (Integer.parseInt(var("b3ar5")) > 0 && Integer.parseInt(var("b3ar5")) < 4)) {
-                    if (!(getValue().equals("6"))) {
-                        setValid(false);
-                        addMessage(MessageString.value202("6"));
-                    }
-                }
-
-                //  Validasi #8
-                if (var("b3ar4").equals("6") && (Integer.parseInt(var("b3ar5")) == 8)) {
-                    if (!(getValue().equals("7"))) {
-                        setValid(false);
-                        addMessage(MessageString.value202("7"));
-                    }
-                }
-
-                //  Validasi #9
-                if (var("b3ar4").equals("7") && (Integer.parseInt(var("b3ar5")) > 0 && Integer.parseInt(var("b3ar5")) < 5)) {
-                    if (!(getValue().equals("8"))) {
-                        setValid(false);
-                        addMessage(MessageString.value202("8"));
-                    }
-                }
-
-                //  Validasi #10               
-                if (var("b3ar4").equals("8") && (Integer.parseInt(var("b3ar5")) > 0 && Integer.parseInt(var("b3ar5")) < 3)) {
-                    if (!(getValue().equals("9"))) {
-                        setValid(false);
-                        addMessage(MessageString.value202("9"));
-                    }
-                }
-
-                //  Validasi #11
-                if (var("b3ar4").equals("8") && (Integer.parseInt(var("b3ar5")) > 0 && Integer.parseInt(var("b3ar5")) < 5)) {
-                    if (!(getValue().equals("9"))) {
-                        setValid(false);
-                        addMessage(MessageString.value202("9"));
-                    }
-                }
-            }
-
-        });
-
-        b3.put("b3ar7s1", new IntNumber() {
-
-            @Override
-            public void valid() {
-
-                if (Integer.parseInt(getValue()) != 1 || Integer.parseInt(getValue()) != 2 || Integer.parseInt(getValue()) == 0) {
-                    setValid(false);
-                    addMessage(MessageString.value201("1 atau 2"));
-                }
-            }
-
-        });
-
-        b3.put("b3ar7s2", new Text() {
-
-            @Override
-            public void valid() {
-                if (var("b3ar7s1").equals("1")) {
+                if (Integer.parseInt(var("b3r3")) == 2) {
                     setEnable(false);
-                    addMessage(MessageString.null102("b3ar7s2"));
-                }
-
-                if (var("b3ar7s2").equals("2")) {
-                    if (Integer.parseInt(getValue()) < 1 && Integer.parseInt(getValue()) > 4) {
-                        setValid(false);
-                        addMessage(MessageString.value201("1,2,3,4"));
-                    }
+                    addMessage(MessageString.null102("b3ar6"));
                 }
             }
 
         });
 
-        b3.put("b3ar7s2lainnya", new Text() {
+        b3a.put("b3ar7", new Text() {
 
             @Override
             public void valid() {
-                if (Integer.parseInt(var("b3ar7s2lainnya")) == 0 && getValue().isEmpty()) {
+                if (value.isEmpty()) {
                     setValid(false);
-                    addMessage(MessageString.null101("b3ar7s2lainnya"));
+                    addMessage(MessageString.null101("b3ar7"));
                 }
-            }
 
-        });
-
-        b3.put("b3a7s3", new IntNumber() {
-
-            @Override
-            public void valid() {
-                if (value != 1 || value != 2 || value == 0) {
+                if (Integer.parseInt(value) < 1 || Integer.parseInt(value) > 3) {
                     setValid(false);
-                    addMessage(MessageString.value201("1 atau 2"));
+                    addMessage(MessageString.value202("1, 2, atau 3"));
+                }
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b3ar7"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b3ar7"));
                 }
             }
 
         });
 
-        b3.put("b3ar8s1", new IntNumber() {
+        b3a.put("b3ar8s1", new Text() {
 
             @Override
             public void valid() {
-
-            }
-
-        });
-
-        b3.put("b3ar8s2", new IntNumber() {
-
-            @Override
-            public void valid() {
-                if (Integer.parseInt(var("b3ar8s1")) == 0 && value == 0) {
+                if ((Integer.parseInt(value) % 1) != 0) {
                     setValid(false);
-                    addMessage(MessageString.null101("b3ar8s2"));
+                    addMessage(MessageString.type307());
                 }
 
-                if (Integer.parseInt(var("b3ar8s1")) != 0) {
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b3ar8s1"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b3ar8s1"));
+                }
+            }
+
+        });
+
+        b3a.put("b3ar8s2", new Text() {
+
+            @Override
+            public void valid() {
+                if (((Integer.parseInt(value)) % 1) != 0) {
+                    setValid(false);
+                    addMessage(MessageString.type307());
+                }
+
+                if (Integer.parseInt(value) < 1 || Integer.parseInt(value) > 12) {
+                    setValid(false);
+                    addMessage(MessageString.range402(1, 12));
+                }
+
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b3ar8s2"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
                     setEnable(false);
                     addMessage(MessageString.null102("b3ar8s2"));
                 }
@@ -687,380 +483,2852 @@ public class KuesionerPKL {
 
         });
 
-        b3.put("b3ar8s3", new IntNumber() {
+        b3a.put("b3ar9", new Text() {
 
             @Override
             public void valid() {
-                if (Integer.parseInt(var("b3ar8s1")) != 0) {
-                    if (value == 0 || value != 1 || value != 2) {
-                        setValid(false);
-                        addMessage(MessageString.null101("b3ar8s3"));
-                    }
-                }
-
-                if (Integer.parseInt(var("b3ar8s1")) == 0) {
-                    setEnable(false);
-                    addMessage(MessageString.null102("b3ar8s3"));
-                }
-            }
-
-        });
-
-        b3.put("b3ar8s4", new IntNumber() {
-
-            @Override
-            public void valid() {
-                if (Integer.parseInt(var("b3ar8s1")) == 0) {
-                    setEnable(false);
-                    addMessage(MessageString.null102("b3ar8s4"));
-                }
-            }
-
-        });
-
-        b3.put("b3ar9s1", new IntNumber() {
-
-            @Override
-            public void valid() {
-
-                if (value != 1 || value != 2 || value == 0) {
+                if (value.isEmpty()) {
                     setValid(false);
-                    addMessage(MessageString.null101("b3ar9s1"));
+                    addMessage(MessageString.null101("b3ar6"));
+                }
+                if (!(value.equals("1") && value.equals("2"))) {
+                    setValid(false);
+                    addMessage(MessageString.value202("1 atau 2"));
                 }
 
-            }
-
-        });
-
-        b3.put("b3ar9s2", new IntNumber() {
-
-            @Override
-            public void valid() {
-                if (Integer.parseInt(var("b3ar9s1")) == 2) {
+                if (Integer.parseInt(var("b3r2")) < 15) {
                     setEnable(false);
-                    addMessage(MessageString.null102("b3ar9s2"));
-                }
-                if (Integer.parseInt(var("b3ar9s1")) == 1 && value == 0) {
-                    setValid(false);
-                    addMessage(MessageString.null101("b3ar9s2"));
-                }
-            }
-
-        });
-
-        b3.put("b3ar10s1", new IntNumber() {
-
-            @Override
-            public void valid() {
-
-                if (value != 1 || value != 2 || value == 0) {
-                    setValid(false);
-                    addMessage(MessageString.null101("b3ar10s1"));
+                    addMessage(MessageString.null102("b3ar9"));
                 }
 
-            }
-
-        });
-
-        b3.put("b3ar10s2", new IntNumber() {
-
-            @Override
-            public void valid() {
-                if (Integer.parseInt(var("b3ar10s1")) == 2) {
+                if (Integer.parseInt(var("b3r3")) == 2) {
                     setEnable(false);
-                    addMessage(MessageString.null102("b3ar10s2"));
+                    addMessage(MessageString.null102("b3ar9"));
                 }
             }
 
         });
 
-        b3.put("b3ar11", new IntNumber() {
+        b3a.put("b3ar10", new Text() {
 
             @Override
             public void valid() {
-                if (value != 1 || value != 2 || value == 0) {
+                if (value.isEmpty()) {
                     setValid(false);
-                    addMessage(MessageString.null101("b3ar11"));
+                    addMessage(MessageString.null101("b3ar10"));
                 }
 
-            }
+                if (Integer.parseInt(value) < 1 || Integer.parseInt(value) > 3) {
+                    setValid(false);
+                    addMessage(MessageString.value202("1, 2, atau 3"));
+                }
 
-        });
-
-        b3.put("b3ar12", new IntNumber() {
-
-            @Override
-            public void valid() {
-                if (Integer.parseInt(var("b3ar7s11")) == 2) {
+                if (Integer.parseInt(var("b3r2")) < 15) {
                     setEnable(false);
-                    addMessage(MessageString.null102("b3ar12"));
+                    addMessage(MessageString.null102("b3ar10"));
                 }
 
-                if ((Integer.parseInt(getValue()) % 1) != 0) {
-                    setValid(false);
-                    addMessage(MessageString.type307());
-                }
-
-            }
-
-        });
-
-        b3.put("b3ar13", new IntNumber() {
-
-            @Override
-            public void valid() {
-                if (value != 1 || value != 2 || value == 0) {
-                    setValid(false);
-                    addMessage(MessageString.null101("b3ar13"));
-                }
-            }
-
-        });
-
-        b3.put("b3ar14", new IntNumber() {
-
-            @Override
-            public void valid() {
-                if (Integer.parseInt(var("b3ar13")) == 2) {
+                if (Integer.parseInt(var("b3r3")) == 2) {
                     setEnable(false);
-                    addMessage(MessageString.null102("b3ar14"));
-
-                }
-            }
-        });
-
-        b3.put("b3ar13", new IntNumber() {
-
-            public void valid() {
-                if (value != 1 || value != 2 || value == 0) {
-                    setValid(false);
-                    addMessage(MessageString.null101("b3ar13"));
+                    addMessage(MessageString.null102("b3ar10"));
                 }
             }
 
         });
 
-        b3.put("b3ar14", new IntNumber() {
-
-            @Override
-            public void valid() {
-                if (Integer.parseInt(var("b3ar13")) == 2) {
-                    setEnable(false);
-                    addMessage(MessageString.null102("b3ar14"));
-                }
-
-            }
-        });
-        Blok blok3 = new Blok(b3);
-        k1.put("b3", blok3);
+        Blok blok3a = new Blok(b3a);
+        k1.put("b3a", blok3a);
 
 //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::        
 //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 //                                       - BLOK 4 -
 //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
-        
-        Hashtable<String, Variabel> b4a1 = new Hashtable();
-        
-        b4a1.put("b4ar1s1", new IntNumber() {
+//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::        
+        Hashtable<String, SuperVariabel> b4 = new Hashtable();
+
+        b4.put("b4r1", new IntNumber() {
 
             @Override
             public void valid() {
-                if (value == 0) {
-                    setValid(false);
-                    addMessage(MessageString.null101("b4ar1 jenis kapal"));
-                }
-            }
-
-        });
-
-        b4a1.put("b4ar1s2", new Text() {
-
-            @Override
-            public void valid() {
-                if ((Integer.parseInt(getValue())) % 1 != 0) {
-                    setValid(false);
-                    addMessage(MessageString.type308());
-                }
-            }
-
-        });
-
-        b4a1.put("b4ar2s1", new DoubleDecimal() {
-
-            @Override
-            public void valid() {
-                if ((value % 1) > 0 || (value % 1) < 0) {
-                    setValid(false);
-                    addMessage(MessageString.type307());
-                }
+                setMin(1);
+                setMax(6);
+                valid();
 
                 if (value == 0) {
                     setValid(false);
-                    addMessage(MessageString.null101("b4ar2 Panjang"));
+                    addMessage(MessageString.null101("b4r1"));
+                }
+
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r1"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r1"));
                 }
             }
 
         });
 
-        b4a1.put("b4ar2s2", new DoubleDecimal() {
+        b4.put("b4r1lainnya", new Text() {
 
             @Override
             public void valid() {
-                if ((value % 1) > 0 || (value % 1) < 0) {
-                    setValid(false);
-                    addMessage(MessageString.type307());
+                if (Integer.parseInt(var("b4r1")) == 6) {
+                    if (value.isEmpty()) {
+                        setValid(false);
+                        addMessage(MessageString.null101("b4r1lainnya"));
+                    }
                 }
 
-                if (value == 0) {
-                    setValid(false);
-                    addMessage(MessageString.null101("b4ar2 lebar"));
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r1lainnya"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r1lainnya"));
                 }
             }
 
         });
 
-        b4a1.put("b4ar3", new DoubleDecimal() {
+        b4.put("b4r2", new IntNumber() {
 
             @Override
             public void valid() {
-                if ((value % 1) > 0 || (value % 1) < 0) {
-                    setValid(false);
-                    addMessage(MessageString.type307());
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r2"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r2"));
                 }
             }
 
         });
 
-        b4a1.put("b4ar4", new DoubleDecimal() {
+        b4.put("b4r3", new Text() {
 
             @Override
             public void valid() {
-                if ((value % 1) > 0 || (value % 1) < 0) {
+                if (value.isEmpty()) {
                     setValid(false);
-                    addMessage(MessageString.type307());
+                    addMessage(MessageString.null101("b4r3"));
                 }
 
-                if (value == 0) {
+                if (!value.equals("1") && !value.equals("2") && !value.equals("4") && !value.equals("8") && !value.equals("16")) {
                     setValid(false);
-                    addMessage(MessageString.null101("b4ar4"));
+                    addMessage(MessageString.range402(1, 31));
+                }
+
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r3"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r3"));
                 }
             }
 
         });
 
-        b4a1.put("b4ar5", new IntNumber() {
+        b4.put("b4r4", new Text() {
 
             @Override
             public void valid() {
-                if (value < 1 && value > 3) {
+                if (value.isEmpty()) {
                     setValid(false);
-                    addMessage(MessageString.range402(1, 3));
+                    addMessage(MessageString.null101("b4r4"));
+                }
+                if (!(value.equals("1") && value.equals("2"))) {
+                    setValid(false);
+                    addMessage(MessageString.value202("1 atau 2"));
                 }
 
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r4"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r4"));
+                }
             }
 
         });
 
-        b4a1.put("b4ar5lainnya", new Text() {
+        b4.put("b4r5s1d1", new Text() {
 
             @Override
             public void valid() {
-                if (Integer.parseInt(var("b4ar5")) == 0 && value.isEmpty()) {
+                if (value.isEmpty()) {
                     setValid(false);
-                    addMessage(MessageString.null101("lainnya"));
+                    addMessage(MessageString.null101("b4r5"));
                 }
 
-                if ((Integer.parseInt(getValue())) % 1 != 0) {
+                if ((Integer.parseInt(value)) % 1 != 0) {
                     setValid(false);
                     addMessage(MessageString.type301());
                 }
-                
-                if (Integer.parseInt(var("b4ar5")) >0 && Integer.parseInt(var("b4ar5")) <4) {
+
+                if (Integer.parseInt(var("b3r2")) < 15) {
                     setEnable(false);
-                    addMessage(MessageString.null102("lainnya"));
+                    addMessage(MessageString.null102("b4r5s1d1"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r5s1d1"));
+                }
+
+                if (Integer.parseInt(var("b4r4")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r5s1d1"));
+                }
+            }
+
+        });
+
+        b4.put("b4r5s1d2", new IntNumber() {
+
+            @Override
+            public void valid() {
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b4r5s1d2"));
+                }
+
+                try {
+                    if (value % 1 == 0) {
+                        setValid(false);
+                        addMessage(MessageString.type301());
+                    }
+                } catch (Exception e) {
+                }
+
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r5s1d2"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r5s1d2"));
+                }
+
+                if (Integer.parseInt(var("b4r4")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r5s1d2"));
+                }
+            }
+
+        });
+
+        b4.put("b4r5s1d3", new IntNumber() {
+
+            @Override
+            public void valid() {
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b4r5s1d3"));
+                }
+
+                try {
+                    if (value % 1 == 0) {
+                        setValid(false);
+                        addMessage(MessageString.type301());
+                    }
+                } catch (Exception e) {
+                }
+
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r5s1d3"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r5s1d3"));
+                }
+
+                if (Integer.parseInt(var("b4r4")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r5s1d3"));
+                }
+            }
+
+        });
+
+        b4.put("b4r5s2", new Text() {
+
+            @Override
+            public void valid() {
+                if (value.isEmpty()) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b4r5s2"));
+                }
+                if (!(value.equals("1") && value.equals("2"))) {
+                    setValid(false);
+                    addMessage(MessageString.value202("1 atau 2"));
+                }
+
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r5s2"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r5s2"));
+                }
+
+                if (Integer.parseInt(var("b4r4")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r5s2"));
+                }
+            }
+
+        });
+
+        b4.put("b4r5s3", new IntNumber() {
+
+            @Override
+            public void valid() {
+                try {
+                    if ((value % 1) != 0) {
+                        setValid(false);
+                        addMessage(MessageString.type307());
+                    }
+                } catch (NumberFormatException e) {
+                }
+
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r5s3"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r5s3"));
+                }
+
+                if (Integer.parseInt(var("b4r4")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r5s3"));
+                }
+
+                if (Integer.parseInt(var("b4r5s2")) == 1) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r5s2"));
+                }
+            }
+
+        });
+
+        b4.put("b4r5s4d1", new Text() {
+
+            @Override
+            public void valid() {
+                if (value.isEmpty()) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b4r5s4d1"));
+                }
+                if (!(value.equals("1") && value.equals("2"))) {
+                    setValid(false);
+                    addMessage(MessageString.value202("1 atau 2"));
+                }
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r5s4d1"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r5s4d1"));
+                }
+
+                if (Integer.parseInt(var("b4r4")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r5s4d1"));
+                }
+            }
+
+        });
+
+        b4.put("b4r5s4d2", new Text() {
+
+            @Override
+            public void valid() {
+                if (value.isEmpty()) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b4r5s4d2"));
+                }
+                if (!(value.equals("1") && value.equals("2"))) {
+                    setValid(false);
+                    addMessage(MessageString.value202("1 atau 2"));
+                }
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r5s4d2"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r5s4d2"));
+                }
+
+                if (Integer.parseInt(var("b4r4")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r5s4d2"));
+                }
+            }
+
+        });
+
+        b4.put("b4r5s4d3", new Text() {
+
+            @Override
+            public void valid() {
+                if (value.isEmpty()) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b4r5s4d3"));
+                }
+                if (!(value.equals("1") && value.equals("2"))) {
+                    setValid(false);
+                    addMessage(MessageString.value202("1 atau 2"));
+                }
+
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r5s4d3"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r5s4d3"));
+                }
+
+                if (Integer.parseInt(var("b4r4")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r5s4d3"));
+                }
+            }
+
+        });
+
+        b4.put("b4r5s4d4", new Text() {
+
+            @Override
+            public void valid() {
+                if (value.isEmpty()) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b4r5s4d4"));
+                }
+                if (!(value.equals("1") && value.equals("2"))) {
+                    setValid(false);
+                    addMessage(MessageString.value202("1 atau 2"));
+                }
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r5s4d4"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r5s4d4"));
+                }
+
+                if (Integer.parseInt(var("b4r4")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r5s4d4"));
+                }
+            }
+
+        });
+
+        b4.put("b4r5s4d5", new Text() {
+
+            @Override
+            public void valid() {
+                if (value.isEmpty()) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b4r5s4d5"));
+                }
+                if (!(value.equals("1") && value.equals("2"))) {
+                    setValid(false);
+                    addMessage(MessageString.value202("1 atau 2"));
+                }
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r5s4d5"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r5s4d5"));
+                }
+
+                if (Integer.parseInt(var("b4r4")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r5s4d5"));
+                }
+            }
+
+        });
+
+        b4.put("b4r5s4lainnya", new Text() {
+
+            @Override
+            public void valid() {
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r5s4lainnya"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r5s4lainnya"));
+                }
+
+                if (Integer.parseInt(var("b4r4")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r5s4lainnya"));
                 }
 
             }
 
         });
 
-        b4a1.put("b4ar6", new IntNumber() {
+        b4.put("b4r6s1", new IntNumber() {
 
             @Override
             public void valid() {
-                if (value != 1 || value != 2 || value == 0) {
-                    setValid(false);
-                    addMessage(MessageString.value201("1 atau 2"));
+                try {
+                    if ((value % 1) != 0) {
+                        setValid(false);
+                        addMessage(MessageString.type307());
+                    }
+                } catch (NumberFormatException e) {
+                }
 
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r6s1"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r6s1"));
+                }
+
+            }
+
+        });
+
+        b4.put("b4r6s2", new IntNumber() {
+
+            @Override
+            public void valid() {
+                try {
+                    if ((value % 1) != 0) {
+                        setValid(false);
+                        addMessage(MessageString.type307());
+                    }
+                } catch (NumberFormatException e) {
+                }
+
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r6s2"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r6s2"));
+                }
+            }
+
+        });
+
+        b4.put("b4r6s3", new IntNumber() {
+
+            @Override
+            public void valid() {
+                try {
+                    if ((value % 1) != 0) {
+                        setValid(false);
+                        addMessage(MessageString.type307());
+                    }
+                } catch (NumberFormatException e) {
+                }
+
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r6s3"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r6s3"));
+                }
+            }
+
+        });
+
+        b4.put("b4r6s4", new IntNumber() {
+
+            @Override
+            public void valid() {
+                try {
+                    if ((value % 1) != 0) {
+                        setValid(false);
+                        addMessage(MessageString.type307());
+                    }
+                } catch (NumberFormatException e) {
+                }
+
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r6s4"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r6s4"));
+                }
+            }
+
+        });
+
+        b4.put("b4r6s5", new IntNumber() {
+
+            @Override
+            public void valid() {
+                try {
+                    if ((value % 1) != 0) {
+                        setValid(false);
+                        addMessage(MessageString.type307());
+                    }
+                } catch (NumberFormatException e) {
+                }
+
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r6s5"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r6s5"));
+                }
+            }
+
+        });
+
+        b4.put("b4r6lainnya", new IntNumber() {
+
+            @Override
+            public void valid() {
+                try {
+                    if ((value % 1) != 0) {
+                        setValid(false);
+                        addMessage(MessageString.type307());
+                    }
+                } catch (NumberFormatException e) {
+                }
+
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r6lainnya"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4r6lainnya"));
+                }
+            }
+
+        });
+
+        Blok blok4 = new Blok(b4);
+        k1.put("b4", blok4);
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::        
+//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//                                       - BLOK 4a -
+//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::        
+        Hashtable<String, SuperVariabel> b4a = new Hashtable();
+
+        b4a.put("b4ar7", new IntNumber() {
+
+            @Override
+            public void valid() {
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b4ar7"));
+                }
+
+                setMin(1);
+                setMax(3);
+                valid();
+
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4ar7"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4ar7"));
+                }
+            }
+
+        });
+
+        b4a.put("b4ar8", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b4ar8"));
+                }
+
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4ar8"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4ar8"));
+                }
+            }
+
+        });
+
+        b4a.put("b4ar8lainnya", new Text() {
+
+            @Override
+            public void valid() {
+                if (Integer.parseInt(var("b4ar8")) == 6 && value.isEmpty()) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b4ar8lainnya"));
+                }
+
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4ar8lainnya"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4ar8lainnya"));
+                }
+            }
+
+        });
+
+        b4a.put("b4ar9", new IntNumber() {
+
+            @Override
+            public void valid() {
+                try {
+                    if ((value % 1) != 0) {
+                        setValid(false);
+                        addMessage(MessageString.type307());
+                    }
+                } catch (NumberFormatException e) {
+                }
+
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4ar9"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4ar9"));
+                }
+            }
+
+        });
+
+        b4a.put("b4ar10", new IntNumber() {
+
+            @Override
+            public void valid() {
+                try {
+                    if ((value % 1) != 0) {
+                        setValid(false);
+                        addMessage(MessageString.type307());
+                    }
+                } catch (NumberFormatException e) {
+                }
+
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4ar10"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4ar10"));
+                }
+            }
+
+        });
+
+        b4a.put("b4ar11", new IntNumber() {
+
+            @Override
+            public void valid() {
+                try {
+                    if ((value % 1) != 0) {
+                        setValid(false);
+                        addMessage(MessageString.type307());
+                    }
+                } catch (NumberFormatException e) {
+                }
+
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4ar11"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4ar11"));
+                }
+            }
+
+        });
+
+        b4a.put("b4ar12", new Text() {
+
+            @Override
+            public void valid() {
+                if (value.isEmpty()) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b4r5s4d5"));
+                }
+                if (!(value.equals("1") && value.equals("2"))) {
+                    setValid(false);
+                    addMessage(MessageString.value202("1 atau 2"));
+                }
+
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4ar12"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4ar12"));
+                }
+            }
+
+        });
+
+        b4a.put("b4ar13", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(7);
+                valid();
+
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4ar13"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4ar13"));
+                }
+            }
+
+        });
+
+        b4a.put("b4ar13lainnya", new Text() {
+
+            @Override
+            public void valid() {
+                if (Integer.parseInt("b4ar13") == 7 && value.isEmpty()) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b4ar13lainnya"));
+                }
+
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4ar13lainnya"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4ar13lainnya"));
+                }
+            }
+
+        });
+
+        b4a.put("b4ar14", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(8);
+                valid();
+
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4ar14"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4ar14"));
+                }
+            }
+
+        });
+
+        b4a.put("b4ar14lainnya", new Text() {
+
+            @Override
+            public void valid() {
+                if (Integer.parseInt("b4ar14") == 8 && value.isEmpty()) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b4ar14lainnya"));
+                }
+
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4ar14lainnya"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4ar14lainnya"));
+                }
+            }
+
+        });
+
+        Blok blok4a = new Blok(b4a);
+        k1.put("b4a", blok4a);
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::        
+//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//                                       - BLOK 4c -
+//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::        
+        Hashtable<String, SuperVariabel> b4c = new Hashtable();
+
+        b4c.put("b4cr15", new Text() {
+
+            @Override
+            public void valid() {
+                if (value.isEmpty()) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b4r5s4d5"));
+                }
+                if (!(value.equals("1") && value.equals("2"))) {
+                    setValid(false);
+                    addMessage(MessageString.value202("1 atau 2"));
+                }
+
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4cr15"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4cr15"));
+                }
+            }
+
+        });
+
+        b4c.put("b4cr16s1", new Text() {
+
+            @Override
+            public void valid() {
+                if (value.isEmpty()) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b4cr16s1"));
+                }
+                if (!(value.equals("1") && value.equals("2"))) {
+                    setValid(false);
+                    addMessage(MessageString.value202("1 atau 2"));
+                }
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4cr16s1"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4cr16s1"));
+                }
+
+                if (Integer.parseInt(var("b4cr15")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4cr16s1"));
+                }
+            }
+
+        });
+
+        b4c.put("b4cr16s2", new Text() {
+
+            @Override
+            public void valid() {
+                if (value.isEmpty()) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b4cr16s2"));
+                }
+                if (!(value.equals("1") && value.equals("2"))) {
+                    setValid(false);
+                    addMessage(MessageString.value202("1 atau 2"));
+                }
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4cr16s2"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4cr16s2"));
                 }
                 
+                if (Integer.parseInt(var("b4cr15")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4cr16s2"));
+                }
             }
 
         });
-        Loop b4a = new Loop(b4a1);
-        System.out.println(b4a);
-        
-//  END
-//      OF
-//          LOOP        
 
-        Hashtable<String, SuperVariabel> b4a2 = new Hashtable();
-        b4a2.put("b4a1", b4a);
-        
-        b4a2.put("b4ar7", new IntNumber() {
+        b4c.put("b4cr16s3", new Text() {
 
             @Override
             public void valid() {
-                if ((value % 1) > 0 || (value % 1) < 0) {
+                if (value.isEmpty()) {
                     setValid(false);
-                    addMessage(MessageString.type304());
+                    addMessage(MessageString.null101("b4cr16s3"));
+                }
+                if (!(value.equals("1") && value.equals("2"))) {
+                    setValid(false);
+                    addMessage(MessageString.value202("1 atau 2"));
+                }
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4cr16s3"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4cr16s3"));
+                }
+                if (Integer.parseInt(var("b4cr15")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4cr16s3"));
                 }
             }
 
         });
 
-        b4a2.put("b4ar8s1", new IntNumber() {
+        b4c.put("b4cr16s4", new Text() {
 
             @Override
             public void valid() {
-                if ((value % 1) > 0 || (value % 1) < 0) {
+                if (value.isEmpty()) {
                     setValid(false);
-                    addMessage(MessageString.type304());
+                    addMessage(MessageString.null101("b4cr16s4"));
+                }
+                if (!(value.equals("1") && value.equals("2"))) {
+                    setValid(false);
+                    addMessage(MessageString.value202("1 atau 2"));
+                }
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4cr16s4"));
                 }
 
-                if (value < 1 && value > 12) {
-                    setValid(false);
-                    addMessage(MessageString.range402(1, 12));
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4cr16s4"));
+                }
+                
+                if (Integer.parseInt(var("b4cr15")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4cr16s4"));
                 }
             }
 
         });
 
-        b4a2.put("b4ar8s2", new IntNumber() {
+        b4c.put("b4cr16s5", new Text() {
 
             @Override
             public void valid() {
-                if ((value % 1) > 0 || (value % 1) < 0) {
+                if (value.isEmpty()) {
                     setValid(false);
-                    addMessage(MessageString.type304());
+                    addMessage(MessageString.null101("b4cr16s5"));
+                }
+                if (!(value.equals("1") && value.equals("2"))) {
+                    setValid(false);
+                    addMessage(MessageString.value202("1 atau 2"));
                 }
 
-                if (!getValue().substring(0, 2).equals("201")) {
-                    setValid(false);
-                    addMessage(MessageString.value202("2016"));
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4cr16s5"));
                 }
 
-                if (!(getValue().substring(3).equals("4") || getValue().substring(3).equals("5"))) {
-                    setValid(false);
-                    addMessage(MessageString.value202("2016"));
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4cr16s5"));
                 }
-
+                
+                if (Integer.parseInt(var("b4cr15")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4cr16s5"));
+                }
             }
 
         });
-        Blok blok4 = new Blok(b4a2);
-        k1.put("b4a2", blok4);
+
+        b4c.put("b4cr16s6", new Text() {
+
+            @Override
+            public void valid() {
+                if (value.isEmpty()) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b4cr16s6"));
+                }
+                if (!(value.equals("1") && value.equals("2"))) {
+                    setValid(false);
+                    addMessage(MessageString.value202("1 atau 2"));
+                }
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4cr16s6"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4cr16s6"));
+                }
+                
+                if (Integer.parseInt(var("b4cr15")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4cr16s6"));
+                }
+            }
+
+        });
+
+        b4c.put("b4cr16s7", new Text() {
+
+            @Override
+            public void valid() {
+                if (value.isEmpty()) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b4cr16s7"));
+                }
+                if (!(value.equals("1") && value.equals("2"))) {
+                    setValid(false);
+                    addMessage(MessageString.value202("1 atau 2"));
+                }
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4cr16s7"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4cr16s7"));
+                }
+                
+                if (Integer.parseInt(var("b4cr15")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4cr16s7"));
+                }
+            }
+
+        });
+
+        b4c.put("b4cr16s8", new Text() {
+
+            @Override
+            public void valid() {
+                if (value.isEmpty()) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b4cr16s8"));
+                }
+                if (!(value.equals("1") && value.equals("2"))) {
+                    setValid(false);
+                    addMessage(MessageString.value202("1 atau 2"));
+                }
+
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4cr16s8"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4cr16s8"));
+                }
+                
+                if (Integer.parseInt(var("b4cr15")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4cr16s8"));
+                }
+            }
+
+        });
+
+        b4c.put("b4cr16s9", new Text() {
+
+            @Override
+            public void valid() {
+                if (value.isEmpty()) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b4cr16s9"));
+                }
+                if (!(value.equals("1") && value.equals("2"))) {
+                    setValid(false);
+                    addMessage(MessageString.value202("1 atau 2"));
+                }
+
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4cr16s9"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4cr16s9"));
+                }
+                
+                if (Integer.parseInt(var("b4cr15")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4cr16s9"));
+                }
+            }
+
+        });
+
+        b4c.put("b4cr16s10", new Text() {
+
+            @Override
+            public void valid() {
+                if (value.isEmpty()) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b4cr16s10"));
+                }
+                if (!(value.equals("1") && value.equals("2"))) {
+                    setValid(false);
+                    addMessage(MessageString.value202("1 atau 2"));
+                }
+
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4cr16s10"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4cr16s10"));
+                }
+                
+                if (Integer.parseInt(var("b4cr15")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4cr16s10"));
+                }
+            }
+
+        });
+
+        b4c.put("b4cr16s10d1", new Text() {
+
+            @Override
+            public void valid() {
+                if ((Integer.parseInt(value)) % 1 != 0) {
+                    setValid(false);
+                    addMessage(MessageString.type301());
+                }
+
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4cr16s10d1"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4cr16s10d1"));
+                }
+                
+                if (Integer.parseInt(var("b4cr15")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4cr16s10d1"));
+                }
+            }
+
+        });
+
+        b4c.put("b4cr16s10d2", new Text() {
+
+            @Override
+            public void valid() {
+                if ((Integer.parseInt(value)) % 1 != 0) {
+                    setValid(false);
+                    addMessage(MessageString.type301());
+                }
+
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4cr16s10d2"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4cr16s10d2"));
+                }
+                
+                if (Integer.parseInt(var("b4cr15")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4cr16s10d2"));
+                }
+            }
+
+        });
+
+        b4c.put("b4cr16s10d3", new Text() {
+
+            @Override
+            public void valid() {
+                if ((Integer.parseInt(value)) % 1 != 0) {
+                    setValid(false);
+                    addMessage(MessageString.type301());
+                }
+
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4cr16s10d3"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4cr16s10d3"));
+                }
+                
+                if (Integer.parseInt(var("b4cr15")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b4cr16s10d3"));
+                }
+            }
+
+        });
+
+        Blok blok4c = new Blok(b4c);
+        k1.put("b4c", blok4c);
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::        
+//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//                                       - BLOK 5 -
+//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::        
+        Hashtable<String, SuperVariabel> b5 = new Hashtable();
+
+        b5.put("b5r1s1", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r1s1"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r1s1"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r1s1"));
+                }
+            }
+
+        });
+
+        b5.put("b5r1s2", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r1s2"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r1s2"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r1s2"));
+                }
+            }
+
+        });
+
+        b5.put("b5r2s1", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r2s1"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r2s1"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r2s1"));
+                }
+            }
+
+        });
+
+        b5.put("b5r2s2", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r2s2"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r2s2"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r2s2"));
+                }
+            }
+
+        });
+
+        b5.put("b5r3s1", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r3s1"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r3s1"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r3s1"));
+                }
+            }
+
+        });
+
+        b5.put("b5r3s2", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r3s2"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r3s2"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r3s2"));
+                }
+            }
+
+        });
+
+        b5.put("b5r4s1", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r4s1"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r4s1"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r4s1"));
+                }
+            }
+
+        });
+
+        b5.put("b5r4s2", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r4s2"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r4s2"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r4s2"));
+                }
+            }
+
+        });
+
+        b5.put("b5r5s1", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r4s2"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r5s1"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r5s1"));
+                }
+            }
+
+        });
+
+        b5.put("b5r5s2", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r5s2"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r5s2"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r5s2"));
+                }
+            }
+
+        });
+
+        b5.put("b5r6s1", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r6s1"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r6s1"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r6s1"));
+                }
+            }
+
+        });
+
+        b5.put("b5r6s2", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r6s2"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r6s2"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r6s2"));
+                }
+            }
+
+        });
+
+        b5.put("b5r7s1", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r7s1"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r7s1"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r7s1"));
+                }
+            }
+
+        });
+
+        b5.put("b5r7s2", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r7s2"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r7s2"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r7s2"));
+                }
+            }
+
+        });
+
+        b5.put("b5r8s1", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r8s1"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r8s1"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r8s1"));
+                }
+            }
+
+        });
+
+        b5.put("b5r8s2", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r8s2"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r8s2"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r8s2"));
+                }
+            }
+
+        });
+
+        b5.put("b5r9s1", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r9s1"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r9s1"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r9s1"));
+                }
+            }
+
+        });
+
+        b5.put("b5r9s2", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r9s2"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r9s2"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r9s2"));
+                }
+            }
+
+        });
+
+        b5.put("b5r10s1", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r10s1"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r10s1"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r10s1"));
+                }
+            }
+
+        });
+
+        b5.put("b5r10s2", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r10s2"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r10s2"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r10s2"));
+                }
+            }
+
+        });
+
+        b5.put("b5r11s1", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r11s1"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r11s1"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r11s1"));
+                }
+            }
+
+        });
+
+        b5.put("b5r11s2", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r11s2"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r11s2"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r11s2"));
+                }
+            }
+
+        });
+
+        b5.put("b5r12s1", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r12s1"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r12s1"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r12s1"));
+                }
+            }
+
+        });
+
+        b5.put("b5r12s2", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r12s2"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r12s2"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r12s2"));
+                }
+            }
+
+        });
+
+        b5.put("b5r13s1", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r13s1"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r13s1"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r13s1"));
+                }
+            }
+
+        });
+
+        b5.put("b5r13s2", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r13s2"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r13s2"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r13s2"));
+                }
+            }
+
+        });
+
+        b5.put("b5r14s1", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r14s1"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r14s1"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r14s1"));
+                }
+            }
+
+        });
+
+        b5.put("b5r14s2", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r14s2"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r14s2"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r14s2"));
+                }
+            }
+
+        });
+
+        b5.put("b5r15s1", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r15s1"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r15s1"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r15s1"));
+                }
+            }
+
+        });
+
+        b5.put("b5r15s2", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r15s2"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r15s2"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r15s2"));
+                }
+            }
+
+        });
+
+        b5.put("b5r16s1", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r16s1"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r16s1"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r16s1"));
+                }
+            }
+
+        });
+
+        b5.put("b5r16s2", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r16s2"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r16s2"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r16s2"));
+                }
+            }
+
+        });
+
+        b5.put("b5r17s1", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r17s1"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r17s1"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r17s1"));
+                }
+            }
+
+        });
+
+        b5.put("b5r17s2", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r17s2"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r17s2"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r17s2"));
+                }
+            }
+
+        });
+
+        b5.put("b5r18s1", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r18s1"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r18s1"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r18s1"));
+                }
+            }
+
+        });
+
+        b5.put("b5r18s2", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r18s2"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r18s2"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r18s2"));
+                }
+            }
+
+        });
+
+        b5.put("b5r19s1", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r19s1"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r19s1"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r19s1"));
+                }
+            }
+
+        });
+
+        b5.put("b5r19s2", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r19s2"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r19s2"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r19s2"));
+                }
+            }
+
+        });
+
+        b5.put("b5r20s1", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r20s1"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r20s1"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r20s1"));
+                }
+            }
+
+        });
+
+        b5.put("b5r20s2", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r20s2"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r20s2"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r20s2"));
+                }
+            }
+
+        });
+
+        b5.put("b5r21s1", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r21s1"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r21s1"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r21s1"));
+                }
+            }
+
+        });
+
+        b5.put("b5r21s2", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r21s2"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r21s2"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r21s2"));
+                }
+            }
+
+        });
+
+        b5.put("b5r22s1", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r22s1"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r22s1"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r22s1"));
+                }
+            }
+
+        });
+
+        b5.put("b5r22s2", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r22s2"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r22s2"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r22s2"));
+                }
+            }
+
+        });
+
+        b5.put("b5r23s1", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r23s1"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r23s1"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r23s1"));
+                }
+            }
+
+        });
+
+        b5.put("b5r23s2", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r23s2"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r23s2"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r23s2"));
+                }
+            }
+
+        });
+
+        b5.put("b5r24s1", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r24s1"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r24s1"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r24s1"));
+                }
+            }
+
+        });
+
+        b5.put("b5r24s2", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r24s2"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r24s2"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r24s2"));
+                }
+            }
+
+        });
+
+        b5.put("b5r25s1", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r25s1"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r25s1"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r25s1"));
+                }
+            }
+
+        });
+
+        b5.put("b5r25s2", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r25s2"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r25s2"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r25s2"));
+                }
+            }
+
+        });
+
+        b5.put("b5r26s1", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r26s1"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r26s1"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r26s1"));
+                }
+            }
+
+        });
+
+        b5.put("b5r26s2", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r26s2"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r26s2"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r26s2"));
+                }
+            }
+
+        });
+
+        b5.put("b5r27s1", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r27s1"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r27s1"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r27s1"));
+                }
+            }
+
+        });
+
+        b5.put("b5r27s2", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b5r27s2"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r27s2"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b5r27s2"));
+                }
+            }
+
+        });
+
+        Blok blok5 = new Blok(b5);
+        k1.put("b5", blok5);
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::        
+//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//                                       - BLOK 4a -
+//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::        
+        Hashtable<String, SuperVariabel> b6 = new Hashtable();
+
+        b6.put("b6r1", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(6);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b6r1"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b6r1"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b6r1"));
+                }
+            }
+
+        });
+
+        b6.put("b6r2", new IntNumber() {
+
+            @Override
+            public void valid() {
+                setMin(1);
+                setMax(7);
+                valid();
+
+                if (value == 0) {
+                    setValid(false);
+                    addMessage(MessageString.null101("b6r2"));
+                }
+                
+                if (Integer.parseInt(var("b3r2")) < 15) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b6r2"));
+                }
+
+                if (Integer.parseInt(var("b3r3")) == 2) {
+                    setEnable(false);
+                    addMessage(MessageString.null102("b6r2"));
+                }
+            }
+
+        });
+
+        Blok blok6 = new Blok(b6);
+        k1.put("b6", blok6);
+
         Controller.setDict(k1);
 //        Controller.setNksComponent("b1r1","b1r2","b1r3");
     }

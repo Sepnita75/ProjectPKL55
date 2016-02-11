@@ -3,12 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pkl55.kuesioner.SectionPane;
+package View.SectionPane;
 
-import pkl55.kuesioner.ErrorList;
-import pkl55.kuesioner.Field;
-import pkl55.kuesioner.Hal;
-import java.awt.Component;
+import View.ErrorList;
+import View.Hal;
 
 /**
  *
@@ -20,16 +18,6 @@ public class Section3 extends Hal {
         initComponents();
     }
 
-    public void addToView(){
-        for (Component comp : getComponents()) {
-            if (comp.isVisible()) {
-                if (comp instanceof Field) {
-                    ((Field) comp).addToView();
-                    ((Field) comp).setErrorlist(errorList);
-                }
-            }
-        }
-    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -39,86 +27,81 @@ public class Section3 extends Hal {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        b4ar1s1 = new pkl55.kuesioner.InputTextFieldLoop();
-        b4ar7 = new pkl55.kuesioner.InputTextField();
-        b4ar8s1 = new pkl55.kuesioner.InputTextField();
-        b4ar8s2 = new pkl55.kuesioner.InputTextField();
-        b4ar1s2 = new pkl55.kuesioner.InputTextFieldLoop();
-        b4ar2s1 = new pkl55.kuesioner.InputTextFieldLoop();
-        b4ar2s2 = new pkl55.kuesioner.InputTextFieldLoop();
-        b4ar3 = new pkl55.kuesioner.InputTextFieldLoop();
-        b4ar4 = new pkl55.kuesioner.InputTextFieldLoop();
-        b4ar5 = new pkl55.kuesioner.InputTextFieldLoop();
-        b4ar6 = new pkl55.kuesioner.InputTextFieldLoop();
-        b4ar5lainnya = new pkl55.kuesioner.InputTextFieldLoop();
+        b4ar1s1 = new View.InputTextFieldLoop();
+        b4ar7 = new View.InputTextField();
+        b4ar8s1 = new View.InputTextField();
+        b4ar8s2 = new View.InputTextField();
+        b4ar1s2 = new View.InputTextFieldLoop();
+        b4ar2s1 = new View.InputTextFieldLoop();
+        b4ar2s2 = new View.InputTextFieldLoop();
+        b4ar3 = new View.InputTextFieldLoop();
+        b4ar4 = new View.InputTextFieldLoop();
+        b4ar5 = new View.InputTextFieldLoop();
+        b4ar6 = new View.InputTextFieldLoop();
+        b4ar5lainnya = new View.InputTextFieldLoop();
         label = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         b4ar1s1.setErrorlist(errorList);
         b4ar1s1.setLoopName("b4a1");
-        b4ar1s1.setPanel(this);
         b4ar1s1.setPosition(42);
         b4ar1s1.setStart(true);
         b4ar1s1.setVarName("b4ar1s1");
         add(b4ar1s1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 240, 60, -1));
 
         b4ar7.setErrorlist(errorList);
-        b4ar7.setPanel(this);
         b4ar7.setPosition(51);
         b4ar7.setVarName("b4ar7");
         add(b4ar7, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 530, 45, -1));
 
         b4ar8s1.setErrorlist(errorList);
-        b4ar8s1.setPanel(this);
         b4ar8s1.setPosition(52);
         b4ar8s1.setVarName("b4ar8s1");
         add(b4ar8s1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 562, 45, -1));
 
         b4ar8s2.setErrorlist(errorList);
-        b4ar8s2.setPanel(this);
         b4ar8s2.setPosition(53);
         b4ar8s2.setVarName("b4ar8s2");
         add(b4ar8s2, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 562, 45, -1));
 
         b4ar1s2.setErrorlist(errorList);
         b4ar1s2.setLoopName("b4a1");
-        b4ar1s2.setPanel(this);
         b4ar1s2.setPosition(43);
         b4ar1s2.setVarName("b4ar1s2");
         add(b4ar1s2, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 240, 60, -1));
 
         b4ar2s1.setErrorlist(errorList);
         b4ar2s1.setLoopName("b4a1");
-        b4ar2s1.setPanel(this);
         b4ar2s1.setPosition(44);
         b4ar2s1.setVarName("b4ar2s1");
+        b4ar2s1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b4ar2s1ActionPerformed(evt);
+            }
+        });
         add(b4ar2s1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 270, 90, 20));
 
         b4ar2s2.setErrorlist(errorList);
         b4ar2s2.setLoopName("b4a1");
-        b4ar2s2.setPanel(this);
         b4ar2s2.setPosition(45);
         b4ar2s2.setVarName("b4ar2s2");
         add(b4ar2s2, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 270, 60, -1));
 
         b4ar3.setErrorlist(errorList);
         b4ar3.setLoopName("b4a1");
-        b4ar3.setPanel(this);
         b4ar3.setPosition(46);
         b4ar3.setVarName("b4ar3");
         add(b4ar3, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 320, 60, -1));
 
         b4ar4.setErrorlist(errorList);
         b4ar4.setLoopName("b4a1");
-        b4ar4.setPanel(this);
         b4ar4.setPosition(47);
         b4ar4.setVarName("b4ar4");
         add(b4ar4, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 360, 60, -1));
 
         b4ar5.setErrorlist(errorList);
         b4ar5.setLoopName("b4a1");
-        b4ar5.setPanel(this);
         b4ar5.setPosition(48);
         b4ar5.setVarName("b4ar5");
         add(b4ar5, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 420, 60, -1));
@@ -126,14 +109,12 @@ public class Section3 extends Hal {
         b4ar6.setErrorlist(errorList);
         b4ar6.setEnd(true);
         b4ar6.setLoopName("b4a1");
-        b4ar6.setPanel(this);
         b4ar6.setPosition(50);
         b4ar6.setVarName("b4ar6");
         add(b4ar6, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 480, 60, -1));
 
         b4ar5lainnya.setErrorlist(errorList);
         b4ar5lainnya.setLoopName("b4a1");
-        b4ar5lainnya.setPanel(this);
         b4ar5lainnya.setPosition(49);
         b4ar5lainnya.setVarName("b4ar5lainnya");
         add(b4ar5lainnya, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 430, 80, 20));
@@ -142,20 +123,24 @@ public class Section3 extends Hal {
         add(label, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
+    private void b4ar2s1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b4ar2s1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_b4ar2s1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private pkl55.kuesioner.InputTextFieldLoop b4ar1s1;
-    private pkl55.kuesioner.InputTextFieldLoop b4ar1s2;
-    private pkl55.kuesioner.InputTextFieldLoop b4ar2s1;
-    private pkl55.kuesioner.InputTextFieldLoop b4ar2s2;
-    private pkl55.kuesioner.InputTextFieldLoop b4ar3;
-    private pkl55.kuesioner.InputTextFieldLoop b4ar4;
-    private pkl55.kuesioner.InputTextFieldLoop b4ar5;
-    private pkl55.kuesioner.InputTextFieldLoop b4ar5lainnya;
-    private pkl55.kuesioner.InputTextFieldLoop b4ar6;
-    private pkl55.kuesioner.InputTextField b4ar7;
-    private pkl55.kuesioner.InputTextField b4ar8s1;
-    private pkl55.kuesioner.InputTextField b4ar8s2;
+    private View.InputTextFieldLoop b4ar1s1;
+    private View.InputTextFieldLoop b4ar1s2;
+    private View.InputTextFieldLoop b4ar2s1;
+    private View.InputTextFieldLoop b4ar2s2;
+    private View.InputTextFieldLoop b4ar3;
+    private View.InputTextFieldLoop b4ar4;
+    private View.InputTextFieldLoop b4ar5;
+    private View.InputTextFieldLoop b4ar5lainnya;
+    private View.InputTextFieldLoop b4ar6;
+    private View.InputTextField b4ar7;
+    private View.InputTextField b4ar8s1;
+    private View.InputTextField b4ar8s2;
     private javax.swing.JLabel label;
     // End of variables declaration//GEN-END:variables
 

@@ -5,7 +5,7 @@
  */
 package pkl55.kuesioner;
 
-import pkl55.validasi.Variabel;
+import Controller.Variabel;
 import java.awt.Component;
 
 /**

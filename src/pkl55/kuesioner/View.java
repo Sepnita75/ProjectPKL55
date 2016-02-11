@@ -1,4 +1,4 @@
-package pkl55.kuesioner;
+package View;
 
 import java.util.ArrayList;
 
@@ -21,7 +21,6 @@ public class View {
     }
 
     public static void add(Field tf) {
-        System.out.println(tf);
         list[tf.getPosition()] = tf;
     }
 
