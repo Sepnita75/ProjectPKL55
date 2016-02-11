@@ -166,9 +166,7 @@ public class TableSubKuesPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        table1.setColumnSelectionAllowed(true);
         jScrollPane1.setViewportView(table1);
-        table1.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_INTERVAL_SELECTION);
 
         textFilter.setForeground(new java.awt.Color(204, 204, 204));
         textFilter.setText("Ketikkan NKS di sini...");
