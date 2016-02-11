@@ -5,6 +5,8 @@
  */
 package pkl55.panelcomponent;
 
+import javax.swing.ListSelectionModel;
+
 /**
  *
  * @author User
@@ -14,9 +16,59 @@ public class DSSubPanel extends javax.swing.JPanel {
     /**
      * Creates new form Dspane
      */
+    private TableDSModel tableModel;
+    
     public DSSubPanel() {
         initComponents();
+        
+        initComponents();
+        String[][] data = new String[5][4];
+        data[0][0] = "1";
+        data[0][1] = "Pringsewu";
+        data[0][2] = "Labotu";
+        data[0][3] = "3798579285";
+
+        data[1][0] = "2";
+        data[1][1] = "Laonti";
+        data[1][2] = "Labotu";
+        data[1][3] = "4646549285";
+
+        data[2][0] = "3";
+        data[2][1] = "Lainea";
+        data[2][2] = "Kalisusu";
+        data[2][3] = "45634664365";
+
+        data[3][0] = "4";
+        data[3][1] = "Konawe";
+        data[3][2] = "Wangi-Wangi";
+        data[3][3] = "379456346536";
+
+        data[4][0] = "5";
+        data[4][1] = "Konda";
+        data[4][2] = "Ambalodangge";
+        data[4][3] = "544369285";
+
+        initTable();
+        ((TableDSModel) jTable1.getModel()).update(data);
     }
+    
+    private void initTable() {
+        tableModel = new TableDSModel();
+        jTable1.setModel(tableModel);
+        jTable1.setRowSelectionAllowed(true);
+        jTable1.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+        jTable1.getColumnModel().getColumn(0).setPreferredWidth(8);
+        //        table1.getColumnModel().getColumn(2).setCellRenderer(new CleanErrorRenderer());
+        //        table1.getColumnModel().getColumn(3).setCellRenderer(new StatusEntryRenderer());
+        //        sorter = new TableRowSorter<>(tableModel);
+        //        table1.setRowSorter(sorter);
+        //        table1.getColumnModel().getColumn(2).setWidth(5);
+    }
+
+    public String getNks() {
+        return (String) ((TableDSModel) jTable1.getModel()).getValueAt(jTable1.getSelectedRow(), 3);
+    }
+
 
     /**
      * This method is called from within the constructor to initialize the form.

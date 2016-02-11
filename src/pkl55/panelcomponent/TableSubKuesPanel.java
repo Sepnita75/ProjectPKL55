@@ -20,10 +20,7 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import org.json.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
+import javax.swing.ListSelectionModel;
 
 /**
  *
@@ -34,85 +31,59 @@ public class TableSubKuesPanel extends javax.swing.JPanel {
     /**
      * Creates new form TableSubKuesPanel
      */
+    private TableKuesModel tableModel;
+    
     public TableSubKuesPanel() {
         initComponents();
+        
+        inisialisasi();
+        
+        String[][] data = new String[5][4];
+        data[0][0]="7862814628142";
+        data[0][1]="Pak Jarwo";
+        data[0][2]="clean";
+        data[0][3]="Sudah dientry";
+        
+        data[1][0]="7862345328142";
+        data[1][1]="Bu Ani";
+        data[1][2]="unclean";
+        data[1][3]="Belum dientry";
+        
+        data[2][0]="7862453628142";
+        data[2][1]="Pak Udin";
+        data[2][2]="clean";
+        data[2][3]="Sudah dientry";
+        
+        data[3][0]="78625435354142";
+        data[3][1]="Pak Imin";
+        data[3][2]="clean";
+        data[3][3]="Sudah dientry";
+        
+        data[4][0]="5432814628142";
+        data[4][1]="Bu Inem";
+        data[4][2]="unclean";
+        data[4][3]="Belum dientry";
+        ((TableKuesModel) table1.getModel()).update(data);
+        
+        
     }
     
-    public List<Object> connect(String table, String column, String value) {
-        URL url = null;
-        try {url = new URL("http://localhost/stisbook/public/pkl55");
-        } catch (MalformedURLException ex) {
-            System.out.println(ex.getMessage());
-        }
-        Map<String, Object> params = new LinkedHashMap<>();
-        params.put("table", table);
-        params.put("column", column);
-        params.put("value", value);
-
-        StringBuilder postData = new StringBuilder();
-        for (Map.Entry<String, Object> param : params.entrySet()) {
-            if (postData.length() != 0) {
-                postData.append('&');
-            }
-            try {
-                postData.append(URLEncoder.encode(param.getKey(), "UTF-8"));
-            } catch (UnsupportedEncodingException ex) {
-                System.out.println(ex.getMessage());;
-            }
-            postData.append('=');
-            try {
-                postData.append(URLEncoder.encode(String.valueOf(param.getValue()), "UTF-8"));
-            } catch (UnsupportedEncodingException ex) {
-                System.out.println(ex.getMessage());;
-            }
-        }
-        byte[] postDataBytes = null;
-        try {
-            postDataBytes = postData.toString().getBytes("UTF-8");
-        } catch (UnsupportedEncodingException ex) {
-            System.out.println(ex.getMessage());;
-        }
-
-        HttpURLConnection conn = null;
-        try {
-            conn = (HttpURLConnection) url.openConnection();
-        } catch (IOException ex) {
-            System.out.println(ex.getMessage());;
-        }
-        try {
-            conn.setRequestMethod("POST");
-        } catch (ProtocolException ex) {
-            System.out.println(ex.getMessage());;
-        }
-        conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
-        conn.setRequestProperty("Content-Length", String.valueOf(postDataBytes.length));
-        conn.setDoOutput(true);
-        try {
-            conn.getOutputStream().write(postDataBytes);
-        } catch (IOException ex) {
-            System.out.println(ex.getMessage());;
-        }
-
-        Reader in = null;
-        try {
-            in = new BufferedReader(new InputStreamReader(conn.getInputStream(), "UTF-8"));
-        } catch (IOException ex) {
-            System.out.println(ex.getMessage());;
-        }
-
-        String json1 = "";
-        try {
-            for (int c = in.read(); c != -1; c = in.read()) {
-                json1 += (char) c;
-            }
-        } catch (IOException ex) {
-            System.out.println(ex.getMessage());;
-        }
-        
-        //JSONArray js = (JSONArray) json1;
-        List<Object> list = new ArrayList<>();
-        return list;
+    private void inisialisasi() {
+        tableModel = new TableKuesModel();
+        table1.setModel(tableModel);
+        table1.setRowSelectionAllowed(true);
+        table1.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+        table1.getColumnModel().getColumn(2).setCellRenderer(new TableFlagColorRenderer());
+        table1.getColumnModel().getColumn(3).setCellRenderer(new TableStatusColorRenderer());
+//        sorter = new TableRowSorter<>(tableModel);
+//        table1.setRowSorter(sorter);
+//        table1.getColumnModel().getColumn(2).setWidth(5);
     }
+    
+    public String getNks(){
+        return (String) ((TableKuesModel) table1.getModel()).getValueAt(table1.getSelectedRow(), 0);
+    }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -134,7 +105,7 @@ public class TableSubKuesPanel extends javax.swing.JPanel {
         jLabel7 = new javax.swing.JLabel();
         comboNBS = new javax.swing.JComboBox();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        table1 = new javax.swing.JTable();
         textFilter = new javax.swing.JTextField();
 
         setPreferredSize(new java.awt.Dimension(700, 504));
@@ -179,7 +150,7 @@ public class TableSubKuesPanel extends javax.swing.JPanel {
         comboNBS.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         comboNBS.setPreferredSize(new java.awt.Dimension(329, 29));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        table1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -195,9 +166,9 @@ public class TableSubKuesPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jTable1.setColumnSelectionAllowed(true);
-        jScrollPane1.setViewportView(jTable1);
-        jTable1.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_INTERVAL_SELECTION);
+        table1.setColumnSelectionAllowed(true);
+        jScrollPane1.setViewportView(table1);
+        table1.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_INTERVAL_SELECTION);
 
         textFilter.setForeground(new java.awt.Color(204, 204, 204));
         textFilter.setText("Ketikkan NKS di sini...");
@@ -316,7 +287,7 @@ public class TableSubKuesPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable table1;
     private javax.swing.JTextField textFilter;
     // End of variables declaration//GEN-END:variables
 }
