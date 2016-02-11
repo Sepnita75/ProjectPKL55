@@ -6,21 +6,12 @@
 package pkl55.panelcomponent;
 
 import java.awt.Color;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.Reader;
-import java.io.UnsupportedEncodingException;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.ProtocolException;
-import java.net.URL;
-import java.net.URLEncoder;
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.regex.PatternSyntaxException;
 import javax.swing.ListSelectionModel;
+import javax.swing.RowFilter;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
+import javax.swing.table.TableRowSorter;
 
 /**
  *
@@ -32,6 +23,7 @@ public class TableSubKuesPanel extends javax.swing.JPanel {
      * Creates new form TableSubKuesPanel
      */
     private TableKuesModel tableModel;
+    private TableRowSorter<TableKuesModel> sorter;
     
     public TableSubKuesPanel() {
         initComponents();
@@ -65,7 +57,26 @@ public class TableSubKuesPanel extends javax.swing.JPanel {
         data[4][3]="Belum dientry";
         ((TableKuesModel) table1.getModel()).update(data);
         
+        sorter = new TableRowSorter<>(tableModel);
+        table1.setRowSorter(sorter);
         
+        textFilter.getDocument().addDocumentListener(new DocumentListener() {
+
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                initFilter();
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                initFilter();
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                initFilter();
+            }
+        });
     }
     
     private void inisialisasi() {
@@ -78,6 +89,19 @@ public class TableSubKuesPanel extends javax.swing.JPanel {
 //        sorter = new TableRowSorter<>(tableModel);
 //        table1.setRowSorter(sorter);
 //        table1.getColumnModel().getColumn(2).setWidth(5);
+    }
+    
+private void initFilter() {
+        String text = textFilter.getText();
+        if (text.isEmpty() || text.equals("Ketikkan NKS di sini...")) {
+            sorter.setRowFilter(null);
+        } else {
+            try {
+                sorter.setRowFilter(RowFilter.regexFilter(text, 0));
+            } catch (PatternSyntaxException e) {
+                System.out.println(e);
+            }
+        }
     }
     
     public String getNks(){
