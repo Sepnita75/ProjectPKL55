@@ -1,0 +1,97 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package pkl55.data.controller;
+
+/**
+ *
+ * @author faqih_
+ */
+public abstract class FloatDecimal extends Variabel {
+
+    protected float value;
+    private float max;
+    private float min;
+
+    public FloatDecimal() {
+        super();
+        this.value = 0;
+        this.max = Float.MAX_VALUE;
+        this.min = Float.MIN_VALUE;
+    }
+
+    
+    @Override
+    public void check() {
+        
+            valid();
+        if(value>max||value<min){
+            setValid(false);
+            addMessage(MessageString.OUT_RANGE);
+        }
+    }
+
+    /**
+     * @return the max
+     */
+    public float getMax() {
+        return max;
+    }
+
+    /**
+     * @param max the max to set
+     */
+    public void setMax(float max) {
+        this.max = max;
+    }
+
+    /**
+     * @return the min
+     */
+    public float getMin() {
+        return min;
+    }
+
+    /**
+     * @param min the min to set
+     */
+    public void setMin(float min) {
+        this.min = min;
+    }
+
+    /**
+     * @return the value
+     */
+    @Override
+    public String getValue() {
+        if(isNot)
+            return value+"";
+        else
+            return "";
+    }
+
+    
+    @Override
+    public void setValue(String val) {
+        super.setValue(val);
+        try{
+            this.value = Float.parseFloat(val);
+            isNot = true;
+        }catch(Exception e){
+            this.value = 0;
+            if(val.equals("")&&isRequire()==true){
+                setValid(false);
+                addMessage(MessageString.REQUIRE);
+            }else{
+                addMessage(MessageString.DECIMAL_NEED);
+            }
+        }
+        try {
+            check();
+        } catch (Exception e) {
+        }
+    }
+
+}

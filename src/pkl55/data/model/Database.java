@@ -1,0 +1,86 @@
+package pkl55.data.model;
+
+import java.sql.*;
+import java.util.ArrayList;
+
+public class Database {
+
+    public static void execute(String sql) {
+        Connection c = null;
+        Statement stmt = null;
+        try {
+            Class.forName("org.sqlite.JDBC");
+            c = DriverManager.getConnection("jdbc:sqlite:test.db");
+            stmt = c.createStatement();
+            stmt.executeUpdate(sql);
+            stmt.close();
+            c.close();
+        } catch (Exception e) {
+            System.out.println(e.getClass().getName() + ": " + e.getMessage());
+        }
+    }
+
+    public static ArrayList select(String sql) {
+        ArrayList result = new ArrayList();
+        Connection c = null;
+        Statement stmt = null;
+        try { 
+            Class.forName("org.sqlite.JDBC");
+            c = DriverManager.getConnection("jdbc:sqlite:test.db");
+            c.setAutoCommit(false);
+
+            stmt = c.createStatement();
+            ResultSet rs = stmt.executeQuery(sql);
+            int numcols = rs.getMetaData().getColumnCount();
+
+            while (rs.next()) {
+                ArrayList row = new ArrayList(numcols);
+                for (int i = 1; i <= numcols; i++) {
+                    row.add(rs.getString(i));
+                }
+                result.add(row);
+            }
+            rs.close();
+            stmt.close();
+            c.close();
+        } catch (Exception e) {
+            System.out.println(e.getClass().getName() + ": " + e.getMessage());
+        }
+        return result;
+    }
+    
+    public static void insert(String table,String... value){
+        String sqlInsert="INSERT INTO "+table+" VALUES (";
+        for(int i=0;i<value.length;i++){
+            sqlInsert+=value[i];
+            if(!(i==value.length-1)){
+                sqlInsert+=",";
+            }
+        }
+        sqlInsert+=")";
+        System.out.println(sqlInsert);
+        execute(sqlInsert);
+    }
+    public static void update(String table,String[] col,String[] val,String where) throws Exception{
+        String sqlUpdate="UPDATE "+table+" SET ";
+        if(col.length!=val.length) throw new Exception("Length Kolom dan Value Tidak Sama");
+        for(int i=0;i<val.length;i++){
+            sqlUpdate+=" "+col[i]+"="+val[i];
+            if(!(i==val.length-1)){
+                sqlUpdate+=",";
+            }
+        }
+        sqlUpdate+=" WHERE "+where+";";
+        execute(sqlUpdate);
+    }
+    public static void delete(String table,String where){
+        String sqlUpdate="DELETE FROM "+table;
+        sqlUpdate+=" WHERE "+where+";";
+        execute(sqlUpdate);
+    }
+    
+    public static void createTable(String sql){
+        System.out.println("Nais");
+        execute(sql);
+    }
+}

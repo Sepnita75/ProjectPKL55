@@ -1,0 +1,1033 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+  <Properties>
+    <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[753, 1069]"/>
+    </Property>
+  </Properties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,4,44,0,0,2,-12"/>
+  </AuxValues>
+
+  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+    <Property name="useNullLayout" type="boolean" value="false"/>
+  </Layout>
+  <SubComponents>
+    <Component class="pkl55.data.view.InputTextField" name="b6r2s1t3">
+      <Properties>
+        <Property name="errorlist" type="pkl55.data.view.ErrorList" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="errorList" type="code"/>
+        </Property>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="b6r2s2t3"/>
+        </Property>
+        <Property name="panel" type="pkl55.data.view.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="216"/>
+        <Property name="varName" type="java.lang.String" value="b6r2s1t3"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="581" y="205" width="132" height="23"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.data.view.InputTextField" name="b6r1">
+      <Properties>
+        <Property name="errorlist" type="pkl55.data.view.ErrorList" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="errorList" type="code"/>
+        </Property>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="b6r2s1t1x1"/>
+        </Property>
+        <Property name="panel" type="pkl55.data.view.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="197"/>
+        <Property name="varName" type="java.lang.String" value="b6r1"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b6r1ActionPerformed"/>
+      </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="696" y="61" width="23" height="23"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.data.view.InputTextField" name="b6r2s1t1x1">
+      <Properties>
+        <Property name="errorlist" type="pkl55.data.view.ErrorList" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="errorList" type="code"/>
+        </Property>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="b6r2s2t1x1"/>
+        </Property>
+        <Property name="panel" type="pkl55.data.view.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="198"/>
+        <Property name="varName" type="java.lang.String" value="b6r2s1t1x1"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="150" y="205" width="132" height="23"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.data.view.InputTextField" name="b6r2s1t1x2">
+      <Properties>
+        <Property name="errorlist" type="pkl55.data.view.ErrorList" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="errorList" type="code"/>
+        </Property>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="b6r2s2t1x2"/>
+        </Property>
+        <Property name="panel" type="pkl55.data.view.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="204"/>
+        <Property name="varName" type="java.lang.String" value="b6r2s1t1x2"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="294" y="205" width="132" height="23"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.data.view.InputTextField" name="b6r2s1t2">
+      <Properties>
+        <Property name="errorlist" type="pkl55.data.view.ErrorList" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="errorList" type="code"/>
+        </Property>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="b6r2s2t2"/>
+        </Property>
+        <Property name="panel" type="pkl55.data.view.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="210"/>
+        <Property name="varName" type="java.lang.String" value="b6r2s1t2"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="437" y="205" width="132" height="23"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.data.view.InputTextField" name="b6r2s2t1x1">
+      <Properties>
+        <Property name="errorlist" type="pkl55.data.view.ErrorList" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="errorList" type="code"/>
+        </Property>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="b6r2s3t1x1"/>
+        </Property>
+        <Property name="panel" type="pkl55.data.view.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="199"/>
+        <Property name="varName" type="java.lang.String" value="b6r2s2t1x1"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="150" y="234" width="132" height="23"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.data.view.InputTextField" name="b6r2s2t1x2">
+      <Properties>
+        <Property name="errorlist" type="pkl55.data.view.ErrorList" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="errorList" type="code"/>
+        </Property>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="b6r2s3t1x2"/>
+        </Property>
+        <Property name="panel" type="pkl55.data.view.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="205"/>
+        <Property name="varName" type="java.lang.String" value="b6r2s2t1x2"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="294" y="234" width="132" height="23"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.data.view.InputTextField" name="b6r2s2t2">
+      <Properties>
+        <Property name="errorlist" type="pkl55.data.view.ErrorList" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="errorList" type="code"/>
+        </Property>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="b6r2s3t2"/>
+        </Property>
+        <Property name="panel" type="pkl55.data.view.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="211"/>
+        <Property name="varName" type="java.lang.String" value="b6r2s2t2"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="437" y="234" width="132" height="23"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.data.view.InputTextField" name="b6r2s2t3">
+      <Properties>
+        <Property name="errorlist" type="pkl55.data.view.ErrorList" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="errorList" type="code"/>
+        </Property>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="b6r2s3t3"/>
+        </Property>
+        <Property name="panel" type="pkl55.data.view.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="217"/>
+        <Property name="varName" type="java.lang.String" value="b6r2s2t3"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="581" y="234" width="132" height="23"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.data.view.InputTextField" name="b6r2s3t1x1">
+      <Properties>
+        <Property name="errorlist" type="pkl55.data.view.ErrorList" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="errorList" type="code"/>
+        </Property>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="b6r2s4t1x1"/>
+        </Property>
+        <Property name="panel" type="pkl55.data.view.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="200"/>
+        <Property name="varName" type="java.lang.String" value="b6r2s3t1x1"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="150" y="263" width="132" height="23"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.data.view.InputTextField" name="b6r2s3t1x2">
+      <Properties>
+        <Property name="errorlist" type="pkl55.data.view.ErrorList" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="errorList" type="code"/>
+        </Property>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="b6r2s4t1x2"/>
+        </Property>
+        <Property name="panel" type="pkl55.data.view.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="206"/>
+        <Property name="varName" type="java.lang.String" value="b6r2s3t1x2"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="294" y="263" width="132" height="23"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.data.view.InputTextField" name="b6r2s3t2">
+      <Properties>
+        <Property name="errorlist" type="pkl55.data.view.ErrorList" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="errorList" type="code"/>
+        </Property>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="b6r2s4t2"/>
+        </Property>
+        <Property name="panel" type="pkl55.data.view.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="212"/>
+        <Property name="varName" type="java.lang.String" value="b6r2s3t2"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="437" y="263" width="132" height="23"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.data.view.InputTextField" name="b6r2s3t3">
+      <Properties>
+        <Property name="errorlist" type="pkl55.data.view.ErrorList" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="errorList" type="code"/>
+        </Property>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="b6r2s4t3"/>
+        </Property>
+        <Property name="panel" type="pkl55.data.view.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="218"/>
+        <Property name="varName" type="java.lang.String" value="b6r2s3t3"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="581" y="263" width="132" height="23"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.data.view.InputTextField" name="b6r2s4t1x1">
+      <Properties>
+        <Property name="errorlist" type="pkl55.data.view.ErrorList" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="errorList" type="code"/>
+        </Property>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="b6r2s5t1x1"/>
+        </Property>
+        <Property name="panel" type="pkl55.data.view.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="201"/>
+        <Property name="varName" type="java.lang.String" value="b6r2s4t1x1"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="150" y="295" width="132" height="23"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.data.view.InputTextField" name="b6r2s4t1x2">
+      <Properties>
+        <Property name="errorlist" type="pkl55.data.view.ErrorList" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="errorList" type="code"/>
+        </Property>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="b6r2s5t1x2"/>
+        </Property>
+        <Property name="panel" type="pkl55.data.view.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="207"/>
+        <Property name="varName" type="java.lang.String" value="b6r2s4t1x2"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="294" y="295" width="132" height="23"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.data.view.InputTextField" name="b6r2s4t2">
+      <Properties>
+        <Property name="errorlist" type="pkl55.data.view.ErrorList" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="errorList" type="code"/>
+        </Property>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="b6r2s5t2"/>
+        </Property>
+        <Property name="panel" type="pkl55.data.view.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="213"/>
+        <Property name="varName" type="java.lang.String" value="b6r2s4t2"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="437" y="295" width="132" height="23"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.data.view.InputTextField" name="b6r2s4t3">
+      <Properties>
+        <Property name="errorlist" type="pkl55.data.view.ErrorList" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="errorList" type="code"/>
+        </Property>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="b6r2s5t3"/>
+        </Property>
+        <Property name="panel" type="pkl55.data.view.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="219"/>
+        <Property name="varName" type="java.lang.String" value="b6r2s4t3"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="581" y="295" width="132" height="23"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.data.view.InputTextField" name="b6r2s5t1x1">
+      <Properties>
+        <Property name="errorlist" type="pkl55.data.view.ErrorList" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="errorList" type="code"/>
+        </Property>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="b6r2s6t1x1"/>
+        </Property>
+        <Property name="panel" type="pkl55.data.view.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="202"/>
+        <Property name="varName" type="java.lang.String" value="b6r2s5t1x1"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="150" y="324" width="132" height="23"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.data.view.InputTextField" name="b6r2s5t1x2">
+      <Properties>
+        <Property name="errorlist" type="pkl55.data.view.ErrorList" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="errorList" type="code"/>
+        </Property>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="b6r2s6t1x2"/>
+        </Property>
+        <Property name="panel" type="pkl55.data.view.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="208"/>
+        <Property name="varName" type="java.lang.String" value="b6r2s5t1x2"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="294" y="324" width="132" height="23"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.data.view.InputTextField" name="b6r2s5t2">
+      <Properties>
+        <Property name="errorlist" type="pkl55.data.view.ErrorList" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="errorList" type="code"/>
+        </Property>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="b6r2s6t2"/>
+        </Property>
+        <Property name="panel" type="pkl55.data.view.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="214"/>
+        <Property name="varName" type="java.lang.String" value="b6r2s5t2"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="437" y="324" width="132" height="23"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.data.view.InputTextField" name="b6r2s5t3">
+      <Properties>
+        <Property name="errorlist" type="pkl55.data.view.ErrorList" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="errorList" type="code"/>
+        </Property>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="b6r2s6t3"/>
+        </Property>
+        <Property name="panel" type="pkl55.data.view.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="220"/>
+        <Property name="varName" type="java.lang.String" value="b6r2s5t3"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="581" y="324" width="132" height="23"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.data.view.InputTextField" name="b6r2s6t1x1">
+      <Properties>
+        <Property name="errorlist" type="pkl55.data.view.ErrorList" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="errorList" type="code"/>
+        </Property>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="b6r2s1t1x2"/>
+        </Property>
+        <Property name="panel" type="pkl55.data.view.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="203"/>
+        <Property name="varName" type="java.lang.String" value="b6r2s6t1x1"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="150" y="358" width="132" height="23"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.data.view.InputTextField" name="b6r2s6t1x2">
+      <Properties>
+        <Property name="errorlist" type="pkl55.data.view.ErrorList" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="errorList" type="code"/>
+        </Property>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="b6r2s1t2"/>
+        </Property>
+        <Property name="panel" type="pkl55.data.view.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="209"/>
+        <Property name="varName" type="java.lang.String" value="b6r2s6t1x2"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="294" y="358" width="132" height="23"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.data.view.InputTextField" name="b6r2s6t2">
+      <Properties>
+        <Property name="errorlist" type="pkl55.data.view.ErrorList" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="errorList" type="code"/>
+        </Property>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="b6r2s1t3"/>
+        </Property>
+        <Property name="panel" type="pkl55.data.view.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="215"/>
+        <Property name="varName" type="java.lang.String" value="b6r2s6t2"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="437" y="358" width="132" height="23"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.data.view.InputTextField" name="b6r3s1t1">
+      <Properties>
+        <Property name="errorlist" type="pkl55.data.view.ErrorList" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="errorList" type="code"/>
+        </Property>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="b6r3s1t2"/>
+        </Property>
+        <Property name="panel" type="pkl55.data.view.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="223"/>
+        <Property name="varName" type="java.lang.String" value="b6r3s1t1"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="556" y="497" width="132" height="23"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.data.view.InputTextField" name="b6r2s6t3">
+      <Properties>
+        <Property name="errorlist" type="pkl55.data.view.ErrorList" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="errorList" type="code"/>
+        </Property>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="b6r3s1"/>
+        </Property>
+        <Property name="panel" type="pkl55.data.view.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="221"/>
+        <Property name="varName" type="java.lang.String" value="b6r2s6t3"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="581" y="358" width="132" height="23"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.data.view.InputTextField" name="b6r3s1">
+      <Properties>
+        <Property name="errorlist" type="pkl55.data.view.ErrorList" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="errorList" type="code"/>
+        </Property>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="b6r3s1t1"/>
+        </Property>
+        <Property name="panel" type="pkl55.data.view.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="222"/>
+        <Property name="varName" type="java.lang.String" value="b6r3s1"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="556" y="471" width="132" height="23"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.data.view.InputTextField" name="b6r3s1t2">
+      <Properties>
+        <Property name="errorlist" type="pkl55.data.view.ErrorList" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="errorList" type="code"/>
+        </Property>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="b6r3s1t3"/>
+        </Property>
+        <Property name="panel" type="pkl55.data.view.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="224"/>
+        <Property name="varName" type="java.lang.String" value="b6r3s1t2"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="556" y="522" width="132" height="23"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.data.view.InputTextField" name="b6r4s3">
+      <Properties>
+        <Property name="errorlist" type="pkl55.data.view.ErrorList" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="errorList" type="code"/>
+        </Property>
+        <Property name="nextpage" type="boolean" value="true"/>
+        <Property name="panel" type="pkl55.data.view.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="244"/>
+        <Property name="varName" type="java.lang.String" value="b6r4s3"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b6r4s3ActionPerformed"/>
+      </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="549" y="985" width="152" height="23"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.data.view.InputTextField" name="b6r3s1t3">
+      <Properties>
+        <Property name="errorlist" type="pkl55.data.view.ErrorList" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="errorList" type="code"/>
+        </Property>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="b6r3s1t4"/>
+        </Property>
+        <Property name="panel" type="pkl55.data.view.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="225"/>
+        <Property name="varName" type="java.lang.String" value="b6r3s1t3"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="556" y="548" width="132" height="23"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.data.view.InputTextField" name="b6r3s1t4">
+      <Properties>
+        <Property name="errorlist" type="pkl55.data.view.ErrorList" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="errorList" type="code"/>
+        </Property>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="b6r3s1t5ket"/>
+        </Property>
+        <Property name="panel" type="pkl55.data.view.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="226"/>
+        <Property name="varName" type="java.lang.String" value="b6r3s1t4"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="556" y="574" width="132" height="23"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.data.view.InputTextField" name="b6r3s1t5">
+      <Properties>
+        <Property name="errorlist" type="pkl55.data.view.ErrorList" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="errorList" type="code"/>
+        </Property>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="b6r3s1t6ket"/>
+        </Property>
+        <Property name="panel" type="pkl55.data.view.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="228"/>
+        <Property name="varName" type="java.lang.String" value="b6r3s1t5"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="556" y="605" width="132" height="23"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.data.view.InputTextField" name="b6r3s1t6">
+      <Properties>
+        <Property name="errorlist" type="pkl55.data.view.ErrorList" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="errorList" type="code"/>
+        </Property>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="b6r3s1t7ket"/>
+        </Property>
+        <Property name="panel" type="pkl55.data.view.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="230"/>
+        <Property name="varName" type="java.lang.String" value="b6r3s1t6"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="556" y="636" width="132" height="23"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.data.view.InputTextField" name="b6r3s1t7">
+      <Properties>
+        <Property name="errorlist" type="pkl55.data.view.ErrorList" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="errorList" type="code"/>
+        </Property>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="b6r3s1t8ket"/>
+        </Property>
+        <Property name="panel" type="pkl55.data.view.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="232"/>
+        <Property name="varName" type="java.lang.String" value="b6r3s1t7"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="556" y="665" width="132" height="23"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.data.view.InputTextField" name="b6r3s1t8">
+      <Properties>
+        <Property name="errorlist" type="pkl55.data.view.ErrorList" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="errorList" type="code"/>
+        </Property>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="b6r3s1t9ket"/>
+        </Property>
+        <Property name="panel" type="pkl55.data.view.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="234"/>
+        <Property name="varName" type="java.lang.String" value="b6r3s1t8"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="556" y="692" width="132" height="23"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.data.view.InputTextField" name="b6r3s1t9">
+      <Properties>
+        <Property name="errorlist" type="pkl55.data.view.ErrorList" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="errorList" type="code"/>
+        </Property>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="b6r3s1t10ket"/>
+        </Property>
+        <Property name="panel" type="pkl55.data.view.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="236"/>
+        <Property name="varName" type="java.lang.String" value="b6r3s1t9"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="556" y="718" width="132" height="23"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.data.view.InputTextField" name="b6r3s1t10">
+      <Properties>
+        <Property name="errorlist" type="pkl55.data.view.ErrorList" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="errorList" type="code"/>
+        </Property>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="b6r3s2"/>
+        </Property>
+        <Property name="panel" type="pkl55.data.view.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="238"/>
+        <Property name="varName" type="java.lang.String" value="b6r3s1t10"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="556" y="747" width="132" height="23"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.data.view.InputTextField" name="b6r3s2">
+      <Properties>
+        <Property name="errorlist" type="pkl55.data.view.ErrorList" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="errorList" type="code"/>
+        </Property>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="b6r3s3"/>
+        </Property>
+        <Property name="panel" type="pkl55.data.view.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="239"/>
+        <Property name="varName" type="java.lang.String" value="b6r3s2"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="556" y="776" width="132" height="23"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.data.view.InputTextField" name="b6r3s3">
+      <Properties>
+        <Property name="errorlist" type="pkl55.data.view.ErrorList" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="errorList" type="code"/>
+        </Property>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="b6r3s4"/>
+        </Property>
+        <Property name="panel" type="pkl55.data.view.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="240"/>
+        <Property name="varName" type="java.lang.String" value="b6r3s3"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b6r3s3ActionPerformed"/>
+      </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="556" y="805" width="132" height="23"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.data.view.InputTextField" name="b6r3s4">
+      <Properties>
+        <Property name="errorlist" type="pkl55.data.view.ErrorList" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="errorList" type="code"/>
+        </Property>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="b6r4s1"/>
+        </Property>
+        <Property name="panel" type="pkl55.data.view.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="241"/>
+        <Property name="varName" type="java.lang.String" value="b6r3s4"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b6r3s4ActionPerformed"/>
+      </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="556" y="843" width="132" height="23"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.data.view.InputTextField" name="b6r3s1t5ket">
+      <Properties>
+        <Property name="errorlist" type="pkl55.data.view.ErrorList" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="errorList" type="code"/>
+        </Property>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="b6r3s1t5"/>
+        </Property>
+        <Property name="panel" type="pkl55.data.view.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="227"/>
+        <Property name="varName" type="java.lang.String" value="b6r3s1t5ket"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b6r3s1t5ketActionPerformed"/>
+      </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="70" y="605" width="350" height="23"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.data.view.InputTextField" name="b6r3s1t6ket">
+      <Properties>
+        <Property name="errorlist" type="pkl55.data.view.ErrorList" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="errorList" type="code"/>
+        </Property>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="b6r3s1t6"/>
+        </Property>
+        <Property name="panel" type="pkl55.data.view.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="229"/>
+        <Property name="varName" type="java.lang.String" value="b6r3s1t6ket"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b6r3s1t6ketActionPerformed"/>
+      </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="70" y="636" width="350" height="23"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.data.view.InputTextField" name="b6r3s1t7ket">
+      <Properties>
+        <Property name="errorlist" type="pkl55.data.view.ErrorList" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="errorList" type="code"/>
+        </Property>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="b6r3s1t7"/>
+        </Property>
+        <Property name="panel" type="pkl55.data.view.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="231"/>
+        <Property name="varName" type="java.lang.String" value="b6r3s1t7ket"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b6r3s1t7ketActionPerformed"/>
+      </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="70" y="665" width="350" height="23"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.data.view.InputTextField" name="b6r3s1t8ket">
+      <Properties>
+        <Property name="errorlist" type="pkl55.data.view.ErrorList" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="errorList" type="code"/>
+        </Property>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="b6r3s1t8"/>
+        </Property>
+        <Property name="panel" type="pkl55.data.view.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="233"/>
+        <Property name="varName" type="java.lang.String" value="b6r3s1t8ket"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b6r3s1t8ketActionPerformed"/>
+      </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="70" y="692" width="350" height="23"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.data.view.InputTextField" name="b6r3s1t9ket">
+      <Properties>
+        <Property name="errorlist" type="pkl55.data.view.ErrorList" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="errorList" type="code"/>
+        </Property>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="b6r3s1t9"/>
+        </Property>
+        <Property name="panel" type="pkl55.data.view.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="235"/>
+        <Property name="varName" type="java.lang.String" value="b6r3s1t9ket"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b6r3s1t9ketActionPerformed"/>
+      </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="70" y="718" width="350" height="23"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.data.view.InputTextField" name="b6r3s1t10ket">
+      <Properties>
+        <Property name="errorlist" type="pkl55.data.view.ErrorList" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="errorList" type="code"/>
+        </Property>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="b6r3s1t10"/>
+        </Property>
+        <Property name="panel" type="pkl55.data.view.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="237"/>
+        <Property name="varName" type="java.lang.String" value="b6r3s1t10ket"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b6r3s1t10ketActionPerformed"/>
+      </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="70" y="747" width="350" height="23"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.data.view.InputTextField" name="b6r4s1">
+      <Properties>
+        <Property name="errorlist" type="pkl55.data.view.ErrorList" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="errorList" type="code"/>
+        </Property>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="b6r4s2"/>
+        </Property>
+        <Property name="panel" type="pkl55.data.view.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="242"/>
+        <Property name="varName" type="java.lang.String" value="b6r4s1"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b6r4s1ActionPerformed"/>
+      </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="549" y="920" width="152" height="23"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="pkl55.data.view.InputTextField" name="b6r4s2">
+      <Properties>
+        <Property name="errorlist" type="pkl55.data.view.ErrorList" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="errorList" type="code"/>
+        </Property>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="b6r4s3"/>
+        </Property>
+        <Property name="panel" type="pkl55.data.view.Hal" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="this" type="code"/>
+        </Property>
+        <Property name="position" type="int" value="243"/>
+        <Property name="varName" type="java.lang.String" value="b6r4s2"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b6r4s2ActionPerformed"/>
+      </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="549" y="953" width="152" height="23"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/pkl55/kuesioner/picture/us5.png"/>
+        </Property>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+  </SubComponents>
+</Form>

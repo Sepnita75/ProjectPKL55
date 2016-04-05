@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><kuesioner kode_kortim="" kode_tim="" nama="" nim="" nks="520101201210" status="unclear" timestamps="1459749963">
+    <blok name="b4">
+        <variabel hide="no" name="b4ar16">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b4ar15">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b4r1">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b4ar14">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b4cr32">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b4ar13">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b4cr31">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b4br19">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b4ar12">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b4cr30">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b4br18">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b4ar11">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b4br17">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b4ar10">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b4ar9">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b4ar8">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b4ar7">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b4ar6">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b4ar5">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b4ar4">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b4ar3">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b4br24">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b4ar2">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b4br23">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b4ar1">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b4cr29">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b4br22">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b4cr28">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b4br21">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b4cr27">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b4br20">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b4cr26">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b4cr25">
+            <value/>
+        </variabel>
+    </blok>
+    <blok name="b3">
+        <loop name="b3" nart="">
+            <variabel name="b3r25"/>
+            <variabel name="b3r24"/>
+            <variabel name="b3r23"/>
+            <variabel name="b3r22"/>
+            <variabel name="b3r21"/>
+            <variabel name="b3r9"/>
+            <variabel name="b3r8"/>
+            <variabel name="b3r7"/>
+            <variabel name="b3r31"/>
+            <variabel name="b3r6"/>
+            <variabel name="b3r30"/>
+            <variabel name="b3r5"/>
+            <variabel name="b3r4"/>
+            <variabel name="b3r3"/>
+            <variabel name="b3r2"/>
+            <variabel name="b3r19"/>
+            <variabel name="b3r18"/>
+            <variabel name="b3r17"/>
+            <variabel name="b3r16"/>
+            <variabel name="b3r15"/>
+            <variabel name="b3r14"/>
+            <variabel name="b3r13"/>
+            <variabel name="b3r12"/>
+            <variabel name="b3r11"/>
+            <variabel name="b3r10"/>
+            <variabel name="b3r29"/>
+            <variabel name="b3r28"/>
+            <variabel name="b3r27"/>
+            <variabel name="b3r26"/>
+        </loop>
+    </blok>
+    <blok name="b2">
+        <variabel hide="no" name="b2r3s2">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b2r3s1">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b2r2s2">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b2r2s1">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b2r4s2">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b2r4s1">
+            <value/>
+        </variabel>
+    </blok>
+    <blok name="b1">
+        <variabel hide="no" name="b1r7">
+            <value>3</value>
+        </variabel>
+        <variabel hide="no" name="b1r6">
+            <value>1</value>
+        </variabel>
+        <variabel hide="no" name="b1r5">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b1r4">
+            <value>012</value>
+        </variabel>
+        <variabel hide="no" name="b1r3">
+            <value>012</value>
+        </variabel>
+        <variabel hide="no" name="b1r12">
+            <value>12</value>
+        </variabel>
+        <variabel hide="no" name="b1r2">
+            <value>01</value>
+        </variabel>
+        <variabel hide="no" name="b1r11">
+            <value>3</value>
+        </variabel>
+        <variabel hide="no" name="b1r1">
+            <value>52</value>
+        </variabel>
+        <variabel hide="no" name="b1r10">
+            <value>LASANOM</value>
+        </variabel>
+        <variabel hide="no" name="b1r9">
+            <value>LASANOM</value>
+        </variabel>
+        <variabel hide="no" name="b1r8">
+            <value>10</value>
+        </variabel>
+    </blok>
+    <blok name="b7">
+        <variabel hide="no" name="catatan">
+            <value/>
+        </variabel>
+    </blok>
+    <blok name="b6">
+        <variabel hide="no" name="b6r8">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b6r7">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b6r15">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b6r6">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b6r5">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b6r4">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b6r12">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b6r3">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b6r2">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b6r1">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b6r10">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b6r14s2">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b6r14s1">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b6r9s2">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b6r11s2">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b6r9s1">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b6r11s1">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b6r13s3">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b6r13s2">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b6r13s1">
+            <value/>
+        </variabel>
+    </blok>
+    <blok name="b5">
+        <variabel hide="no" name="b5r2">
+            <value/>
+        </variabel>
+        <variabel hide="no" name="b5r1">
+            <value/>
+        </variabel>
+    </blok>
+</kuesioner>
